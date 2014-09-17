@@ -1,0 +1,3 @@
+{{ for s in species: }}
+<p> <a href="{{=URL(c="species",f="specie",args=[s.id,], extension=False)}}"> {{=s.name}} </a> </p>
+{{ pass }}

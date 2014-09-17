@@ -1,0 +1,23 @@
+
+<div style="border: 1px lightblue solid; padding-top: 1px; padding-left: 10px;" id="libraries" name="librariesDiv">
+    <h5>{{=specie.name}}</h5>
+</div>
+
+<div style="border: 1px lightblue solid; padding-top: 1px; padding-left: 10px;" id="libraries" name="librariesDiv">
+  <h5>Available assemblies:</h5>
+    <div style="border: 1px lightblue solid; padding-top: 1px; padding-left: 10px;" id="libraries" name="librariesDiv">
+        {{ for a in assembled_seq:}}
+        <p><a href="{{=URL(c="assemblies",f="assembly",args=[a.id,], extension=False)}}">{{=a.name}}</a></p>
+        {{ pass }}
+        </div>
+  </div>
+
+
+<div style="border: 1px lightblue solid; padding-top: 1px; padding-left: 10px;" id="libraries" name="librariesDiv">
+  <h5>Libraries available:</h5>
+    <div style="border: 1px lightblue solid; padding-top: 1px; padding-left: 10px;" id="libraries" name="librariesDiv">
+        {{ for l in libraries:}}
+        <p><a href="{{=URL(c="libraries",f="library",args=[l.id,], extension=False)}}">{{=l.name}}</a></p>
+        {{ pass }}
+        </div>
+  </div>

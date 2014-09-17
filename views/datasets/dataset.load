@@ -1,0 +1,10 @@
+
+<div style="border: 2px lightblue solid; padding-top: 5px; padding-left: 10px; padding-bottom: 5px; padding-right: 10px" id="dataset_{{=dataset.id}}" name="datasetDiv">
+  <h4>Dataset: {{=dataset.name}}</h4>
+    <div style="border: 1px lightblue solid; padding-top: 1px; padding-left: 10px;" id="libraries" name="librariesDiv">
+  <h5>Libraries:</h5>
+    {{ for l in libraries:}}
+        <p><a href="{{=URL(c="libraries",f="library",args=[l.id,], extension=False)}}">{{=l.name}}</a></p>
+    {{ pass }}
+    </div>
+</div>

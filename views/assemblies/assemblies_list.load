@@ -1,1 +1,4 @@
-This is the assemblies list <b>loaded by a LOAD function</b>.
+<ul>
+{{ for a in assemblies: }}
+<li> <a href="{{=URL(c="assemblies",f="assembly",args=[a.id,], extension=False)}}"> {{ =a.name }} </a> </li>
+{{ pass }}
