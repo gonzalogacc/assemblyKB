@@ -1,0 +1,9 @@
+<div style="border: 2px lightblue solid; padding-top: 5px; padding-left: 10px; padding-bottom: 5px; padding-right: 10px" id="dataset_{{=assembly_ranking.id}}" name="datasetDiv">
+  <h4>Assembly ranking: {{=assembly_ranking.name}}</h4>
+    <div style="border: 1px lightblue solid; padding-top: 1px; padding-left: 10px;" id="libraries" name="librariesDiv">
+  <h5>Assembled sequences:</h5>
+    {{ for a in assemblies:}}
+        <p><a href="{{=URL(c="assemblies",f="assembly",args=[a.assembled_seq.id,], extension=False)}}">{{=a.assembly_ranking_order.position}}.- {{=a.assembled_seq.name}}</a></p>
+    {{ pass }}
+    </div>
+</div>

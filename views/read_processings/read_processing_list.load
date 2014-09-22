@@ -1,0 +1,3 @@
+{{ for r in read_processings: }}
+<p> <a href="{{=URL(c="read_processings",f="read_processing",args=[r.id,], extension=False)}}"> {{=r.name}} </a> </p>
+{{ pass }}
