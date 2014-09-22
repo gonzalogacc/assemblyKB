@@ -8,6 +8,7 @@ def library():
     specie=db(db.specie.id==library.specie).select()[0].name
     lib_type=db(db.lib_type.id==library.lib_type).select()[0].name
     read_processing=db(db.read_processing.id==library.read_processing).select()[0].name
+
     return {'datasets': datasets, 'library': library, 'specie':specie, 'lib_type': lib_type, 'read_processing': read_processing}
 
 def library_list():
