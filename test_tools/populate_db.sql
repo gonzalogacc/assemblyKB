@@ -22,7 +22,6 @@ INSERT INTO library (lib_type, read_processing, specie, name) VALUES (5, 3, 3, '
 INSERT INTO library (lib_type, read_processing, specie, name) VALUES (3, 2, 3, 'LIB_test_15');
 INSERT INTO library (lib_type, read_processing, specie, name) VALUES (5, 3, 3, 'LIB_test_16');
 
-
 -- ref genome
 INSERT INTO ref_genome (specie, name) VALUES (2, 'ref aegilops');
 INSERT INTO ref_genome (specie, name) VALUES (2, 'ref aegilops');
