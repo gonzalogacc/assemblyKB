@@ -1,5 +1,4 @@
 {{extend 'layout.html'}}
 <div style="border: 2px #00e68b solid; padding-top: 5px; padding-left: 10px; padding-bottom: 5px; padding-right: 10px">
     {{=LOAD('assemblies','assembly.load',args=request.args, ajax=True)}}
-    {{=LOAD('datasets','dataset.load',args=[assembly.dataset], ajax=True)}}
     </div>

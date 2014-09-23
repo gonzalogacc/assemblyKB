@@ -56,7 +56,6 @@ db.define_table('dataset_library',
                 Field('dataset', 'reference dataset'),
                 Field('library', 'reference library'))
 
-
 db.define_table('assembly_run',
                 Field('name'),
                 Field('specie', 'reference specie'),

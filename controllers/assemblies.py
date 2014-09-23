@@ -8,9 +8,14 @@ def assemblies_list():
 
 def assembly():
     id = request.args[0]
-    assembly = db(db.assembled_seq.id == id).select()[0]
-    specie=db(db.specie.id==assembly.specie).select()[0].name
-    dataset=db(db.dataset.id==assembly.dataset).select()[0].name
-    assembly_run=db(db.assembly_run.id==assembly.assembly_run).select()[0].name
+    assembled_seq = db(db.assembled_seq.id == id).select()[0]
 
-    return {'assembly': assembly, 'specie': specie, 'dataset': dataset, 'assembly_run': assembly_run}
+    specie = db((db.assembly_run.id == assembled_seq.assembly_run) & (db.specie.id == db.assembly_run.specie)).select(db.specie.ALL)[0]
+
+    ## un dataset produce solo un ensamblado
+    dataset = db(db.assembly_run.id == assembled_seq.assembly_run).select(db.dataset.ALL)[0]
+
+    ## an assembly run yields only one assembled_seq
+    assembly_run = db(db.assembly_run.id == assembled_seq.assembly_run).select(db.assembly_run.ALL)[0]
+
+    return {'assembled_seq': assembled_seq, 'specie': specie, 'dataset': dataset, 'assembly_run': assembly_run}
