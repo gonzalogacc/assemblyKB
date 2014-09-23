@@ -66,7 +66,50 @@
 </head>
 
 <body>
+<div style="background: #a9f294;">
+  <div id="container">
+    <div id="title">
+        <strong><h2>Assembly Knowledge Base v.0.1 (Beta)</h2></strong>
+    </div>
+  </div>
+  <div id="logo">
+    <strong><img src="{{=URL('static','images/transPLANT_logo.png')}}" width="150"/></strong>
+  </div>
+<div style="clear:both"></div>
+<style type="text/css">
+#container {
+    margin-right: -320px;
+    float:left;
+    width:100%;
+}
+#title {
+    margin-left: 50px; /* 20px added for center margin */
+}
+#logo {
+    width:300px;
+    float:left
+}
+@media (max-width: 580px) {
+    #container {
+        margin-right:0px;
+        margin-bottom:20px;
+    }
+    #title {
+        margin-right:0px;
+        margin-left:150px;
+        width:100%;
+    }
+    #logo {
+        clear:left;
+    }
+}
+</style>
+
+    <div>
+        <div style="float: right;"> </div>
+    </div>
   <!-- Navbar ================================================== -->
+  {{if False:}}
   <div class="navbar navbar-inverse">
     <div class="flash">{{=response.flash or ''}}</div>
     <div class="navbar-inner">
@@ -87,12 +130,13 @@
         </div><!--/.nav-collapse -->
       </div>
     </div>
+  {{pass}}
   </div><!--/top navbar -->
 
   <div class="container">
     <!-- Masthead ================================================== -->
     <header class="mastheader row" id="header">
-      {{if response.title:}}
+      <!--{{if response.title:}}
         <div class="span12">
             <div class="page-header">
                 <h1>
@@ -101,7 +145,7 @@
                 </h1>
             </div>
         </div>
-	{{pass}}
+	{{pass}}-->
     </header>
 
     <section id="main" class="main row">
