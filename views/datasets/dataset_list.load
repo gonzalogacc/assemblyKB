@@ -1,5 +1,5 @@
 
-<div style="border: 2px #01e6dd solid; padding-top: 5px; padding-left: 10px; padding-bottom: 5px; padding-right: 10px">
+<div style="border: 2px #ffffff solid; padding-top: 5px; padding-left: 10px; padding-bottom: 5px; padding-right: 10px">
     {{ for a in datasets: }}
         <p> <a href="{{=URL(c="datasets",f="dataset",args=[a.id,], extension=False)}}"> {{=a.name}} </a> </p>
     {{ pass }}

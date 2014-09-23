@@ -17,42 +17,42 @@ INSERT INTO lib_type (software, name) VALUES (1, 'Bionano');
 
 -- library
 -- A. sharonensis
-INSERT INTO library (lib_type, read_processing, specie, name) VALUES (1, 1, 1, 'PE 200bp frag');
-INSERT INTO library (lib_type, read_processing, specie, name) VALUES (1, 1, 1, 'PE 300bp frag');
-INSERT INTO library (lib_type, read_processing, specie, name) VALUES (2, 1, 1, 'LMP 3kb');
-INSERT INTO library (lib_type, read_processing, specie, name) VALUES (2, 1, 1, 'LMP 8kb');
+INSERT INTO library (lib_type, read_processing, specie, name, bp_size, read_size, fragment_size) VALUES (1, 1, 1, 'PE 200bp frag', 100, 100, 200);
+INSERT INTO library (lib_type, read_processing, specie, name, bp_size, read_size, fragment_size) VALUES (1, 1, 1, 'PE 300bp frag', 100, 100, 300);
+INSERT INTO library (lib_type, read_processing, specie, name, bp_size, read_size, fragment_size) VALUES (2, 1, 1, 'LMP 3kb', 100, 100, 3000);
+INSERT INTO library (lib_type, read_processing, specie, name, bp_size, read_size, fragment_size) VALUES (2, 1, 1, 'LMP 8kb', 100, 100, 8000);
 
 -- O. Sativa Nipponbare
-INSERT INTO library (lib_type, read_processing, specie, name) VALUES (1, 1, 2, 'PE 150bp frag');
-INSERT INTO library (lib_type, read_processing, specie, name) VALUES (1, 1, 2, 'PE 300bp frag 1');
-INSERT INTO library (lib_type, read_processing, specie, name) VALUES (1, 1, 2, 'PE 300bp frag 2');
-INSERT INTO library (lib_type, read_processing, specie, name) VALUES (2, 1, 2, 'LMP 2kb jump 1');
-INSERT INTO library (lib_type, read_processing, specie, name) VALUES (2, 1, 2, 'LMP 2kb jump 2');
-INSERT INTO library (lib_type, read_processing, specie, name) VALUES (2, 1, 2, 'LMP 2kb jump 3');
-INSERT INTO library (lib_type, read_processing, specie, name) VALUES (2, 1, 2, 'LMP 5kb jump');
+INSERT INTO library (lib_type, read_processing, specie, name, bp_size, read_size, fragment_size) VALUES (1, 1, 2, 'PE 150bp frag', 100, 100, 150);
+INSERT INTO library (lib_type, read_processing, specie, name, bp_size, read_size, fragment_size) VALUES (1, 1, 2, 'PE 300bp frag 1', 100, 100, 300);
+INSERT INTO library (lib_type, read_processing, specie, name, bp_size, read_size, fragment_size) VALUES (1, 1, 2, 'PE 300bp frag 2', 100, 100, 300);
+INSERT INTO library (lib_type, read_processing, specie, name, bp_size, read_size, fragment_size) VALUES (2, 1, 2, 'LMP 2kb jump 1', 100, 100, 2000);
+INSERT INTO library (lib_type, read_processing, specie, name, bp_size, read_size, fragment_size) VALUES (2, 1, 2, 'LMP 2kb jump 2', 100, 100, 2000);
+INSERT INTO library (lib_type, read_processing, specie, name, bp_size, read_size, fragment_size) VALUES (2, 1, 2, 'LMP 2kb jump 3', 100, 100, 2000);
+INSERT INTO library (lib_type, read_processing, specie, name, bp_size, read_size, fragment_size) VALUES (2, 1, 2, 'LMP 5kb jump', 100, 100, 5000);
 
 -- O. Sativa IR64
-INSERT INTO library (lib_type, read_processing, specie, name) VALUES (1, 1, 3, 'PE 180bp frag');
-INSERT INTO library (lib_type, read_processing, specie, name) VALUES (1, 1, 3, 'PE 300bp frag 1');
-INSERT INTO library (lib_type, read_processing, specie, name) VALUES (1, 1, 3, 'PE 300bp frag 2');
-INSERT INTO library (lib_type, read_processing, specie, name) VALUES (1, 1, 3, 'PE 450bp frag 1');
-INSERT INTO library (lib_type, read_processing, specie, name) VALUES (2, 1, 3, 'LMP 2kb jump 1');
-INSERT INTO library (lib_type, read_processing, specie, name) VALUES (2, 1, 3, 'LMP 2kb jump 2');
+INSERT INTO library (lib_type, read_processing, specie, name, bp_size, read_size, fragment_size) VALUES (1, 1, 3, 'PE 180bp frag', 100, 100, 180);
+INSERT INTO library (lib_type, read_processing, specie, name, bp_size, read_size, fragment_size) VALUES (1, 1, 3, 'PE 300bp frag 1', 100, 100, 300);
+INSERT INTO library (lib_type, read_processing, specie, name, bp_size, read_size, fragment_size) VALUES (1, 1, 3, 'PE 300bp frag 2', 100, 100, 300);
+INSERT INTO library (lib_type, read_processing, specie, name, bp_size, read_size, fragment_size) VALUES (1, 1, 3, 'PE 450bp frag 1', 100, 100, 450);
+INSERT INTO library (lib_type, read_processing, specie, name, bp_size, read_size, fragment_size) VALUES (2, 1, 3, 'LMP 2kb jump 1', 100, 100, 2000);
+INSERT INTO library (lib_type, read_processing, specie, name, bp_size, read_size, fragment_size) VALUES (2, 1, 3, 'LMP 2kb jump 2', 100, 100, 2000);
 
 -- O. Sativa DJ123
-INSERT INTO library (lib_type, read_processing, specie, name) VALUES (1, 1, 4, 'PE 180bp frag');
-INSERT INTO library (lib_type, read_processing, specie, name) VALUES (1, 1, 4, 'PE 300bp frag 1');
-INSERT INTO library (lib_type, read_processing, specie, name) VALUES (1, 1, 4, 'PE 300bp frag 2');
-INSERT INTO library (lib_type, read_processing, specie, name) VALUES (1, 1, 4, 'PE 450bp frag');
-INSERT INTO library (lib_type, read_processing, specie, name) VALUES (2, 1, 4, 'LMP 2kb jump 1');
-INSERT INTO library (lib_type, read_processing, specie, name) VALUES (2, 1, 4, 'LMP 2kb jump 2');
-INSERT INTO library (lib_type, read_processing, specie, name) VALUES (2, 1, 4, 'LMP 5kb jump 1');
+INSERT INTO library (lib_type, read_processing, specie, name, bp_size, read_size, fragment_size) VALUES (1, 1, 4, 'PE 180bp frag', 100, 100, 180);
+INSERT INTO library (lib_type, read_processing, specie, name, bp_size, read_size, fragment_size) VALUES (1, 1, 4, 'PE 300bp frag 1', 100, 100, 300);
+INSERT INTO library (lib_type, read_processing, specie, name, bp_size, read_size, fragment_size) VALUES (1, 1, 4, 'PE 300bp frag 2', 100, 100, 300);
+INSERT INTO library (lib_type, read_processing, specie, name, bp_size, read_size, fragment_size) VALUES (1, 1, 4, 'PE 450bp frag', 100, 100, 450);
+INSERT INTO library (lib_type, read_processing, specie, name, bp_size, read_size, fragment_size) VALUES (2, 1, 4, 'LMP 2kb jump 1', 100, 100, 2000);
+INSERT INTO library (lib_type, read_processing, specie, name, bp_size, read_size, fragment_size) VALUES (2, 1, 4, 'LMP 2kb jump 2', 100, 100, 2000);
+INSERT INTO library (lib_type, read_processing, specie, name, bp_size, read_size, fragment_size) VALUES (2, 1, 4, 'LMP 5kb jump 1', 100, 100, 5000);
 
 -- A. Thaliana ler-0
-INSERT INTO library (lib_type, read_processing, specie, name) VALUES (1, 3, 5, 'PE 200bp frag 1');
-INSERT INTO library (lib_type, read_processing, specie, name) VALUES (1, 3, 5, 'PE 300bp frag 1');
-INSERT INTO library (lib_type, read_processing, specie, name) VALUES (1, 3, 5, 'PE 400bp frag 1');
-INSERT INTO library (lib_type, read_processing, specie, name) VALUES (4, 3, 5, 'Pacbio');
+INSERT INTO library (lib_type, read_processing, specie, name, bp_size, read_size, fragment_size) VALUES (1, 3, 5, 'PE 200bp frag 1', 100, 100, 200);
+INSERT INTO library (lib_type, read_processing, specie, name, bp_size, read_size, fragment_size) VALUES (1, 3, 5, 'PE 300bp frag 1', 100, 100, 300);
+INSERT INTO library (lib_type, read_processing, specie, name, bp_size, read_size, fragment_size) VALUES (1, 3, 5, 'PE 400bp frag 1', 100, 100, 400);
+INSERT INTO library (lib_type, read_processing, specie, name, bp_size, read_size, fragment_size) VALUES (4, 3, 5, 'Pacbio', 100, 100, 'n/a');
 
 -- A. thalinana col-0
 --fill

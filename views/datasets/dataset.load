@@ -1,10 +1,28 @@
 
-<div style="border: 2px lightblue solid; padding-top: 5px; padding-left: 10px; padding-bottom: 5px; padding-right: 10px" id="dataset_{{=dataset.id}}" name="datasetDiv">
+<div style="border: 2px #ffffff solid; padding-top: 5px; padding-left: 10px; padding-bottom: 5px; padding-right: 10px" id="dataset_{{=dataset.id}}" name="datasetDiv">
   <h4>Dataset: {{=dataset.name}}</h4>
-    <div style="border: 1px lightblue solid; padding-top: 1px; padding-left: 10px;" id="libraries" name="librariesDiv">
-  <h5>Libraries:</h5>
-    {{ for l in libraries:}}
-        <p><a href="{{=URL(c="libraries",f="library",args=[l.id,], extension=False)}}">{{=l.name}}</a></p>
-    {{ pass }}
+
+    <div style="border: 1px #ffffff solid; padding-top: 1px; padding-left: 10px;" id="libraries" name="librariesDiv">
+        </div>
+            <table border="1">
+                <thread>
+                    <th>Lib name</th>
+                    <th>Lib type</th>
+                    <th>read_processing</th>
+                    <th>Base quant</th>
+                    <th>Read size</th>
+                    <th>fragment size</th>
+                </thread>
+                {{ for l in libraries:}}
+                <tr>
+                    <td><a href="{{=URL(c="libraries",f="library",args=[l.library.id,], extension=False)}}">{{=l.library.name}}</a></td>
+                    <td>{{=l.lib_type.name}}</td>
+                    <td>{{=l.read_processing.name}}</td>
+                    <td>{{=l.library.bp_size}}</td>
+                    <td>{{=l.library.read_size}}</td>
+                    <td>{{=l.library.fragment_size}}</td>
+                </tr>
+                {{pass}}
+            </table>
     </div>
-</div>
+
