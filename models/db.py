@@ -34,7 +34,7 @@ db.define_table('lib_qc',
                 Field('library', 'reference library'),
                 Field('lib_qc_type', 'reference lib_qc_type'),
                 Field('value'),
-                Field('figure'),
+                Field('figure', 'upload'),
                 format='%(name)s')
 
 db.define_table('lib_type',

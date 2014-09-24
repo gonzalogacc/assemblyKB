@@ -74,79 +74,205 @@ INSERT INTO lib_qc_type (ref_genome, name) VALUES (7, 'K-mer spectra');
 INSERT INTO lib_qc_type (ref_genome, name) VALUES (7, 'K-mer density read1 vs read2');
 INSERT INTO lib_qc_type (ref_genome, name) VALUES (7, 'other');
 
+--------- begin qc data -----------
 -- lib_qc
-INSERT INTO lib_qc (lib_qc_type, library) VALUES (1, 1);
-INSERT INTO lib_qc (lib_qc_type, library) VALUES (1, 2);
-INSERT INTO lib_qc (lib_qc_type, library) VALUES (1, 3);
-INSERT INTO lib_qc (lib_qc_type, library) VALUES (1, 4);
-INSERT INTO lib_qc (lib_qc_type, library) VALUES (1, 5);
-INSERT INTO lib_qc (lib_qc_type, library) VALUES (1, 6);
-INSERT INTO lib_qc (lib_qc_type, library) VALUES (1, 7);
-INSERT INTO lib_qc (lib_qc_type, library) VALUES (1, 8);
-INSERT INTO lib_qc (lib_qc_type, library) VALUES (1, 9);
-INSERT INTO lib_qc (lib_qc_type, library) VALUES (1, 10);
-INSERT INTO lib_qc (lib_qc_type, library) VALUES (1, 11);
-INSERT INTO lib_qc (lib_qc_type, library) VALUES (1, 12);
-INSERT INTO lib_qc (lib_qc_type, library) VALUES (1, 13);
-INSERT INTO lib_qc (lib_qc_type, library) VALUES (1, 14);
-INSERT INTO lib_qc (lib_qc_type, library) VALUES (1, 15);
-INSERT INTO lib_qc (lib_qc_type, library) VALUES (1, 16);
-INSERT INTO lib_qc (lib_qc_type, library) VALUES (1, 17);
+--a.sharonensis pe200bp
+--INSERT INTO lib_qc (lib_qc_type, library, figure) VALUES (1, 1, 'lib_qc.figure.a_sharonensis_pe200bp_rl.png');
+INSERT INTO lib_qc (lib_qc_type, library, figure) VALUES (2, 1, 'lib_qc.figure.a_sharonensis_pe200bp_fs.png');
+--INSERT INTO lib_qc (lib_qc_type, library, figure) VALUES (3, 1, 'lib_qc.figure.a_sharonensis_pe200bp_gcc.png');
+INSERT INTO lib_qc (lib_qc_type, library, figure) VALUES (4, 1, 'lib_qc.figure.a_sharonensis_pe200bp_ks.png');
+INSERT INTO lib_qc (lib_qc_type, library, figure) VALUES (5, 1, 'lib_qc.figure.a_sharonensis_pe200bp_kd.png');
 
-INSERT INTO lib_qc (lib_qc_type, library) VALUES (2, 1);
-INSERT INTO lib_qc (lib_qc_type, library) VALUES (2, 2);
-INSERT INTO lib_qc (lib_qc_type, library) VALUES (2, 3);
-INSERT INTO lib_qc (lib_qc_type, library) VALUES (2, 4);
-INSERT INTO lib_qc (lib_qc_type, library) VALUES (2, 5);
-INSERT INTO lib_qc (lib_qc_type, library) VALUES (2, 6);
-INSERT INTO lib_qc (lib_qc_type, library) VALUES (2, 7);
-INSERT INTO lib_qc (lib_qc_type, library) VALUES (2, 8);
-INSERT INTO lib_qc (lib_qc_type, library) VALUES (2, 9);
-INSERT INTO lib_qc (lib_qc_type, library) VALUES (2, 10);
-INSERT INTO lib_qc (lib_qc_type, library) VALUES (2, 11);
-INSERT INTO lib_qc (lib_qc_type, library) VALUES (2, 12);
-INSERT INTO lib_qc (lib_qc_type, library) VALUES (2, 13);
-INSERT INTO lib_qc (lib_qc_type, library) VALUES (2, 14);
-INSERT INTO lib_qc (lib_qc_type, library) VALUES (2, 15);
-INSERT INTO lib_qc (lib_qc_type, library) VALUES (2, 16);
-INSERT INTO lib_qc (lib_qc_type, library) VALUES (2, 17);
+--a.sharonensis pe300bp
+--INSERT INTO lib_qc (lib_qc_type, library, figure) VALUES (1, 2, 'lib_qc.figure.a_sharonensis_pe300bp_rl.png');
+--INSERT INTO lib_qc (lib_qc_type, library, figure) VALUES (2, 2, 'lib_qc.figure.a_sharonensis_pe300bp_fs.png');
+--INSERT INTO lib_qc (lib_qc_type, library, figure) VALUES (3, 2, 'lib_qc.figure.a_sharonensis_pe300bp_gcc.png');
+INSERT INTO lib_qc (lib_qc_type, library, figure) VALUES (4, 2, 'lib_qc.figure.a_sharonensis_pe300bp_ks.png');
+INSERT INTO lib_qc (lib_qc_type, library, figure) VALUES (5, 2, 'lib_qc.figure.a_sharonensis_pe300bp_kd.png');
 
-INSERT INTO lib_qc (lib_qc_type, library) VALUES (3, 1);
-INSERT INTO lib_qc (lib_qc_type, library) VALUES (3, 2);
-INSERT INTO lib_qc (lib_qc_type, library) VALUES (3, 3);
-INSERT INTO lib_qc (lib_qc_type, library) VALUES (3, 4);
-INSERT INTO lib_qc (lib_qc_type, library) VALUES (3, 5);
-INSERT INTO lib_qc (lib_qc_type, library) VALUES (3, 6);
-INSERT INTO lib_qc (lib_qc_type, library) VALUES (3, 7);
-INSERT INTO lib_qc (lib_qc_type, library) VALUES (3, 8);
-INSERT INTO lib_qc (lib_qc_type, library) VALUES (3, 9);
-INSERT INTO lib_qc (lib_qc_type, library) VALUES (3, 10);
-INSERT INTO lib_qc (lib_qc_type, library) VALUES (3, 11);
-INSERT INTO lib_qc (lib_qc_type, library) VALUES (3, 12);
-INSERT INTO lib_qc (lib_qc_type, library) VALUES (3, 13);
-INSERT INTO lib_qc (lib_qc_type, library) VALUES (3, 14);
-INSERT INTO lib_qc (lib_qc_type, library) VALUES (3, 15);
-INSERT INTO lib_qc (lib_qc_type, library) VALUES (3, 16);
-INSERT INTO lib_qc (lib_qc_type, library) VALUES (3, 17);
+--a.sharonensis lmp3kbp
+--INSERT INTO lib_qc (lib_qc_type, library, figure) VALUES (1, 3, 'lib_qc.figure.a_sharonensis_lmp3kbp_rl.png');
+--INSERT INTO lib_qc (lib_qc_type, library, figure) VALUES (2, 3, 'lib_qc.figure.a_sharonensis_lmp3kbp_fs.png');
+--INSERT INTO lib_qc (lib_qc_type, library, figure) VALUES (3, 3, 'lib_qc.figure.a_sharonensis_lmp3kbp_gcc.png');
+INSERT INTO lib_qc (lib_qc_type, library, figure) VALUES (4, 3, 'lib_qc.figure.a_sharonensis_lmp3kbp_ks.png');
+INSERT INTO lib_qc (lib_qc_type, library, figure) VALUES (5, 3, 'lib_qc.figure.a_sharonensis_lmp3kbp_kd.png');
 
-INSERT INTO lib_qc (lib_qc_type, library) VALUES (4, 1);
-INSERT INTO lib_qc (lib_qc_type, library) VALUES (4, 2);
-INSERT INTO lib_qc (lib_qc_type, library) VALUES (4, 3);
-INSERT INTO lib_qc (lib_qc_type, library) VALUES (4, 4);
-INSERT INTO lib_qc (lib_qc_type, library) VALUES (4, 5);
-INSERT INTO lib_qc (lib_qc_type, library) VALUES (4, 6);
-INSERT INTO lib_qc (lib_qc_type, library) VALUES (4, 7);
-INSERT INTO lib_qc (lib_qc_type, library) VALUES (4, 8);
-INSERT INTO lib_qc (lib_qc_type, library) VALUES (4, 9);
-INSERT INTO lib_qc (lib_qc_type, library) VALUES (4, 10);
-INSERT INTO lib_qc (lib_qc_type, library) VALUES (4, 11);
-INSERT INTO lib_qc (lib_qc_type, library) VALUES (4, 12);
-INSERT INTO lib_qc (lib_qc_type, library) VALUES (4, 13);
-INSERT INTO lib_qc (lib_qc_type, library) VALUES (4, 14);
-INSERT INTO lib_qc (lib_qc_type, library) VALUES (4, 15);
-INSERT INTO lib_qc (lib_qc_type, library) VALUES (4, 16);
-INSERT INTO lib_qc (lib_qc_type, library) VALUES (4, 17);
+--a.sharonensis lmp8kbp
+--INSERT INTO lib_qc (lib_qc_type, library, figure) VALUES (1, 4, 'lib_qc.figure.a_sharonensis_lmp8kbp_rl.png');
+--INSERT INTO lib_qc (lib_qc_type, library, figure) VALUES (2, 4, 'lib_qc.figure.a_sharonensis_lmp8kbp_fs.png');
+--INSERT INTO lib_qc (lib_qc_type, library, figure) VALUES (3, 4, 'lib_qc.figure.a_sharonensis_lmp8kbp_gcc.png');
+INSERT INTO lib_qc (lib_qc_type, library, figure) VALUES (4, 4, 'lib_qc.figure.a_sharonensis_lmp8kbp_ks.png');
+INSERT INTO lib_qc (lib_qc_type, library, figure) VALUES (5, 4, 'lib_qc.figure.a_sharonensis_lmp8kbp_kd.png');
 
+--o.stativa.nb pe150bp
+--INSERT INTO lib_qc (lib_qc_type, library, figure) VALUES (1, 5, 'lib_qc.figure.o_sativa_nb_pe150bp_rl.png');
+--INSERT INTO lib_qc (lib_qc_type, library, figure) VALUES (2, 5, 'lib_qc.figure.o_sativa_nb_pe150bp_fs.png');
+--INSERT INTO lib_qc (lib_qc_type, library, figure) VALUES (3, 5, 'lib_qc.figure.o_sativa_nb_pe150bp_gcc.png');
+INSERT INTO lib_qc (lib_qc_type, library, figure) VALUES (4, 5, 'lib_qc.figure.o_sativa_nb_pe150bp_ks.png');
+INSERT INTO lib_qc (lib_qc_type, library, figure) VALUES (5, 5, 'lib_qc.figure.o_sativa_nb_pe150bp_kd.png');
+
+--o.stativa.nb pe300bp1
+--INSERT INTO lib_qc (lib_qc_type, library, figure) VALUES (1, 6, 'lib_qc.figure.o_sativa_nb_pe300bp1_rl.png');
+--INSERT INTO lib_qc (lib_qc_type, library, figure) VALUES (2, 6, 'lib_qc.figure.o_sativa_nb_pe300bp1_fs.png');
+--INSERT INTO lib_qc (lib_qc_type, library, figure) VALUES (3, 6, 'lib_qc.figure.o_sativa_nb_pe300bp1_gcc.png');
+INSERT INTO lib_qc (lib_qc_type, library, figure) VALUES (4, 6, 'lib_qc.figure.o_sativa_nb_pe300bp1_ks.png');
+INSERT INTO lib_qc (lib_qc_type, library, figure) VALUES (5, 6, 'lib_qc.figure.o_sativa_nb_pe300bp1_kd.png');
+
+--o.stativa.nb pe300bp2
+--INSERT INTO lib_qc (lib_qc_type, library, figure) VALUES (1, 7, 'lib_qc.figure.o_sativa_nb_pe300bp2_rl.png');
+--INSERT INTO lib_qc (lib_qc_type, library, figure) VALUES (2, 7, 'lib_qc.figure.o_sativa_nb_pe300bp2_fs.png');
+--INSERT INTO lib_qc (lib_qc_type, library, figure) VALUES (3, 7, 'lib_qc.figure.o_sativa_nb_pe300bp2_gcc.png');
+INSERT INTO lib_qc (lib_qc_type, library, figure) VALUES (4, 7, 'lib_qc.figure.o_sativa_nb_pe300bp2_ks.png');
+INSERT INTO lib_qc (lib_qc_type, library, figure) VALUES (5, 7, 'lib_qc.figure.o_sativa_nb_pe300bp2_kd.png');
+
+--o.stativa.nb lmp2kb
+--INSERT INTO lib_qc (lib_qc_type, library, figure) VALUES (1, 8, 'lib_qc.figure.o_sativa_nb_lmp2kb_rl.png');
+--INSERT INTO lib_qc (lib_qc_type, library, figure) VALUES (2, 8, 'lib_qc.figure.o_sativa_nb_lmp2kb_fs.png');
+--INSERT INTO lib_qc (lib_qc_type, library, figure) VALUES (3, 8, 'lib_qc.figure.o_sativa_nb_lmp2kb_gcc.png');
+INSERT INTO lib_qc (lib_qc_type, library, figure) VALUES (4, 8, 'lib_qc.figure.o_sativa_nb_lmp2kb_ks.png');
+INSERT INTO lib_qc (lib_qc_type, library, figure) VALUES (5, 8, 'lib_qc.figure.o_sativa_nb_lmp2kb_kd.png');
+
+--o.stativa.nb lmp2kb2
+--INSERT INTO lib_qc (lib_qc_type, library, figure) VALUES (1, 9, 'lib_qc.figure.o_sativa_nb_lmp2kb2_rl.png');
+--INSERT INTO lib_qc (lib_qc_type, library, figure) VALUES (2, 9, 'lib_qc.figure.o_sativa_nb_lmp2kb2_fs.png');
+--INSERT INTO lib_qc (lib_qc_type, library, figure) VALUES (3, 9, 'lib_qc.figure.o_sativa_nb_lmp2kb2_gcc.png');
+INSERT INTO lib_qc (lib_qc_type, library, figure) VALUES (4, 9, 'lib_qc.figure.o_sativa_nb_lmp2kb2_ks.png');
+INSERT INTO lib_qc (lib_qc_type, library, figure) VALUES (5, 9, 'lib_qc.figure.o_sativa_nb_lmp2kb2_kd.png');
+
+--o.stativa.nb lmp2kb3
+--INSERT INTO lib_qc (lib_qc_type, library, figure) VALUES (1, 10, 'lib_qc.figure.o_sativa_nb_lmp2kb3_rl.png');
+--INSERT INTO lib_qc (lib_qc_type, library, figure) VALUES (2, 10, 'lib_qc.figure.o_sativa_nb_lmp2kb3_fs.png');
+--INSERT INTO lib_qc (lib_qc_type, library, figure) VALUES (3, 10, 'lib_qc.figure.o_sativa_nb_lmp2kb3_gcc.png');
+INSERT INTO lib_qc (lib_qc_type, library, figure) VALUES (4, 10, 'lib_qc.figure.o_sativa_nb_lmp2kb3_ks.png');
+INSERT INTO lib_qc (lib_qc_type, library, figure) VALUES (5, 10, 'lib_qc.figure.o_sativa_nb_lmp2kb3_kd.png');
+
+--o.stativa.nb lmp5kb
+--INSERT INTO lib_qc (lib_qc_type, library, figure) VALUES (1, 11, 'lib_qc.figure.o_sativa_nb_lmp5kb_rl.png');
+--INSERT INTO lib_qc (lib_qc_type, library, figure) VALUES (2, 11, 'lib_qc.figure.o_sativa_nb_lmp5kb_fs.png');
+--INSERT INTO lib_qc (lib_qc_type, library, figure) VALUES (3, 11, 'lib_qc.figure.o_sativa_nb_lmp5kb_gcc.png');
+INSERT INTO lib_qc (lib_qc_type, library, figure) VALUES (4, 11, 'lib_qc.figure.o_sativa_nb_lmp5kb_ks.png');
+INSERT INTO lib_qc (lib_qc_type, library, figure) VALUES (5, 11, 'lib_qc.figure.o_sativa_nb_lmp5kb_kd.png');
+
+--o.stativa.ir64 pe180bp
+--INSERT INTO lib_qc (lib_qc_type, library, figure) VALUES (1, 12, 'lib_qc.figure.o_sativa_ir64_pe180bp_rl.png');
+--INSERT INTO lib_qc (lib_qc_type, library, figure) VALUES (2, 12, 'lib_qc.figure.o_sativa_ir64_pe180bp_fs.png');
+--INSERT INTO lib_qc (lib_qc_type, library, figure) VALUES (3, 12, 'lib_qc.figure.o_sativa_ir64_pe180bp_gcc.png');
+INSERT INTO lib_qc (lib_qc_type, library, figure) VALUES (4, 12, 'lib_qc.figure.o_sativa_ir64_pe180bp_ks.png');
+INSERT INTO lib_qc (lib_qc_type, library, figure) VALUES (5, 12, 'lib_qc.figure.o_sativa_ir64_pe180bp_kd.png');
+
+--o.stativa.ir64 pe300bp1
+--INSERT INTO lib_qc (lib_qc_type, library, figure) VALUES (1, 13, 'lib_qc.figure.o_sativa_ir64_pe300bp1_rl.png');
+--INSERT INTO lib_qc (lib_qc_type, library, figure) VALUES (2, 13, 'lib_qc.figure.o_sativa_ir64_pe300bp1_fs.png');
+--INSERT INTO lib_qc (lib_qc_type, library, figure) VALUES (3, 13, 'lib_qc.figure.o_sativa_ir64_pe300bp1_gcc.png');
+INSERT INTO lib_qc (lib_qc_type, library, figure) VALUES (4, 13, 'lib_qc.figure.o_sativa_ir64_pe300bp1_ks.png');
+INSERT INTO lib_qc (lib_qc_type, library, figure) VALUES (5, 13, 'lib_qc.figure.o_sativa_ir64_pe300bp1_kd.png');
+
+--o.stativa.ir64 pe300bp2
+--INSERT INTO lib_qc (lib_qc_type, library, figure) VALUES (1, 14, 'lib_qc.figure.o_sativa_ir64_pe300bp2_rl.png');
+--INSERT INTO lib_qc (lib_qc_type, library, figure) VALUES (2, 14, 'lib_qc.figure.o_sativa_ir64_pe300bp2_fs.png');
+--INSERT INTO lib_qc (lib_qc_type, library, figure) VALUES (3, 14, 'lib_qc.figure.o_sativa_ir64_pe300bp2_gcc.png');
+INSERT INTO lib_qc (lib_qc_type, library, figure) VALUES (4, 14, 'lib_qc.figure.o_sativa_ir64_pe300bp2_ks.png');
+--INSERT INTO lib_qc (lib_qc_type, library, figure) VALUES (5, 14, 'lib_qc.figure.o_sativa_ir64_pe300bp2_kd.png');
+
+--o.stativa.ir64 pe450bp
+--INSERT INTO lib_qc (lib_qc_type, library, figure) VALUES (1, 15, 'lib_qc.figure.o_sativa_ir64_pe450bp_rl.png');
+--INSERT INTO lib_qc (lib_qc_type, library, figure) VALUES (2, 15, 'lib_qc.figure.o_sativa_ir64_pe450bp_fs.png');
+--INSERT INTO lib_qc (lib_qc_type, library, figure) VALUES (3, 15, 'lib_qc.figure.o_sativa_ir64_pe450bp_gcc.png');
+INSERT INTO lib_qc (lib_qc_type, library, figure) VALUES (4, 15, 'lib_qc.figure.o_sativa_ir64_pe450bp_ks.png');
+INSERT INTO lib_qc (lib_qc_type, library, figure) VALUES (5, 15, 'lib_qc.figure.o_sativa_ir64_pe450bp_kd.png');
+
+--o.stativa.ir64 lmp2kbp
+--INSERT INTO lib_qc (lib_qc_type, library, figure) VALUES (1, 15, 'lib_qc.figure.o_sativa_ir64_lmp2kbp_rl.png');
+--INSERT INTO lib_qc (lib_qc_type, library, figure) VALUES (2, 15, 'lib_qc.figure.o_sativa_ir64_lmp2kbp_fs.png');
+--INSERT INTO lib_qc (lib_qc_type, library, figure) VALUES (3, 15, 'lib_qc.figure.o_sativa_ir64_lmp2kbp_gcc.png');
+INSERT INTO lib_qc (lib_qc_type, library, figure) VALUES (4, 15, 'lib_qc.figure.o_sativa_ir64_lmp2kbp_ks.png');
+INSERT INTO lib_qc (lib_qc_type, library, figure) VALUES (5, 15, 'lib_qc.figure.o_sativa_ir64_lmp2kbp_kd.png');
+
+--o.stativa.ir64 lmp2kbp
+--INSERT INTO lib_qc (lib_qc_type, library, figure) VALUES (1, 16, 'lib_qc.figure.o_sativa_ir64_lmp2kbp_rl.png');
+--INSERT INTO lib_qc (lib_qc_type, library, figure) VALUES (2, 16, 'lib_qc.figure.o_sativa_ir64_lmp2kbp_fs.png');
+--INSERT INTO lib_qc (lib_qc_type, library, figure) VALUES (3, 16, 'lib_qc.figure.o_sativa_ir64_lmp2kbp_gcc.png');
+INSERT INTO lib_qc (lib_qc_type, library, figure) VALUES (4, 16, 'lib_qc.figure.o_sativa_ir64_lmp2kbp_ks.png');
+INSERT INTO lib_qc (lib_qc_type, library, figure) VALUES (5, 16, 'lib_qc.figure.o_sativa_ir64_lmp2kbp_kd.png');
+
+--o.stativa.ir64 lmp2kbp2
+--INSERT INTO lib_qc (lib_qc_type, library, figure) VALUES (1, 17, 'lib_qc.figure.o_sativa_ir64_lmp2kbp2_rl.png');
+--INSERT INTO lib_qc (lib_qc_type, library, figure) VALUES (2, 17, 'lib_qc.figure.o_sativa_ir64_lmp2kbp2_fs.png');
+--INSERT INTO lib_qc (lib_qc_type, library, figure) VALUES (3, 17, 'lib_qc.figure.o_sativa_ir64_lmp2kbp2_gcc.png');
+INSERT INTO lib_qc (lib_qc_type, library, figure) VALUES (4, 17, 'lib_qc.figure.o_sativa_ir64_lmp2kbp2_ks.png');
+INSERT INTO lib_qc (lib_qc_type, library, figure) VALUES (5, 17, 'lib_qc.figure.o_sativa_ir64_lmp2kbp2_kd.png');
+
+--o.stativa.dj123 pe180bp
+--INSERT INTO lib_qc (lib_qc_type, library, figure) VALUES (1, 18, 'lib_qc.figure.o_sativa_dj123_pe180bp_rl.png');
+--INSERT INTO lib_qc (lib_qc_type, library, figure) VALUES (2, 18, 'lib_qc.figure.o_sativa_dj123_pe180bp_fs.png');
+--INSERT INTO lib_qc (lib_qc_type, library, figure) VALUES (3, 18, 'lib_qc.figure.o_sativa_dj123_pe180bp_gcc.png');
+INSERT INTO lib_qc (lib_qc_type, library, figure) VALUES (4, 18, 'lib_qc.figure.o_sativa_dj123_pe180bp_ks.png');
+INSERT INTO lib_qc (lib_qc_type, library, figure) VALUES (5, 18, 'lib_qc.figure.o_sativa_dj123_pe180bp_kd.png');
+
+--o.stativa.dj123 pe300bp
+--INSERT INTO lib_qc (lib_qc_type, library, figure) VALUES (1, 19, 'lib_qc.figure.o_sativa_dj123_pe300bp_rl.png');
+--INSERT INTO lib_qc (lib_qc_type, library, figure) VALUES (2, 19, 'lib_qc.figure.o_sativa_dj123_pe300bp_fs.png');
+--INSERT INTO lib_qc (lib_qc_type, library, figure) VALUES (3, 19, 'lib_qc.figure.o_sativa_dj123_pe300bp_gcc.png');
+INSERT INTO lib_qc (lib_qc_type, library, figure) VALUES (4, 19, 'lib_qc.figure.o_sativa_dj123_pe300bp_ks.png');
+--INSERT INTO lib_qc (lib_qc_type, library, figure) VALUES (5, 19, 'lib_qc.figure.o_sativa_dj123_pe300bp_kd.png');
+
+--o.stativa.dj123 pe300bp2
+--INSERT INTO lib_qc (lib_qc_type, library, figure) VALUES (1, 20, 'lib_qc.figure.o_sativa_dj123_pe300bp2_rl.png');
+--INSERT INTO lib_qc (lib_qc_type, library, figure) VALUES (2, 20, 'lib_qc.figure.o_sativa_dj123_pe300bp2_fs.png');
+--INSERT INTO lib_qc (lib_qc_type, library, figure) VALUES (3, 20, 'lib_qc.figure.o_sativa_dj123_pe300bp2_gcc.png');
+INSERT INTO lib_qc (lib_qc_type, library, figure) VALUES (4, 20, 'lib_qc.figure.o_sativa_dj123_pe300bp2_ks.png');
+INSERT INTO lib_qc (lib_qc_type, library, figure) VALUES (5, 20, 'lib_qc.figure.o_sativa_dj123_pe300bp2_kd.png');
+
+--o.stativa.dj123 pe450bp
+--INSERT INTO lib_qc (lib_qc_type, library, figure) VALUES (1, 21, 'lib_qc.figure.o_sativa_dj123_pe450bp_rl.png');
+--INSERT INTO lib_qc (lib_qc_type, library, figure) VALUES (2, 21, 'lib_qc.figure.o_sativa_dj123_pe450bp_fs.png');
+--INSERT INTO lib_qc (lib_qc_type, library, figure) VALUES (3, 21, 'lib_qc.figure.o_sativa_dj123_pe450bp_gcc.png');
+INSERT INTO lib_qc (lib_qc_type, library, figure) VALUES (4, 21, 'lib_qc.figure.o_sativa_dj123_pe450bp_ks.png');
+INSERT INTO lib_qc (lib_qc_type, library, figure) VALUES (5, 21, 'lib_qc.figure.o_sativa_dj123_pe450bp_kd.png');
+
+--o.stativa.dj123 lmp2kbp
+--INSERT INTO lib_qc (lib_qc_type, library, figure) VALUES (1, 22, 'lib_qc.figure.o_sativa_dj123_lmp2kbp_rl.png');
+--INSERT INTO lib_qc (lib_qc_type, library, figure) VALUES (2, 22, 'lib_qc.figure.o_sativa_dj123_lmp2kbp_fs.png');
+--INSERT INTO lib_qc (lib_qc_type, library, figure) VALUES (3, 22, 'lib_qc.figure.o_sativa_dj123_lmp2kbp_gcc.png');
+INSERT INTO lib_qc (lib_qc_type, library, figure) VALUES (4, 22, 'lib_qc.figure.o_sativa_dj123_lmp2kbp_ks.png');
+INSERT INTO lib_qc (lib_qc_type, library, figure) VALUES (5, 22, 'lib_qc.figure.o_sativa_dj123_lmp2kbp_kd.png');
+
+--o.stativa.dj123 lmp2kbp2
+--INSERT INTO lib_qc (lib_qc_type, library, figure) VALUES (1, 23, 'lib_qc.figure.o_sativa_dj123_lmp2kbp2_rl.png');
+--INSERT INTO lib_qc (lib_qc_type, library, figure) VALUES (2, 23, 'lib_qc.figure.o_sativa_dj123_lmp2kbp2_fs.png');
+--INSERT INTO lib_qc (lib_qc_type, library, figure) VALUES (3, 23, 'lib_qc.figure.o_sativa_dj123_lmp2kbp2_gcc.png');
+INSERT INTO lib_qc (lib_qc_type, library, figure) VALUES (4, 23, 'lib_qc.figure.o_sativa_dj123_lmp2kbp2_ks.png');
+INSERT INTO lib_qc (lib_qc_type, library, figure) VALUES (5, 23, 'lib_qc.figure.o_sativa_dj123_lmp2kbp2_kd.png');
+
+--o.stativa.dj123 lmp5kbp
+--INSERT INTO lib_qc (lib_qc_type, library, figure) VALUES (1, 24, 'lib_qc.figure.o_sativa_dj123_lmp5kbp_rl.png');
+--INSERT INTO lib_qc (lib_qc_type, library, figure) VALUES (2, 24, 'lib_qc.figure.o_sativa_dj123_lmp5kbp_fs.png');
+--INSERT INTO lib_qc (lib_qc_type, library, figure) VALUES (3, 24, 'lib_qc.figure.o_sativa_dj123_lmp5kbp_gcc.png');
+INSERT INTO lib_qc (lib_qc_type, library, figure) VALUES (4, 24, 'lib_qc.figure.o_sativa_dj123_lmp5kbp_ks.png');
+--INSERT INTO lib_qc (lib_qc_type, library, figure) VALUES (5, 24, 'lib_qc.figure.o_sativa_dj123_lmp5kbp_kd.png');
+
+--A. thalinana pe200bp
+--INSERT INTO lib_qc (lib_qc_type, library, figure) VALUES (1, 25, 'lib_qc.figure.a_thaliana_ler0_pe200_rl.png');
+--INSERT INTO lib_qc (lib_qc_type, library, figure) VALUES (2, 25, 'lib_qc.figure.a_thaliana_ler0_pe200_fs.png');
+--INSERT INTO lib_qc (lib_qc_type, library, figure) VALUES (3, 25, 'lib_qc.figure.a_thaliana_ler0_pe200_gcc.png');
+INSERT INTO lib_qc (lib_qc_type, library, figure) VALUES (4, 25, 'lib_qc.figure.a_thaliana_ler0_pe200_ks.png');
+INSERT INTO lib_qc (lib_qc_type, library, figure) VALUES (5, 25, 'lib_qc.figure.a_thaliana_ler0_pe200_kd.png');
+
+--A. thalinana pe300bp
+--INSERT INTO lib_qc (lib_qc_type, library, figure) VALUES (1, 26, 'lib_qc.figure.a_thaliana_ler0_pe300_rl.png');
+--INSERT INTO lib_qc (lib_qc_type, library, figure) VALUES (2, 26, 'lib_qc.figure.a_thaliana_ler0_pe300_fs.png');
+--INSERT INTO lib_qc (lib_qc_type, library, figure) VALUES (3, 26, 'lib_qc.figure.a_thaliana_ler0_pe300_gcc.png');
+INSERT INTO lib_qc (lib_qc_type, library, figure) VALUES (4, 26, 'lib_qc.figure.a_thaliana_ler0_pe300_ks.png');
+INSERT INTO lib_qc (lib_qc_type, library, figure) VALUES (5, 26, 'lib_qc.figure.a_thaliana_ler0_pe300_kd.png');
+
+--A. thalinana pe400bp
+--INSERT INTO lib_qc (lib_qc_type, library, figure) VALUES (1, 26, 'lib_qc.figure.a_thaliana_ler0_pe400_rl.png');
+--INSERT INTO lib_qc (lib_qc_type, library, figure) VALUES (2, 26, 'lib_qc.figure.a_thaliana_ler0_pe400_fs.png');
+--INSERT INTO lib_qc (lib_qc_type, library, figure) VALUES (3, 26, 'lib_qc.figure.a_thaliana_ler0_pe400_gcc.png');
+INSERT INTO lib_qc (lib_qc_type, library, figure) VALUES (4, 26, 'lib_qc.figure.a_thaliana_ler0_pe400_ks.png');
+INSERT INTO lib_qc (lib_qc_type, library, figure) VALUES (5, 26, 'lib_qc.figure.a_thaliana_ler0_pe400_kd.png');
+
+--------- end qc data -----------
 -- dataset
 INSERT INTO dataset (name, specie) VALUES ('dataset A. Sharonensis 1', 1);
 INSERT INTO dataset (name, specie) VALUES ('dataset O. Sativa Nb', 2);
