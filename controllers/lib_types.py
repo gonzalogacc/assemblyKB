@@ -12,4 +12,3 @@ def lib_type():
     libraries = db(db.library.lib_type==id).select()
 
     return {'lib_type': lib_type, 'libraries': libraries}
-

@@ -15,7 +15,7 @@ db.define_table('library',
                 Field('specie', 'reference specie'),
                 Field('lib_type', 'reference lib_type'),
                 Field('read_processing', 'reference read_processing'),
-                Field('bp_size'),
+                Field('coverage'),
                 Field('read_size'),
                 Field('fragment_size'),
                 format='%(name)s')
