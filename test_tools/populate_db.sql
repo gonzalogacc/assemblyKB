@@ -1,81 +1,84 @@
--- specie table
-INSERT INTO specie (name) VALUES ('Aegilops sharonensis');
-INSERT INTO specie (name) VALUES ('Oryza sativa Nipponbare');
-INSERT INTO specie (name) VALUES ('Oryza sativa IR64');
-INSERT INTO specie (name) VALUES ('Oryza sativa DJ123');
-INSERT INTO specie (name) VALUES ('Arabidopsis thaliana ler-0');
-INSERT INTO specie (name) VALUES ('Arabidopsis thaliana col-0');
-INSERT INTO specie (name) VALUES ('None');
+-- DO NOT CHANGE ORDER!!! (add new ENTRIES at the bottom of the list)
 
--- lib_type
-INSERT INTO lib_type (software, name) VALUES (1, 'illumina PE');
-INSERT INTO lib_type (software, name) VALUES (1, 'illumina LMP');
-INSERT INTO lib_type (software, name) VALUES (1, 'illumina Nextera LMP');
-INSERT INTO lib_type (software, name) VALUES (1, 'PacBio');
-INSERT INTO lib_type (software, name) VALUES (1, '454');
-INSERT INTO lib_type (software, name) VALUES (1, 'Bionano');
+-- specie table DO NOT CHANGE ORDER!!! (add new ENTRIES at the bottom of the list)
+INSERT INTO specie (id, name) VALUES (1, 'Aegilops sharonensis');
+INSERT INTO specie (id, name) VALUES (2, 'Oryza sativa Nipponbare');
+INSERT INTO specie (id, name) VALUES (3, 'Oryza sativa IR64');
+INSERT INTO specie (id, name) VALUES (4, 'Oryza sativa DJ123');
+INSERT INTO specie (id, name) VALUES (5, 'Arabidopsis thaliana ler-0');
+INSERT INTO specie (id, name) VALUES (6, 'Arabidopsis thaliana col-0');
+INSERT INTO specie (id, name) VALUES (7, 'None');
 
--- library
+-- lib_type DO NOT CHANGE ORDER!!! (add new ENTRIES at the bottom of the list)
+INSERT INTO lib_type (id, software, name) VALUES (1, 1, 'illumina PE');
+INSERT INTO lib_type (id, software, name) VALUES (2, 1, 'illumina LMP');
+INSERT INTO lib_type (id, software, name) VALUES (3, 1, 'illumina Nextera LMP');
+INSERT INTO lib_type (id, software, name) VALUES (4, 1, 'PacBio');
+INSERT INTO lib_type (id, software, name) VALUES (5, 1, '454');
+INSERT INTO lib_type (id, software, name) VALUES (6, 1, 'Bionano');
+
+-- library DO NOT CHANGE ORDER!!! (add new ENTRIES at the bottom of the list)
 -- A. sharonensis
-INSERT INTO library (lib_type, read_processing, specie, name, coverage, read_size, fragment_size) VALUES (1, 1, 1, 'PE 200bp frag', 199, 100, 200);
-INSERT INTO library (lib_type, read_processing, specie, name, coverage, read_size, fragment_size) VALUES (1, 1, 1, 'PE 300bp frag', 202, 100, 300);
-INSERT INTO library (lib_type, read_processing, specie, name, coverage, read_size, fragment_size) VALUES (2, 1, 1, 'LMP 3kb', -1, 20, 3000);
-INSERT INTO library (lib_type, read_processing, specie, name, coverage, read_size, fragment_size) VALUES (2, 1, 1, 'LMP 8kb', -1, 100, 8000);
+INSERT INTO library (id, lib_type, read_processing, specie, name, coverage, read_size, fragment_size) VALUES (1, 1, 1, 1, 'PE 200bp frag', 199, 100, 200);
+INSERT INTO library (id, lib_type, read_processing, specie, name, coverage, read_size, fragment_size) VALUES (2, 1, 1, 1, 'PE 300bp frag', 202, 100, 300);
+INSERT INTO library (id, lib_type, read_processing, specie, name, coverage, read_size, fragment_size) VALUES (3, 2, 1, 1, 'LMP 3kb', -1, 20, 3000);
+INSERT INTO library (id, lib_type, read_processing, specie, name, coverage, read_size, fragment_size) VALUES (4, 2, 1, 1, 'LMP 8kb', -1, 100, 8000);
 
 -- O. Sativa Nipponbare
-INSERT INTO library (lib_type, read_processing, specie, name, coverage, read_size, fragment_size) VALUES (1, 1, 2, 'PE 150bp frag', 58, 100, 150);
-INSERT INTO library (lib_type, read_processing, specie, name, coverage, read_size, fragment_size) VALUES (1, 1, 2, 'PE 300bp frag 1', 49, 100, 300);
-INSERT INTO library (lib_type, read_processing, specie, name, coverage, read_size, fragment_size) VALUES (1, 1, 2, 'PE 300bp frag 2', 20, 100, 300);
-INSERT INTO library (lib_type, read_processing, specie, name, coverage, read_size, fragment_size) VALUES (2, 1, 2, 'LMP 2kb jump 1', 563, 100, 2000);
-INSERT INTO library (lib_type, read_processing, specie, name, coverage, read_size, fragment_size) VALUES (2, 1, 2, 'LMP 2kb jump 2', 12, 100, 2000);
-INSERT INTO library (lib_type, read_processing, specie, name, coverage, read_size, fragment_size) VALUES (2, 1, 2, 'LMP 2kb jump 3', 14, 100, 2000);
-INSERT INTO library (lib_type, read_processing, specie, name, coverage, read_size, fragment_size) VALUES (2, 1, 2, 'LMP 5kb jump', 483, 100, 5000);
+INSERT INTO library (id, lib_type, read_processing, specie, name, coverage, read_size, fragment_size) VALUES (5, 1, 1, 2, 'PE 150bp frag', 58, 100, 150);
+INSERT INTO library (id, lib_type, read_processing, specie, name, coverage, read_size, fragment_size) VALUES (6, 1, 1, 2, 'PE 300bp frag 1', 49, 100, 300);
+INSERT INTO library (id, lib_type, read_processing, specie, name, coverage, read_size, fragment_size) VALUES (7, 1, 1, 2, 'PE 300bp frag 2', 20, 100, 300);
+INSERT INTO library (id, lib_type, read_processing, specie, name, coverage, read_size, fragment_size) VALUES (8, 2, 1, 2, 'LMP 2kb jump 1', 563, 100, 2000);
+INSERT INTO library (id, lib_type, read_processing, specie, name, coverage, read_size, fragment_size) VALUES (9, 2, 1, 2, 'LMP 2kb jump 2', 12, 100, 2000);
+INSERT INTO library (id, lib_type, read_processing, specie, name, coverage, read_size, fragment_size) VALUES (10, 2, 1, 2, 'LMP 2kb jump 3', 14, 100, 2000);
+INSERT INTO library (id, lib_type, read_processing, specie, name, coverage, read_size, fragment_size) VALUES (11, 2, 1, 2, 'LMP 5kb jump', 483, 100, 5000);
 
 -- O. Sativa IR64
-INSERT INTO library (lib_type, read_processing, specie, name, coverage, read_size, fragment_size) VALUES (1, 1, 3, 'PE 180bp frag', 241, 100, 180);
-INSERT INTO library (lib_type, read_processing, specie, name, coverage, read_size, fragment_size) VALUES (1, 1, 3, 'PE 300bp frag 1', 43, 100, 300);
-INSERT INTO library (lib_type, read_processing, specie, name, coverage, read_size, fragment_size) VALUES (1, 1, 3, 'PE 300bp frag 2', 32, 100, 300);
-INSERT INTO library (lib_type, read_processing, specie, name, coverage, read_size, fragment_size) VALUES (1, 1, 3, 'PE 450bp frag 1', 46, 100, 450);
-INSERT INTO library (lib_type, read_processing, specie, name, coverage, read_size, fragment_size) VALUES (2, 1, 3, 'LMP 2kb jump 1', 591, 100, 2000);
-INSERT INTO library (lib_type, read_processing, specie, name, coverage, read_size, fragment_size) VALUES (2, 1, 3, 'LMP 2kb jump 2', 8, 100, 2000);
+INSERT INTO library (id, lib_type, read_processing, specie, name, coverage, read_size, fragment_size) VALUES (12, 1, 1, 3, 'PE 180bp frag', 241, 100, 180);
+INSERT INTO library (id, lib_type, read_processing, specie, name, coverage, read_size, fragment_size) VALUES (13, 1, 1, 3, 'PE 300bp frag 1', 43, 100, 300);
+INSERT INTO library (id, lib_type, read_processing, specie, name, coverage, read_size, fragment_size) VALUES (14, 1, 1, 3, 'PE 300bp frag 2', 32, 100, 300);
+INSERT INTO library (id, lib_type, read_processing, specie, name, coverage, read_size, fragment_size) VALUES (15, 1, 1, 3, 'PE 450bp frag 1', 46, 100, 450);
+INSERT INTO library (id, lib_type, read_processing, specie, name, coverage, read_size, fragment_size) VALUES (16, 2, 1, 3, 'LMP 2kb jump 1', 591, 100, 2000);
+INSERT INTO library (id, lib_type, read_processing, specie, name, coverage, read_size, fragment_size) VALUES (17, 2, 1, 3, 'LMP 2kb jump 2', 8, 100, 2000);
 
 -- O. Sativa DJ123
-INSERT INTO library (lib_type, read_processing, specie, name, coverage, read_size, fragment_size) VALUES (1, 1, 4, 'PE 180bp frag', 198, 100, 180);
-INSERT INTO library (lib_type, read_processing, specie, name, coverage, read_size, fragment_size) VALUES (1, 1, 4, 'PE 300bp frag 1', 29, 100, 300);
-INSERT INTO library (lib_type, read_processing, specie, name, coverage, read_size, fragment_size) VALUES (1, 1, 4, 'PE 300bp frag 2', 20, 100, 300);
-INSERT INTO library (lib_type, read_processing, specie, name, coverage, read_size, fragment_size) VALUES (1, 1, 4, 'PE 450bp frag', 55, 100, 450);
-INSERT INTO library (lib_type, read_processing, specie, name, coverage, read_size, fragment_size) VALUES (2, 1, 4, 'LMP 2kb jump 1', 496, 100, 2000);
-INSERT INTO library (lib_type, read_processing, specie, name, coverage, read_size, fragment_size) VALUES (2, 1, 4, 'LMP 2kb jump 2', 8, 100, 2000);
-INSERT INTO library (lib_type, read_processing, specie, name, coverage, read_size, fragment_size) VALUES (2, 1, 4, 'LMP 5kb jump 1', 473, 100, 5000);
+INSERT INTO library (id, lib_type, read_processing, specie, name, coverage, read_size, fragment_size) VALUES (18, 1, 1, 4, 'PE 180bp frag', 198, 100, 180);
+INSERT INTO library (id, lib_type, read_processing, specie, name, coverage, read_size, fragment_size) VALUES (19, 1, 1, 4, 'PE 300bp frag 1', 29, 100, 300);
+INSERT INTO library (id, lib_type, read_processing, specie, name, coverage, read_size, fragment_size) VALUES (20, 1, 1, 4, 'PE 300bp frag 2', 20, 100, 300);
+INSERT INTO library (id, lib_type, read_processing, specie, name, coverage, read_size, fragment_size) VALUES (21, 1, 1, 4, 'PE 450bp frag', 55, 100, 450);
+INSERT INTO library (id, lib_type, read_processing, specie, name, coverage, read_size, fragment_size) VALUES (22, 2, 1, 4, 'LMP 2kb jump 1', 496, 100, 2000);
+INSERT INTO library (id, lib_type, read_processing, specie, name, coverage, read_size, fragment_size) VALUES (23, 2, 1, 4, 'LMP 2kb jump 2', 8, 100, 2000);
+INSERT INTO library (id, lib_type, read_processing, specie, name, coverage, read_size, fragment_size) VALUES (24, 2, 1, 4, 'LMP 5kb jump 1', 473, 100, 5000);
 
 -- A. Thaliana ler-0
-INSERT INTO library (lib_type, read_processing, specie, name, coverage, read_size, fragment_size) VALUES (1, 3, 5, 'PE 200bp frag 1', 14, 100, 200);
-INSERT INTO library (lib_type, read_processing, specie, name, coverage, read_size, fragment_size) VALUES (1, 3, 5, 'PE 300bp frag 1', 40, 100, 300);
-INSERT INTO library (lib_type, read_processing, specie, name, coverage, read_size, fragment_size) VALUES (1, 3, 5, 'PE 400bp frag 1', 8, 100, 400);
-INSERT INTO library (lib_type, read_processing, specie, name, coverage, read_size, fragment_size) VALUES (4, 3, 5, 'Pacbio', 41, 100, 'n/a');
+INSERT INTO library (id, lib_type, read_processing, specie, name, coverage, read_size, fragment_size) VALUES (25, 1, 3, 5, 'PE 200bp frag 1', 14, 100, 200);
+INSERT INTO library (id, lib_type, read_processing, specie, name, coverage, read_size, fragment_size) VALUES (26, 1, 3, 5, 'PE 300bp frag 1', 40, 100, 300);
+INSERT INTO library (id, lib_type, read_processing, specie, name, coverage, read_size, fragment_size) VALUES (27, 1, 3, 5, 'PE 400bp frag 1', 8, 100, 400);
+INSERT INTO library (id, lib_type, read_processing, specie, name, coverage, read_size, fragment_size) VALUES (28, 4, 3, 5, 'Pacbio', 41, 100, 'n/a');
 
 -- A. thalinana col-0
---fill
+-- to fill
 
--- ref genome
-INSERT INTO ref_genome (specie, name) VALUES (1, 'ref A. Sharonensis');
-INSERT INTO ref_genome (specie, name) VALUES (2, 'ref O. Sativa Nipponbare');
-INSERT INTO ref_genome (specie, name) VALUES (3, 'ref O. Sativa IR64');
-INSERT INTO ref_genome (specie, name) VALUES (4, 'ref O. Sativa DJ123');
-INSERT INTO ref_genome (specie, name) VALUES (5, 'ref A.thaliana ler-0');
-INSERT INTO ref_genome (specie, name) VALUES (6, 'ref A.thaliana col-0');
-INSERT INTO ref_genome (specie, name) VALUES (7, 'None');
+-- ref genome DO NOT CHANGE ORDER!!! (add new ENTRIES at the bottom of the list)
+INSERT INTO ref_genome (id, specie, name) VALUES (1, 1, 'ref A. Sharonensis');
+INSERT INTO ref_genome (id, specie, name) VALUES (2, 2, 'ref O. Sativa Nipponbare');
+INSERT INTO ref_genome (id, specie, name) VALUES (3, 3, 'ref O. Sativa IR64');
+INSERT INTO ref_genome (id, specie, name) VALUES (4, 4, 'ref O. Sativa DJ123');
+INSERT INTO ref_genome (id, specie, name) VALUES (5, 5, 'ref A.thaliana ler-0');
+INSERT INTO ref_genome (id, specie, name) VALUES (6, 6, 'ref A.thaliana col-0');
+INSERT INTO ref_genome (id, specie, name) VALUES (7, 7, 'None');
 
--- lib_qc_type
-INSERT INTO lib_qc_type (ref_genome, name) VALUES (7, 'Read length');
-INSERT INTO lib_qc_type (ref_genome, name) VALUES (7, 'Fragment size');
-INSERT INTO lib_qc_type (ref_genome, name) VALUES (7, 'GC content');
-INSERT INTO lib_qc_type (ref_genome, name) VALUES (7, 'K-mer spectra');
-INSERT INTO lib_qc_type (ref_genome, name) VALUES (7, 'K-mer density read1 vs read2');
-INSERT INTO lib_qc_type (ref_genome, name) VALUES (7, 'other');
+-- lib_qc_type DO NOT CHANGE ORDER!!! (add new ENTRIES at the bottom of the list)
+INSERT INTO lib_qc_type (id, ref_genome, name) VALUES (1, 7, 'Read length');
+INSERT INTO lib_qc_type (id, ref_genome, name) VALUES (2, 7, 'Fragment size');
+INSERT INTO lib_qc_type (id, ref_genome, name) VALUES (3, 7, 'GC content');
+INSERT INTO lib_qc_type (id, ref_genome, name) VALUES (4, 7, 'K-mer spectra');
+INSERT INTO lib_qc_type (id, ref_genome, name) VALUES (5, 7, 'K-mer density read1 vs read2');
+INSERT INTO lib_qc_type (id, ref_genome, name) VALUES (6, 7, 'other');
 
 --------- begin qc data -----------
--- lib_qc
+-- lib_qc DO NOT CHANGE ORDER!!! (add new ENTRIES at the bottom of the list)
+
 --a.sharonensis pe200bp
 --INSERT INTO lib_qc (lib_qc_type, library, figure) VALUES (1, 1, 'lib_qc.figure.a_sharonensis_pe200bp_rl.png');
 INSERT INTO lib_qc (lib_qc_type, library, figure) VALUES (2, 1, 'lib_qc.figure.a_sharonensis_pe200bp_fs.png');
@@ -271,9 +274,10 @@ INSERT INTO lib_qc (lib_qc_type, library, figure) VALUES (5, 26, 'lib_qc.figure.
 --INSERT INTO lib_qc (lib_qc_type, library, figure) VALUES (3, 26, 'lib_qc.figure.a_thaliana_ler0_pe400_gcc.png');
 INSERT INTO lib_qc (lib_qc_type, library, figure) VALUES (4, 26, 'lib_qc.figure.a_thaliana_ler0_pe400_ks.png');
 INSERT INTO lib_qc (lib_qc_type, library, figure) VALUES (5, 26, 'lib_qc.figure.a_thaliana_ler0_pe400_kd.png');
-
 --------- end qc data -----------
--- dataset
+
+
+-- datasets DO NOT CHANGE ORDER!!! (add new ENTRIES at the bottom of the list)
 INSERT INTO dataset (name, specie) VALUES ('dataset A. Sharonensis 1', 1);
 INSERT INTO dataset (name, specie) VALUES ('dataset O. Sativa Nb', 2);
 INSERT INTO dataset (name, specie) VALUES ('dataset O. Sativa IR64', 3);
@@ -281,47 +285,63 @@ INSERT INTO dataset (name, specie) VALUES ('dataset O. Sativa DJ123', 4);
 INSERT INTO dataset (name, specie) VALUES ('dataset A. Thaliana ler-0', 5);
 INSERT INTO dataset (name, specie) VALUES ('dataset A. Thaliana col-0', 6);
 
--- dataset_library
+-- dataset_library, DO NOT CHANGE ORDER!!! (add new ENTRIES at the bottom of the list)
+-- dataset a. sharonensis ds1
+-- pe
 INSERT INTO dataset_library (dataset, library) VALUES (1, 1);
 INSERT INTO dataset_library (dataset, library) VALUES (1, 2);
+-- lmp
 INSERT INTO dataset_library (dataset, library) VALUES (1, 3);
 INSERT INTO dataset_library (dataset, library) VALUES (1, 4);
 
+-- dataset o. staiva nb ds1
+-- pe
 INSERT INTO dataset_library (dataset, library) VALUES (2, 5);
 INSERT INTO dataset_library (dataset, library) VALUES (2, 6);
 INSERT INTO dataset_library (dataset, library) VALUES (2, 7);
+-- lmp
 INSERT INTO dataset_library (dataset, library) VALUES (2, 8);
 INSERT INTO dataset_library (dataset, library) VALUES (2, 9);
 INSERT INTO dataset_library (dataset, library) VALUES (2, 10);
 INSERT INTO dataset_library (dataset, library) VALUES (2, 11);
 
+-- dataset o. staiva ir64 ds1
+-- pe
 INSERT INTO dataset_library (dataset, library) VALUES (3, 12);
 INSERT INTO dataset_library (dataset, library) VALUES (3, 13);
 INSERT INTO dataset_library (dataset, library) VALUES (3, 14);
 INSERT INTO dataset_library (dataset, library) VALUES (3, 15);
-INSERT INTO dataset_library (dataset, library) VALUES (3, 16);
-INSERT INTO dataset_library (dataset, library) VALUES (3, 17);
+-- lmp
+-- INSERT INTO dataset_library (dataset, library) VALUES (3, 16);
+-- INSERT INTO dataset_library (dataset, library) VALUES (3, 17);
 
+-- dataset o. staiva dj123 ds1
+-- pe
 INSERT INTO dataset_library (dataset, library) VALUES (4, 18);
 INSERT INTO dataset_library (dataset, library) VALUES (4, 19);
 INSERT INTO dataset_library (dataset, library) VALUES (4, 20);
 INSERT INTO dataset_library (dataset, library) VALUES (4, 21);
-INSERT INTO dataset_library (dataset, library) VALUES (4, 22);
-INSERT INTO dataset_library (dataset, library) VALUES (4, 23);
-INSERT INTO dataset_library (dataset, library) VALUES (4, 24);
+-- lmp
+-- INSERT INTO dataset_library (dataset, library) VALUES (4, 22);
+-- INSERT INTO dataset_library (dataset, library) VALUES (4, 23);
+-- INSERT INTO dataset_library (dataset, library) VALUES (4, 24);
 
+-- dataset a. thaliana ler-0 ds1
+-- pe
 INSERT INTO dataset_library (dataset, library) VALUES (5, 25);
 INSERT INTO dataset_library (dataset, library) VALUES (5, 26);
 INSERT INTO dataset_library (dataset, library) VALUES (5, 27);
-INSERT INTO dataset_library (dataset, library) VALUES (5, 28);
+-- INSERT INTO dataset_library (dataset, library) VALUES (5, 28);
+---------- end dataset_library --------------------
 
--- sw_type
+
+-- sw_type DO NOT CHANGE ORDER!!! (add new ENTRIES at the bottom of the list)
 INSERT INTO sw_type (name) VALUES ('Qc');
 INSERT INTO sw_type (name) VALUES ('Read processing');
 INSERT INTO sw_type (name) VALUES ('Assembly');
 INSERT INTO sw_type (name) VALUES ('None');
 
--- software
+-- software DO NOT CHANGE ORDER!!! (add new ENTRIES at the bottom of the list)
 INSERT INTO software (name, sw_type) VALUES ('None', 4);
 INSERT INTO software (name, sw_type) VALUES ('ABYSS', 3);
 INSERT INTO software (name, sw_type) VALUES ('SOAPdenovo', 3);
@@ -331,42 +351,55 @@ INSERT INTO software (name, sw_type) VALUES ('NextClip', 2);
 INSERT INTO software (name, sw_type) VALUES ('Trimmomatic', 2);
 INSERT INTO software (name, sw_type) VALUES ('KAT', 1);
 
--- assembly_pipeline
+-- assembly_pipeline DO NOT CHANGE ORDER!!! (add new ENTRIES at the bottom of the list)
 INSERT INTO assembly_pipeline (name) VALUES ('pipeline Abyss generic');
 INSERT INTO assembly_pipeline (name) VALUES ('pipeline Soap generic');
 INSERT INTO assembly_pipeline (name) VALUES ('pipeline Allpaths generic');
 
--- pipeline_component
-INSERT INTO pipeline_component (pipeline, name, step_order, software) VALUES (1, 'adaptor triming', 1, 1);
-INSERT INTO pipeline_component (pipeline, name, step_order, software) VALUES (1, 'assembly', 1, 2);
-INSERT INTO pipeline_component (pipeline, name, step_order, software) VALUES (2, 'adaptor triming', 1, 1);
-INSERT INTO pipeline_component (pipeline, name, step_order, software) VALUES (2, 'assembly', 1, 3);
-INSERT INTO pipeline_component (pipeline, name, step_order, software) VALUES (3, 'adaptor triming', 1, 1);
-INSERT INTO pipeline_component (pipeline, name, step_order, software) VALUES (3, 'assembly', 1, 4);
+-- pipeline_component DO NOT CHANGE ORDER!!! (add new ENTRIES at the bottom of the list)
+-- INSERT INTO pipeline_component (pipeline, name, step_order, software, parameters) VALUES (1, 'adaptor triming', 1, 1, "{}");
+INSERT INTO pipeline_component (pipeline, name, step_order, software, parameters) VALUES (1, 'assembly', 1, 2, "{'k': 31}");
+-- INSERT INTO pipeline_component (pipeline, name, step_order, software, parameters) VALUES (2, 'adaptor triming', 1, 1, "{}");
+INSERT INTO pipeline_component (pipeline, name, step_order, software, parameters) VALUES (2, 'assembly', 1, 3, "{'k': 31}");
+-- INSERT INTO pipeline_component (pipeline, name, step_order, software, parameters) VALUES (3, 'adaptor triming', 1, 1, "{}");
+INSERT INTO pipeline_component (pipeline, name, step_order, software, parameters) VALUES (3, 'assembly', 1, 4, "{'k': 31}");
 
--- assembly_run
+------------- begin assembly runs ---------------
+-- assembly_run (so far same ds different pipelines) DO NOT CHANGE ORDER!!! (add new ENTRIES at the bottom of the list)
+-- A. sharonensis
 INSERT INTO assembly_run (assembly_pipeline, specie, dataset, name) VALUES (1, 1, 1, 'Run1 A. Sharonensis');
 INSERT INTO assembly_run (assembly_pipeline, specie, dataset, name) VALUES (2, 1, 1, 'Run2 A. Sharonensis');
 INSERT INTO assembly_run (assembly_pipeline, specie, dataset, name) VALUES (3, 1, 1, 'Run3 A. Sharonensis');
+
+-- O. Sativa nb
 INSERT INTO assembly_run (assembly_pipeline, specie, dataset, name) VALUES (1, 2, 2, 'Run1 O. Sativa Nb');
 INSERT INTO assembly_run (assembly_pipeline, specie, dataset, name) VALUES (2, 2, 2, 'Run2 O. Sativa Nb');
 INSERT INTO assembly_run (assembly_pipeline, specie, dataset, name) VALUES (3, 2, 2, 'Run3 O. Sativa Nb');
+
+-- O. Sativa ir64
 INSERT INTO assembly_run (assembly_pipeline, specie, dataset, name) VALUES (1, 3, 3, 'Run1 O. Sativa IR64');
 INSERT INTO assembly_run (assembly_pipeline, specie, dataset, name) VALUES (2, 3, 3, 'Run2 O. Sativa IR64');
 INSERT INTO assembly_run (assembly_pipeline, specie, dataset, name) VALUES (3, 3, 3, 'Run3 O. Sativa IR64');
+
+-- O. Sativa dj123
 INSERT INTO assembly_run (assembly_pipeline, specie, dataset, name) VALUES (1, 4, 4, 'Run1 O. Sativa DJ123');
 INSERT INTO assembly_run (assembly_pipeline, specie, dataset, name) VALUES (2, 4, 4, 'Run2 O. Sativa DJ123');
 INSERT INTO assembly_run (assembly_pipeline, specie, dataset, name) VALUES (3, 4, 4, 'Run3 O. Sativa DJ123');
+
+-- A. thalinana ler-0
 INSERT INTO assembly_run (assembly_pipeline, specie, dataset, name) VALUES (1, 5, 5, 'Run1 A. Thaliana ler-0');
 INSERT INTO assembly_run (assembly_pipeline, specie, dataset, name) VALUES (2, 5, 5, 'Run2 A. Thaliana ler-0');
 INSERT INTO assembly_run (assembly_pipeline, specie, dataset, name) VALUES (3, 5, 5, 'Run3 A. Thaliana ler-0');
 
--- read_processing
+------------- end assembly runs ---------------
+
+-- read_processing DO NOT CHANGE ORDER!!! (add new ENTRIES at the bottom of the list)
 INSERT INTO read_processing (name, software) VALUES ('No processing', 4);
 INSERT INTO read_processing (name, software) VALUES ('adaptor trimming', 2);
 INSERT INTO read_processing (name, software) VALUES ('qual test', 1);
 
--- assembled_seq
+---------------- begin assembled seq --------------------
+-- assembled_seq DO NOT CHANGE ORDER!!! (add new ENTRIES at the bottom of the list)
 INSERT INTO assembled_seq (name, assembly_run) VALUES ('assembled A. Sharonensis 1', 1);
 INSERT INTO assembled_seq (name, assembly_run) VALUES ('assembled A. Sharonensis 2', 2);
 INSERT INTO assembled_seq (name, assembly_run) VALUES ('assembled A. Sharonensis 3', 3);
@@ -387,77 +420,90 @@ INSERT INTO assembled_seq (name, assembly_run) VALUES ('assembled A. Thaliana le
 INSERT INTO assembled_seq (name, assembly_run) VALUES ('assembled A. Thaliana ler-0 2', 14);
 INSERT INTO assembled_seq (name, assembly_run) VALUES ('assembled A. Thaliana ler-0 3', 15);
 
--- assembly_qc_type
-INSERT INTO assembly_qc_type (name) VALUES ('Base content');
-INSERT INTO assembly_qc_type (name) VALUES ('Contig length');
-INSERT INTO assembly_qc_type (name) VALUES ('Scaffolds length');
+---------------- end assembled seq --------------------
 
--- assembly_qc
-INSERT INTO assembly_qc (ref_genome, assembly_qc_type, assembled_seq) VALUES (7, 1, 1);
-INSERT INTO assembly_qc (ref_genome, assembly_qc_type, assembled_seq) VALUES (7, 2, 1);
-INSERT INTO assembly_qc (ref_genome, assembly_qc_type, assembled_seq) VALUES (7, 3, 1);
+-- assembly_qc_type DO NOT CHANGE ORDER!!! (add new ENTRIES at the bottom of the list)
+INSERT INTO assembly_qc_type (name) VALUES ('Contigs base content');
+INSERT INTO assembly_qc_type (name) VALUES ('scaffolds base content');
+INSERT INTO assembly_qc_type (name) VALUES ('Length report');
+INSERT INTO assembly_qc_type (name) VALUES ('GC report');
+INSERT INTO assembly_qc_type (name) VALUES ('Text report');
+INSERT INTO assembly_qc_type (name) VALUES ('Nx report');
 
-INSERT INTO assembly_qc (ref_genome, assembly_qc_type, assembled_seq) VALUES (7, 1, 2);
-INSERT INTO assembly_qc (ref_genome, assembly_qc_type, assembled_seq) VALUES (7, 2, 2);
-INSERT INTO assembly_qc (ref_genome, assembly_qc_type, assembled_seq) VALUES (7, 3, 2);
+--------------- begin assembly_qc ------------
+-- assembly_qc DO NOT CHANGE ORDER!!! (add new ENTRIES at the bottom of the list)
+-- a. sharonensis run1
+INSERT INTO assembly_qc (ref_genome, assembly_qc_type, assembled_seq, figure) VALUES (7, 1, 1, 'assembly_qc.figure.a_sharonensis_run1_bc.png');
+INSERT INTO assembly_qc (ref_genome, assembly_qc_type, assembled_seq, figure) VALUES (7, 2, 1, 'assembly_qc.figure.a_sharonensis_run1_lr.png');
 
-INSERT INTO assembly_qc (ref_genome, assembly_qc_type, assembled_seq) VALUES (7, 1, 3);
-INSERT INTO assembly_qc (ref_genome, assembly_qc_type, assembled_seq) VALUES (7, 2, 3);
-INSERT INTO assembly_qc (ref_genome, assembly_qc_type, assembled_seq) VALUES (7, 3, 3);
+-- -- a. sharonensis run2
+-- INSERT INTO assembly_qc (ref_genome, assembly_qc_type, assembled_seq, figure) VALUES (7, 1, 2, 'assembly_qc.figure.a_sharonensis_run2_bc.png');
+-- INSERT INTO assembly_qc (ref_genome, assembly_qc_type, assembled_seq, figure) VALUES (7, 2, 2, 'assembly_qc.figure.a_sharonensis_run2_lr.png');
 
-INSERT INTO assembly_qc (ref_genome, assembly_qc_type, assembled_seq) VALUES (7, 1, 4);
-INSERT INTO assembly_qc (ref_genome, assembly_qc_type, assembled_seq) VALUES (7, 2, 4);
-INSERT INTO assembly_qc (ref_genome, assembly_qc_type, assembled_seq) VALUES (7, 3, 4);
+-- -- a. sharonensis run3
+-- INSERT INTO assembly_qc (ref_genome, assembly_qc_type, assembled_seq, figure) VALUES (7, 1, 3, 'assembly_qc.figure.a_sharonensis_run3_bc.png');
+-- INSERT INTO assembly_qc (ref_genome, assembly_qc_type, assembled_seq, figure) VALUES (7, 2, 3, 'assembly_qc.figure.a_sharonensis_run3_lr.png');
 
-INSERT INTO assembly_qc (ref_genome, assembly_qc_type, assembled_seq) VALUES (7, 1, 5);
-INSERT INTO assembly_qc (ref_genome, assembly_qc_type, assembled_seq) VALUES (7, 2, 5);
-INSERT INTO assembly_qc (ref_genome, assembly_qc_type, assembled_seq) VALUES (7, 3, 5);
+-- o. staiva nb run1
+INSERT INTO assembly_qc (ref_genome, assembly_qc_type, assembled_seq, figure) VALUES (7, 1, 4, 'assembly_qc.figure.o_sativa_nb_run1_bc.png');
+INSERT INTO assembly_qc (ref_genome, assembly_qc_type, assembled_seq, figure) VALUES (7, 2, 4, 'assembly_qc.figure.o_sativa_nb_run1_lr.png');
 
-INSERT INTO assembly_qc (ref_genome, assembly_qc_type, assembled_seq) VALUES (7, 1, 6);
-INSERT INTO assembly_qc (ref_genome, assembly_qc_type, assembled_seq) VALUES (7, 2, 6);
-INSERT INTO assembly_qc (ref_genome, assembly_qc_type, assembled_seq) VALUES (7, 3, 6);
+-- -- o. staiva nb run2
+-- INSERT INTO assembly_qc (ref_genome, assembly_qc_type, assembled_seq, figure) VALUES (7, 1, 5, 'assembly_qc.figure.o_sativa_nb_run2_bc.png');
+-- INSERT INTO assembly_qc (ref_genome, assembly_qc_type, assembled_seq, figure) VALUES (7, 2, 5, 'assembly_qc.figure.o_sativa_nb_run2_lr.png');
 
-INSERT INTO assembly_qc (ref_genome, assembly_qc_type, assembled_seq) VALUES (7, 1, 7);
-INSERT INTO assembly_qc (ref_genome, assembly_qc_type, assembled_seq) VALUES (7, 2, 7);
-INSERT INTO assembly_qc (ref_genome, assembly_qc_type, assembled_seq) VALUES (7, 3, 7);
+-- -- o. staiva nb run3
+-- INSERT INTO assembly_qc (ref_genome, assembly_qc_type, assembled_seq, figure) VALUES (7, 1, 6, 'assembly_qc.figure.o_sativa_nb_run3_bc.png');
+-- INSERT INTO assembly_qc (ref_genome, assembly_qc_type, assembled_seq, figure) VALUES (7, 2, 6, 'assembly_qc.figure.o_sativa_nb_run3_lr.png');
 
-INSERT INTO assembly_qc (ref_genome, assembly_qc_type, assembled_seq) VALUES (7, 1, 8);
-INSERT INTO assembly_qc (ref_genome, assembly_qc_type, assembled_seq) VALUES (7, 2, 8);
-INSERT INTO assembly_qc (ref_genome, assembly_qc_type, assembled_seq) VALUES (7, 3, 8);
+-- o. staiva ir64 run1
+INSERT INTO assembly_qc (ref_genome, assembly_qc_type, assembled_seq, figure) VALUES (7, 1, 7, 'assembly_qc.figure.o_sativa_ir64_run1_bc.png');
+INSERT INTO assembly_qc (ref_genome, assembly_qc_type, assembled_seq, figure) VALUES (7, 2, 7, 'assembly_qc.figure.o_sativa_ir64_run1_lr.png');
 
-INSERT INTO assembly_qc (ref_genome, assembly_qc_type, assembled_seq) VALUES (7, 1, 9);
-INSERT INTO assembly_qc (ref_genome, assembly_qc_type, assembled_seq) VALUES (7, 2, 9);
-INSERT INTO assembly_qc (ref_genome, assembly_qc_type, assembled_seq) VALUES (7, 3, 9);
+-- -- o. staiva ir64 run2
+-- INSERT INTO assembly_qc (ref_genome, assembly_qc_type, assembled_seq, figure) VALUES (7, 1, 8, 'assembly_qc.figure.o_sativa_ir64_run2_bc.png');
+-- INSERT INTO assembly_qc (ref_genome, assembly_qc_type, assembled_seq, figure) VALUES (7, 2, 8, 'assembly_qc.figure.o_sativa_ir64_run2_lr.png');
 
-INSERT INTO assembly_qc (ref_genome, assembly_qc_type, assembled_seq) VALUES (7, 1, 10);
-INSERT INTO assembly_qc (ref_genome, assembly_qc_type, assembled_seq) VALUES (7, 2, 10);
-INSERT INTO assembly_qc (ref_genome, assembly_qc_type, assembled_seq) VALUES (7, 3, 10);
+-- -- o. staiva ir64 run3
+-- INSERT INTO assembly_qc (ref_genome, assembly_qc_type, assembled_seq, figure) VALUES (7, 1, 9, 'assembly_qc.figure.o_sativa_ir64_run3_bc.png');
+-- INSERT INTO assembly_qc (ref_genome, assembly_qc_type, assembled_seq, figure) VALUES (7, 2, 9, 'assembly_qc.figure.o_sativa_ir64_run3_lr.png');
 
-INSERT INTO assembly_qc (ref_genome, assembly_qc_type, assembled_seq) VALUES (7, 1, 11);
-INSERT INTO assembly_qc (ref_genome, assembly_qc_type, assembled_seq) VALUES (7, 2, 11);
-INSERT INTO assembly_qc (ref_genome, assembly_qc_type, assembled_seq) VALUES (7, 3, 11);
+-- -- o. staiva dj123 run1
+INSERT INTO assembly_qc (ref_genome, assembly_qc_type, assembled_seq, figure) VALUES (7, 1, 10, 'assembly_qc.figure.o_sativa_dj123_run1_bc.png');
+INSERT INTO assembly_qc (ref_genome, assembly_qc_type, assembled_seq, figure) VALUES (7, 2, 10, 'assembly_qc.figure.o_sativa_dj123_run1_lr.png');
 
-INSERT INTO assembly_qc (ref_genome, assembly_qc_type, assembled_seq) VALUES (7, 1, 12);
-INSERT INTO assembly_qc (ref_genome, assembly_qc_type, assembled_seq) VALUES (7, 2, 12);
-INSERT INTO assembly_qc (ref_genome, assembly_qc_type, assembled_seq) VALUES (7, 3, 12);
+-- o. staiva dj123 run2
+-- INSERT INTO assembly_qc (ref_genome, assembly_qc_type, assembled_seq, figure) VALUES (7, 1, 11, 'assembly_qc.figure.o_sativa_dj123_run2_bc.png');
+-- INSERT INTO assembly_qc (ref_genome, assembly_qc_type, assembled_seq, figure) VALUES (7, 2, 11, 'assembly_qc.figure.o_sativa_dj123_run2_lr.png');
 
-INSERT INTO assembly_qc (ref_genome, assembly_qc_type, assembled_seq) VALUES (7, 1, 13);
-INSERT INTO assembly_qc (ref_genome, assembly_qc_type, assembled_seq) VALUES (7, 2, 13);
-INSERT INTO assembly_qc (ref_genome, assembly_qc_type, assembled_seq) VALUES (7, 3, 13);
+-- -- o. staiva dj123 run3
+-- INSERT INTO assembly_qc (ref_genome, assembly_qc_type, assembled_seq, figure) VALUES (7, 1, 12, 'assembly_qc.figure.o_sativa_dj123_run3_bc.png');
+-- INSERT INTO assembly_qc (ref_genome, assembly_qc_type, assembled_seq, figure) VALUES (7, 2, 12, 'assembly_qc.figure.o_sativa_dj123_run3_lr.png');
 
-INSERT INTO assembly_qc (ref_genome, assembly_qc_type, assembled_seq) VALUES (7, 1, 14);
-INSERT INTO assembly_qc (ref_genome, assembly_qc_type, assembled_seq) VALUES (7, 2, 14);
-INSERT INTO assembly_qc (ref_genome, assembly_qc_type, assembled_seq) VALUES (7, 3, 14);
+-- a. thalinana ler-0
+INSERT INTO assembly_qc (ref_genome, assembly_qc_type, assembled_seq, figure) VALUES (7, 1, 13, 'assembly_qc.figure.a_thaliana_ler0_run1_bc.png');
+INSERT INTO assembly_qc (ref_genome, assembly_qc_type, assembled_seq, figure) VALUES (7, 2, 13, 'assembly_qc.figure.a_thaliana_ler0_run1_lr.png');
 
-INSERT INTO assembly_qc (ref_genome, assembly_qc_type, assembled_seq) VALUES (7, 1, 15);
-INSERT INTO assembly_qc (ref_genome, assembly_qc_type, assembled_seq) VALUES (7, 2, 15);
-INSERT INTO assembly_qc (ref_genome, assembly_qc_type, assembled_seq) VALUES (7, 3, 15);
+-- -- a. thalinana ler-0
+-- INSERT INTO assembly_qc (ref_genome, assembly_qc_type, assembled_seq, figure) VALUES (7, 1, 14, 'assembly_qc.figure.a_thaliana_ler0_run2_sl.png');
+-- INSERT INTO assembly_qc (ref_genome, assembly_qc_type, assembled_seq, figure) VALUES (7, 2, 14, 'assembly_qc.figure.a_thaliana_ler0_run2_lr.png');
 
--- assembly_ranking_type
+-- -- a. thalinana ler-0
+INSERT INTO assembly_qc (ref_genome, assembly_qc_type, assembled_seq, figure) VALUES (7, 1, 15, 'assembly_qc.figure.a_thaliana_ler0_run3_cbc.png');
+INSERT INTO assembly_qc (ref_genome, assembly_qc_type, assembled_seq, figure) VALUES (7, 2, 15, 'assembly_qc.figure.a_thaliana_ler0_run3_sbc.png');
+INSERT INTO assembly_qc (ref_genome, assembly_qc_type, assembled_seq, figure) VALUES (7, 3, 15, 'assembly_qc.figure.a_thaliana_ler0_run3_lr.png');
+INSERT INTO assembly_qc (ref_genome, assembly_qc_type, assembled_seq, figure) VALUES (7, 4, 15, 'assembly_qc.figure.a_thaliana_ler0_run3_gc.png');
+INSERT INTO assembly_qc (ref_genome, assembly_qc_type, assembled_seq, figure) VALUES (7, 5, 15, 'assembly_qc.figure.a_thaliana_ler0_run3_tr.png');
+INSERT INTO assembly_qc (ref_genome, assembly_qc_type, assembled_seq, figure) VALUES (7, 6, 15, 'assembly_qc.figure.a_thaliana_ler0_run3_nx.png');
+
+
+--------------- end assembly_qc ------------
+
+-- assembly_ranking_type DO NOT CHANGE ORDER!!! (add new ENTRIES at the bottom of the list)
 INSERT INTO assembly_ranking_type (name, assembly_qc_type) VALUES ('Ranking contiguidad', 2);
 INSERT INTO assembly_ranking_type (name, assembly_qc_type) VALUES ('Ranking contenido', 1);
 
--- assembly_ranking_order
+-- assembly_ranking_order DO NOT CHANGE ORDER!!! (add new ENTRIES at the bottom of the list)
 INSERT INTO assembly_ranking_order (position, assembled_seq, assembly_ranking_type) VALUES (1, 1, 1);
 INSERT INTO assembly_ranking_order (position, assembled_seq, assembly_ranking_type) VALUES (2, 2, 1);
 INSERT INTO assembly_ranking_order (position, assembled_seq, assembly_ranking_type) VALUES (3, 3, 1);

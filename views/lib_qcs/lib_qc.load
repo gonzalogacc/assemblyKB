@@ -3,7 +3,7 @@
     {{for l in lib_qc:}}
         <div class="box" style="width: 27%; margin-left: 0px; overflow: hidden;">
             <h4>{{=l.lib_qc_type.name}}</h4>
-            <img src="{{=URL('download',args=l.lib_qc.figure)}}" />
+            <img src="{{=URL('download',args=l.lib_qc.figure)}}" onmouseover="width='700'; height='700'" onmouseout="width='300'; height='300'" />
         </div>
     {{pass}}
 </div>

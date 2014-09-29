@@ -87,6 +87,7 @@ db.define_table('assembled_seq',
 db.define_table('assembly_qc',
                 Field('assembly_qc_type'),
                 Field('assembled_seq', 'reference assembled_seq'),
+                Field('figure', 'upload'),
                 Field('ref_genome', 'reference ref_genome'))
 
 db.define_table('assembly_qc_type',
@@ -121,6 +122,7 @@ db.define_table('pipeline_component',
                 Field('pipeline', 'reference assembly_pipeline'),
                 Field('step_order'),
                 Field('software', 'reference software'),
+                Field('parameters'),
                 format='%(name)s')
 
 datasets_and_libraries = db((db.dataset.id==db.dataset_library.dataset) & (db.library.id==db.dataset_library.library))
