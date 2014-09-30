@@ -495,8 +495,6 @@ INSERT INTO assembly_qc (ref_genome, assembly_qc_type, assembled_seq, figure) VA
 INSERT INTO assembly_qc (ref_genome, assembly_qc_type, assembled_seq, figure) VALUES (7, 4, 15, 'assembly_qc.figure.a_thaliana_ler0_run3_gc.png');
 INSERT INTO assembly_qc (ref_genome, assembly_qc_type, assembled_seq, figure) VALUES (7, 5, 15, 'assembly_qc.figure.a_thaliana_ler0_run3_tr.png');
 INSERT INTO assembly_qc (ref_genome, assembly_qc_type, assembled_seq, figure) VALUES (7, 6, 15, 'assembly_qc.figure.a_thaliana_ler0_run3_nx.png');
-
-
 --------------- end assembly_qc ------------
 
 -- assembly_ranking_type DO NOT CHANGE ORDER!!! (add new ENTRIES at the bottom of the list)
