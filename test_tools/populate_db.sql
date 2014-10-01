@@ -57,7 +57,8 @@ INSERT INTO library (id, lib_type, read_processing, specie, name, coverage, read
 INSERT INTO library (id, lib_type, read_processing, specie, name, coverage, read_size, fragment_size) VALUES (28, 4, 3, 5, 'Pacbio', 41, 100, 'n/a');
 
 -- A. thalinana col-0
--- to fill
+INSERT INTO library (id, lib_type, read_processing, specie, name, coverage, read_size, fragment_size) VALUES (29, 1, 1, 6, 'PE 600bp frag', 'xx', 301, 600);
+INSERT INTO library (id, lib_type, read_processing, specie, name, coverage, read_size, fragment_size) VALUES (29, 2, 1, 6, 'PE 5kbp jump', 'xx', 101, 5000);
 
 -- ref genome DO NOT CHANGE ORDER!!! (add new ENTRIES at the bottom of the list)
 INSERT INTO ref_genome (id, specie, name) VALUES (1, 1, 'ref A. Sharonensis');
@@ -433,16 +434,28 @@ INSERT INTO assembly_qc_type (name) VALUES ('Nx report');
 --------------- begin assembly_qc ------------
 -- assembly_qc DO NOT CHANGE ORDER!!! (add new ENTRIES at the bottom of the list)
 -- a. sharonensis run1
-INSERT INTO assembly_qc (ref_genome, assembly_qc_type, assembled_seq, figure) VALUES (7, 1, 1, 'assembly_qc.figure.a_sharonensis_run1_bc.png');
-INSERT INTO assembly_qc (ref_genome, assembly_qc_type, assembled_seq, figure) VALUES (7, 2, 1, 'assembly_qc.figure.a_sharonensis_run1_lr.png');
+INSERT INTO assembly_qc (ref_genome, assembly_qc_type, assembled_seq, figure) VALUES (7, 1, 1, 'assembly_qc.figure.a_sharonensis_run1_cbc.png');
+INSERT INTO assembly_qc (ref_genome, assembly_qc_type, assembled_seq, figure) VALUES (7, 2, 1, 'assembly_qc.figure.a_sharonensis_run1_sbc.png');
+INSERT INTO assembly_qc (ref_genome, assembly_qc_type, assembled_seq, figure) VALUES (7, 3, 1, 'assembly_qc.figure.a_sharonensis_run1_lr.png');
+INSERT INTO assembly_qc (ref_genome, assembly_qc_type, assembled_seq, figure) VALUES (7, 4, 1, 'assembly_qc.figure.a_sharonensis_run1_gc.png');
+INSERT INTO assembly_qc (ref_genome, assembly_qc_type, assembled_seq, figure) VALUES (7, 5, 1, 'assembly_qc.figure.a_sharonensis_run1_tr.png');
+INSERT INTO assembly_qc (ref_genome, assembly_qc_type, assembled_seq, figure) VALUES (7, 6, 1, 'assembly_qc.figure.a_sharonensis_run1_nx.png');
 
 -- -- a. sharonensis run2
--- INSERT INTO assembly_qc (ref_genome, assembly_qc_type, assembled_seq, figure) VALUES (7, 1, 2, 'assembly_qc.figure.a_sharonensis_run2_bc.png');
--- INSERT INTO assembly_qc (ref_genome, assembly_qc_type, assembled_seq, figure) VALUES (7, 2, 2, 'assembly_qc.figure.a_sharonensis_run2_lr.png');
+INSERT INTO assembly_qc (ref_genome, assembly_qc_type, assembled_seq, figure) VALUES (7, 1, 2, 'assembly_qc.figure.a_sharonensis_run1_cbc.png');
+INSERT INTO assembly_qc (ref_genome, assembly_qc_type, assembled_seq, figure) VALUES (7, 2, 2, 'assembly_qc.figure.a_sharonensis_run1_sbc.png');
+INSERT INTO assembly_qc (ref_genome, assembly_qc_type, assembled_seq, figure) VALUES (7, 3, 2, 'assembly_qc.figure.a_sharonensis_run1_lr.png');
+INSERT INTO assembly_qc (ref_genome, assembly_qc_type, assembled_seq, figure) VALUES (7, 4, 2, 'assembly_qc.figure.a_sharonensis_run1_gc.png');
+INSERT INTO assembly_qc (ref_genome, assembly_qc_type, assembled_seq, figure) VALUES (7, 5, 2, 'assembly_qc.figure.a_sharonensis_run1_tr.png');
+INSERT INTO assembly_qc (ref_genome, assembly_qc_type, assembled_seq, figure) VALUES (7, 6, 2, 'assembly_qc.figure.a_sharonensis_run1_nx.png');
 
 -- -- a. sharonensis run3
--- INSERT INTO assembly_qc (ref_genome, assembly_qc_type, assembled_seq, figure) VALUES (7, 1, 3, 'assembly_qc.figure.a_sharonensis_run3_bc.png');
--- INSERT INTO assembly_qc (ref_genome, assembly_qc_type, assembled_seq, figure) VALUES (7, 2, 3, 'assembly_qc.figure.a_sharonensis_run3_lr.png');
+INSERT INTO assembly_qc (ref_genome, assembly_qc_type, assembled_seq, figure) VALUES (7, 1, 3, 'assembly_qc.figure.a_sharonensis_run1_cbc.png');
+INSERT INTO assembly_qc (ref_genome, assembly_qc_type, assembled_seq, figure) VALUES (7, 2, 3, 'assembly_qc.figure.a_sharonensis_run1_sbc.png');
+INSERT INTO assembly_qc (ref_genome, assembly_qc_type, assembled_seq, figure) VALUES (7, 3, 3, 'assembly_qc.figure.a_sharonensis_run1_lr.png');
+INSERT INTO assembly_qc (ref_genome, assembly_qc_type, assembled_seq, figure) VALUES (7, 4, 3, 'assembly_qc.figure.a_sharonensis_run1_gc.png');
+INSERT INTO assembly_qc (ref_genome, assembly_qc_type, assembled_seq, figure) VALUES (7, 5, 3, 'assembly_qc.figure.a_sharonensis_run1_tr.png');
+INSERT INTO assembly_qc (ref_genome, assembly_qc_type, assembled_seq, figure) VALUES (7, 6, 3, 'assembly_qc.figure.a_sharonensis_run1_nx.png');
 
 -- o. staiva nb run1
 INSERT INTO assembly_qc (ref_genome, assembly_qc_type, assembled_seq, figure) VALUES (7, 1, 4, 'assembly_qc.figure.o_sativa_nb_run1_bc.png');
