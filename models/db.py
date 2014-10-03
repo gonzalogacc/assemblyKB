@@ -30,11 +30,18 @@ db.define_table('lib_qc_type',
                 Field('ref_genome', 'reference ref_genome'),
                 format='%(name)s')
 
-db.define_table('lib_qc',
+db.define_table('lib_qc_fig',
                 Field('library', 'reference library'),
                 Field('lib_qc_type', 'reference lib_qc_type'),
                 Field('value'),
                 Field('figure', 'upload'),
+                format='%(name)s')
+
+db.define_table('lib_qc_val',
+                Field('library', 'reference library'),
+                Field('lib_qc_type', 'reference lib_qc_type'),
+                Field('value'),
+                Field('valor'),
                 format='%(name)s')
 
 db.define_table('lib_type',
@@ -84,10 +91,16 @@ db.define_table('assembled_seq',
                 Field('assembly_run', 'reference assembly_run'),
                 format='%(name)s')
 
-db.define_table('assembly_qc',
+db.define_table('assembly_qc_fig',
                 Field('assembly_qc_type'),
                 Field('assembled_seq', 'reference assembled_seq'),
                 Field('figure', 'upload'),
+                Field('ref_genome', 'reference ref_genome'))
+
+db.define_table('assembly_qc_val',
+                Field('assembly_qc_type'),
+                Field('assembled_seq', 'reference assembled_seq'),
+                Field('valor'),
                 Field('ref_genome', 'reference ref_genome'))
 
 db.define_table('assembly_qc_type',

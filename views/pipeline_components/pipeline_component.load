@@ -1,0 +1,15 @@
+
+<div style="border: 2px lightblue solid; padding-top: 5px; padding-left: 10px; padding-bottom: 5px; padding-right: 10px" id="Assembly data">
+    <h4>Assembly settings for {{=pipeline_component.name}}</h4>
+    <div style="border: 2px lightblue solid; padding-top: 5px; padding-left: 10px; padding-bottom: 5px; padding-right: 10px" >
+        <p>Pipeline: <a href="{{=URL(c="pipelines",f="pipeline",args=[pipeline.id,], extension=False)}}">{{=pipeline.name}}</a></p>
+        <p>Software: <a href="{{=URL(c="softwares",f="software",args=[software.id,], extension=False)}}">{{=software.name}}</a></p>
+        <div style="border: 2px lightblue solid; padding-top: 5px; padding-left: 10px; padding-bottom: 5px; padding-right: 10px">
+            <p>Parameter settings:
+                {{for key, param in eval(pipeline_component.parameters).iteritems():}}
+                <li>{{=key}} --> {{=param}}</li>
+                {{pass}}
+            </p>
+        </div>
+    </div>
+</div>

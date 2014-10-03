@@ -1,0 +1,8 @@
+<p>{{=assembly_run}}</p>
+<p>{{=assembled_seq}}</p>
+
+<div style="border: 2px #ffffff solid; padding-top: 5px; padding-left: 10px; padding-bottom: 5px; padding-right: 10px" id="dataset_{{=assembly_run.id}}" name="datasetDiv">
+  <h1>{{=assembly_run.name}}</h4>
+    <p>Assembled seq: <a href="{{=URL(c="assemblies_run",f="assembly_run",args=[assembled_seq.id,], extension=False)}}">{{=assembled_seq.name}}</a></p>
+    <p>Pipeline used: <a href="{{=URL(c="pipelines",f="pipeline",args=[pipeline.id,], extension=False)}}">{{=pipeline.name}}</a></p>
+</div>

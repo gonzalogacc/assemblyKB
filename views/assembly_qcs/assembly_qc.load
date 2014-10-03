@@ -1,9 +1,44 @@
-<div>
-    {{for a in assembly_qc:}}
-        <div class="box" style="width: 27%; margin-left: 0px; overflow: hidden;">
-            <h4>{{=a.assembly_qc_type.name}}</h4>
-            {{=a.assembly_qc.figure}}
-            <img src="{{=URL('download',args=a.assembly_qc.figure)}}"/>
+<html>
+    <head>
+        <style type="text/css">
+        .cont1 {
+            float: left;
+            width: 49%;
+            border: 2px solid;
+        }
+        .cont2 {
+            float: left;
+            width: 49%;
+            border: 2px solid;
+
+        }
+        .box {
+            float: left;
+            border: 1px solid;
+        }
+       </style>
+    </head>
+</html>
+
+<body>
+<div class="cont1">
+{{for a in assembly_qc_fig:}}
+    <div class="box">
+        <h4>{{=a.assembly_qc_type.name}}</h4>
+        <div class="box">
+            <img src="{{=URL('download',args=a.assembly_qc_fig.figure)}}"/>
         </div>
-    {{pass}}
+    </div>
+{{pass}}
 </div>
+
+
+<div class="cont2">
+{{for a in assembly_qc_val:}}
+    <div class="box">
+        <h4>{{=a.assembly_qc_type.name}}</h4>
+        <ul>{{=a.assembly_qc_val.valor}}</ul>
+    </div>
+{{pass}}
+</div>
+</body>
