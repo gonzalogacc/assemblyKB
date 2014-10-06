@@ -5,5 +5,9 @@
 </div>
 
  <div>
+    {{=LOAD('datasets','dataset.load',args=request.args, ajax=True)}}
+ </div>
+
+ <div>
     {{=LOAD('assembly_qcs','assembly_qc.load',args=request.args, ajax=True)}}
  </div>

@@ -92,13 +92,13 @@ db.define_table('assembled_seq',
                 format='%(name)s')
 
 db.define_table('assembly_qc_fig',
-                Field('assembly_qc_type'),
+                Field('assembly_qc_type', 'reference assembly_qc_type'),
                 Field('assembled_seq', 'reference assembled_seq'),
                 Field('figure', 'upload'),
                 Field('ref_genome', 'reference ref_genome'))
 
 db.define_table('assembly_qc_val',
-                Field('assembly_qc_type'),
+                Field('assembly_qc_type', 'reference assembly_qc_type'),
                 Field('assembled_seq', 'reference assembled_seq'),
                 Field('valor'),
                 Field('ref_genome', 'reference ref_genome'))

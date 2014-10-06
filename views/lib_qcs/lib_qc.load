@@ -32,7 +32,6 @@
 {{pass}}
 </div>
 
-
 <div class="cont2">
 {{for l2 in lib_qc_val:}}
     <div class="box">

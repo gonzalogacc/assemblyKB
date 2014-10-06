@@ -1,9 +1,25 @@
+<HTML>
+<head>
+    <script src="{{=URL('static', 'js/sorttable.js')}}" type="text/javascript"></script>
+</head>
+
+<body>
 <div style="border: 2px lightblue solid; padding-top: 5px; padding-left: 10px; padding-bottom: 5px; padding-right: 10px" id="dataset_{{=assembly_ranking.id}}" name="datasetDiv">
   <h4>Assembly ranking: {{=assembly_ranking.name}}</h4>
     <div style="border: 1px lightblue solid; padding-top: 1px; padding-left: 10px;" id="libraries" name="librariesDiv">
-  <h5>Assembled sequences:</h5>
-    {{ for a in assemblies:}}
-        <p><a href="{{=URL(c="assemblies",f="assembly",args=[a.assembled_seq.id,], extension=False)}}">{{=a.assembly_ranking_order.position}}.- {{=a.assembled_seq.name}}</a></p>
-    {{ pass }}
+        <table border="1" class="sortable">
+            <tr bgcolor="#7cfc00">
+                <th>Assembly name</th>
+                <th>Assembly value</th>
+            </tr>
+            {{ for a in assemblies:}}
+                <tr>
+                    <td><a href="{{=URL(c="assemblies",f="assembly",args=[a.assembled_seq.id,], extension=False)}}">{{=a.assembled_seq.name}}</a></td>
+                    <td>{{=a.assembly_qc_val.valor}} </td>
+                </tr>
+            {{ pass }}
+        </table>
     </div>
 </div>
+</body>
+</HTML>

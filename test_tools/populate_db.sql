@@ -699,23 +699,23 @@ INSERT INTO assembly_qc_fig (ref_genome, assembly_qc_type, assembled_seq, figure
 --------------- begin assembly_qc_val ------------
 -- assembly_qc DO NOT CHANGE ORDER!!! (add new ENTRIES at the bottom of the list)
 -- a. sharonensis run1
-INSERT INTO assembly_qc_val (ref_genome, assembly_qc_type, assembled_seq, valor) VALUES (7, 7, 1, 1000);
-INSERT INTO assembly_qc_val (ref_genome, assembly_qc_type, assembled_seq, valor) VALUES (7, 8, 1, 1000);
-INSERT INTO assembly_qc_val (ref_genome, assembly_qc_type, assembled_seq, valor) VALUES (7, 9, 1, 1000);
-INSERT INTO assembly_qc_val (ref_genome, assembly_qc_type, assembled_seq, valor) VALUES (7, 10, 1, 1000);
+INSERT INTO assembly_qc_val (ref_genome, assembly_qc_type, assembled_seq, valor) VALUES (7, 7, 1, 1001);
+INSERT INTO assembly_qc_val (ref_genome, assembly_qc_type, assembled_seq, valor) VALUES (7, 8, 1, 1001);
+INSERT INTO assembly_qc_val (ref_genome, assembly_qc_type, assembled_seq, valor) VALUES (7, 9, 1, 1001);
+INSERT INTO assembly_qc_val (ref_genome, assembly_qc_type, assembled_seq, valor) VALUES (7, 10, 1, 1001);
 
 
 -- -- a. sharonensis run2
-INSERT INTO assembly_qc_val (ref_genome, assembly_qc_type, assembled_seq, valor) VALUES (7, 7, 2, 1000);
-INSERT INTO assembly_qc_val (ref_genome, assembly_qc_type, assembled_seq, valor) VALUES (7, 8, 2, 1000);
-INSERT INTO assembly_qc_val (ref_genome, assembly_qc_type, assembled_seq, valor) VALUES (7, 9, 2, 1000);
-INSERT INTO assembly_qc_val (ref_genome, assembly_qc_type, assembled_seq, valor) VALUES (7, 10, 2, 1000);
+INSERT INTO assembly_qc_val (ref_genome, assembly_qc_type, assembled_seq, valor) VALUES (7, 7, 2, 1002);
+INSERT INTO assembly_qc_val (ref_genome, assembly_qc_type, assembled_seq, valor) VALUES (7, 8, 2, 1002);
+INSERT INTO assembly_qc_val (ref_genome, assembly_qc_type, assembled_seq, valor) VALUES (7, 9, 2, 1002);
+INSERT INTO assembly_qc_val (ref_genome, assembly_qc_type, assembled_seq, valor) VALUES (7, 10, 2, 1020);
 
 -- -- a. sharonensis run3
-INSERT INTO assembly_qc_val (ref_genome, assembly_qc_type, assembled_seq, valor) VALUES (7, 7, 3, 1000);
-INSERT INTO assembly_qc_val (ref_genome, assembly_qc_type, assembled_seq, valor) VALUES (7, 8, 3, 1000);
-INSERT INTO assembly_qc_val (ref_genome, assembly_qc_type, assembled_seq, valor) VALUES (7, 9, 3, 1000);
-INSERT INTO assembly_qc_val (ref_genome, assembly_qc_type, assembled_seq, valor) VALUES (7, 10, 3, 1000);
+INSERT INTO assembly_qc_val (ref_genome, assembly_qc_type, assembled_seq, valor) VALUES (7, 7, 3, 1003);
+INSERT INTO assembly_qc_val (ref_genome, assembly_qc_type, assembled_seq, valor) VALUES (7, 8, 3, 1003);
+INSERT INTO assembly_qc_val (ref_genome, assembly_qc_type, assembled_seq, valor) VALUES (7, 9, 3, 1003);
+INSERT INTO assembly_qc_val (ref_genome, assembly_qc_type, assembled_seq, valor) VALUES (7, 10, 3, 1003);
 
 -- o. staiva nb run1
 INSERT INTO assembly_qc_val (ref_genome, assembly_qc_type, assembled_seq, valor) VALUES (7, 7, 4, 1000);
@@ -809,28 +809,35 @@ INSERT INTO assembly_qc_val (ref_genome, assembly_qc_type, assembled_seq, valor)
 --------------- end assembly_qc_val ------------
 
 
+--------------- Begin assembly_ranking_type -------------
 -- assembly_ranking_type DO NOT CHANGE ORDER!!! (add new ENTRIES at the bottom of the list)
-INSERT INTO assembly_ranking_type (name, assembly_qc_type) VALUES ('Ranking contiguidad', 2);
-INSERT INTO assembly_ranking_type (name, assembly_qc_type) VALUES ('Ranking contenido', 1);
+INSERT INTO assembly_ranking_type (id, name, assembly_qc_type) VALUES (1, 'Ranking contiguidad', 7);
+INSERT INTO assembly_ranking_type (id, name, assembly_qc_type) VALUES (2, 'Ranking contenido', 8);
+INSERT INTO assembly_ranking_type (id, name, assembly_qc_type) VALUES (3, 'Ranking kmer content', 9);
+INSERT INTO assembly_ranking_type (id, name, assembly_qc_type) VALUES (4, 'Ranking unique kmer content', 10);
+INSERT INTO assembly_ranking_type (id, name, assembly_qc_type) VALUES (5, 'Ranking otro', 11);
+--------------- end assembly_ranking_type -------------
 
+
+--------------- Begin assembly_ranking_order -------------
 -- assembly_ranking_order DO NOT CHANGE ORDER!!! (add new ENTRIES at the bottom of the list)
 INSERT INTO assembly_ranking_order (position, assembled_seq, assembly_ranking_type) VALUES (1, 1, 1);
 INSERT INTO assembly_ranking_order (position, assembled_seq, assembly_ranking_type) VALUES (2, 2, 1);
 INSERT INTO assembly_ranking_order (position, assembled_seq, assembly_ranking_type) VALUES (3, 3, 1);
 
-INSERT INTO assembly_ranking_order (position, assembled_seq, assembly_ranking_type) VALUES (1, 4, 1);
-INSERT INTO assembly_ranking_order (position, assembled_seq, assembly_ranking_type) VALUES (2, 5, 1);
-INSERT INTO assembly_ranking_order (position, assembled_seq, assembly_ranking_type) VALUES (3, 6, 1);
+INSERT INTO assembly_ranking_order (position, assembled_seq, assembly_ranking_type) VALUES (1, 4, 2);
+INSERT INTO assembly_ranking_order (position, assembled_seq, assembly_ranking_type) VALUES (2, 5, 2);
+INSERT INTO assembly_ranking_order (position, assembled_seq, assembly_ranking_type) VALUES (3, 6, 2);
 
-INSERT INTO assembly_ranking_order (position, assembled_seq, assembly_ranking_type) VALUES (1, 7, 1);
-INSERT INTO assembly_ranking_order (position, assembled_seq, assembly_ranking_type) VALUES (2, 8, 1);
-INSERT INTO assembly_ranking_order (position, assembled_seq, assembly_ranking_type) VALUES (3, 9, 1);
+INSERT INTO assembly_ranking_order (position, assembled_seq, assembly_ranking_type) VALUES (1, 7, 3);
+INSERT INTO assembly_ranking_order (position, assembled_seq, assembly_ranking_type) VALUES (2, 8, 3);
+INSERT INTO assembly_ranking_order (position, assembled_seq, assembly_ranking_type) VALUES (3, 9, 3);
 
-INSERT INTO assembly_ranking_order (position, assembled_seq, assembly_ranking_type) VALUES (1, 10, 1);
-INSERT INTO assembly_ranking_order (position, assembled_seq, assembly_ranking_type) VALUES (2, 11, 1);
-INSERT INTO assembly_ranking_order (position, assembled_seq, assembly_ranking_type) VALUES (3, 12, 1);
+INSERT INTO assembly_ranking_order (position, assembled_seq, assembly_ranking_type) VALUES (1, 10, 4);
+INSERT INTO assembly_ranking_order (position, assembled_seq, assembly_ranking_type) VALUES (2, 11, 4);
+INSERT INTO assembly_ranking_order (position, assembled_seq, assembly_ranking_type) VALUES (3, 12, 4);
 
-INSERT INTO assembly_ranking_order (position, assembled_seq, assembly_ranking_type) VALUES (1, 13, 1);
-INSERT INTO assembly_ranking_order (position, assembled_seq, assembly_ranking_type) VALUES (2, 14, 1);
-INSERT INTO assembly_ranking_order (position, assembled_seq, assembly_ranking_type) VALUES (3, 15, 1);
-
+INSERT INTO assembly_ranking_order (position, assembled_seq, assembly_ranking_type) VALUES (1, 13, 5);
+INSERT INTO assembly_ranking_order (position, assembled_seq, assembly_ranking_type) VALUES (2, 14, 5);
+INSERT INTO assembly_ranking_order (position, assembled_seq, assembly_ranking_type) VALUES (3, 15, 5);
+--------------- end assembly_ranking_order -------------

@@ -12,7 +12,7 @@
         </div>
   </div>
 
-
+<!--
 <div style="border: 1px lightblue solid; padding-top: 1px; padding-left: 10px;" id="libraries" name="librariesDiv">
   <h5>Libraries available:</h5>
     <div style="border: 1px lightblue solid; padding-top: 1px; padding-left: 10px;" id="libraries" name="librariesDiv">
@@ -21,3 +21,4 @@
         {{ pass }}
         </div>
   </div>
+  -->
