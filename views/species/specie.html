@@ -1,12 +1,11 @@
 {{extend 'layout.html'}}
 
-
-<div style="border: 2px #00e68b solid; padding-top: 5px; padding-left: 10px; padding-bottom: 5px; padding-right: 10px">
-    <div style="border: 2px #00e68b solid; padding-top: 5px; padding-left: 10px; padding-bottom: 5px; padding-right: 10px">
+<div>
+    <div class="general_container1">
         {{=LOAD('species','specie.load',args=request.args, ajax=True)}}
     </div>
 
-    <div style="border: 2px #00e68b solid; padding-top: 5px; padding-left: 10px; padding-bottom: 5px; padding-right: 10px">
+    <div class="general_container1">
         {{=LOAD('datasets','dataset.load',args=request.args, ajax=True)}}
     </div>
 </div>
