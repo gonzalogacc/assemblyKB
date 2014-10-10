@@ -1,4 +1,4 @@
 <ul>
 {{ for a in assemblies: }}
-<li> <a href="{{=URL(c="assemblies",f="assembly",args=[a.id,], extension=False)}}"> {{ =a.name }} </a> </li>
+<li> <a href="{{=URL(c="assemblies",f="assembly",args=[a.id,], extension=False)}}">{{ =a.name }}</a> </li>
 {{ pass }}
