@@ -1,2 +1,18 @@
-{{extend 'layout.html'}}
-{{=LOAD('assemblies_run','assembly_run.load',args=request.args, ajax=True)}}
+<html>
+    <head>
+        {{extend 'layout.html'}}
+    </head>
+
+    <body>
+    <div>
+        {{=LOAD('assemblies_run','assembly_run.load',args=request.args, ajax=True)}}
+    </div>
+
+    <div>
+        {{=LOAD('pipeline_components','pipeline_component.load',args=assembly_run.assembly_pipeline, ajax=True)}}
+    </div>
+
+    </body>
+
+</html>
+

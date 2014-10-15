@@ -1,13 +1,18 @@
-{{extend 'layout.html'}}
 
-<div style="border: 2px #ffffff solid; padding-top: 5px; padding-left: 10px; padding-bottom: 5px; padding-right: 10px">
-    {{=LOAD('assemblies','assembly.load',args=request.args, ajax=True)}}
-</div>
+<html>
+    <head>
+        {{extend 'layout.html'}}
+    </head>
 
- <div>
-    {{=LOAD('datasets','dataset.load',args=request.args, ajax=True)}}
- </div>
-
- <div>
-    {{=LOAD('assembly_qcs','assembly_qc.load',args=request.args, ajax=True)}}
- </div>
+    <body>
+        <div class="general_container1">
+            {{=LOAD('assemblies','assembly.load',args=request.args, ajax=True)}}
+        </div>
+        <div class="general_container1">
+            {{=LOAD('datasets','dataset.load',args=dataset.id, ajax=True)}}
+        </div>
+        <div class="general_container1">
+            {{=LOAD('assembly_qcs','assembly_qc.load',args=request.args, ajax=True)}}
+        </div>
+    </body>
+</html>

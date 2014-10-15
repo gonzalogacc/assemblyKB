@@ -8,8 +8,7 @@ def pipeline_component_list():
 def pipeline_component():
 
     id = request.args[0]
-    pipeline_component = db(db.pipeline_component.id == id).select()[0]
-    pipeline = db(db.assembly_pipeline.id == pipeline_component.pipeline).select()[0]
-    software = db(db.software.id == pipeline_component.software).select()[0]
 
-    return {'pipeline_component': pipeline_component, 'pipeline': pipeline, 'software': software}
+    pipeline = db((db.assembly_pipeline.id == id) & (db.pipeline_component.pipeline == id) & (db.software.id == db.pipeline_component.software)).select()
+
+    return {'pipeline': pipeline}

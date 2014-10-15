@@ -1,5 +1,8 @@
 {{extend 'layout.html'}}
-<div style="border: 2px #ffffff solid; padding-top: 5px; padding-left: 10px; padding-bottom: 5px; padding-right: 10px">
+<div class="general_container1">
     {{=LOAD('libraries','library.load',args=request.args, ajax=True)}}
+</div>
+
+<div class="general_container1">
     {{=LOAD('lib_qcs','lib_qc.load',args=request.args, ajax=True)}}
 </div>

@@ -1,7 +1,7 @@
 
 
 def read_processing_list():
-    read_processings = db(db.read_processing).select()
+    read_processings = db(db.read_processing.software == db.software.id).select()
     return {'read_processings': read_processings}
 
 def read_processing():

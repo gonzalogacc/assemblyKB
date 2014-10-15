@@ -8,6 +8,7 @@ db.define_table('specie',
                 Field('name'),
                 Field('genome_size'),
                 Field('gc_content'),
+                Field('ploidy'),
                 format='%(name)s')
 
 db.define_table('library',

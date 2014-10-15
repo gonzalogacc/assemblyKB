@@ -1,7 +1,7 @@
 
 
 def species_list():
-    species = db(db.specie).select()
+    species = db(db.specie.name != 'None').select()
     return {'species': species}
 
 def specie():

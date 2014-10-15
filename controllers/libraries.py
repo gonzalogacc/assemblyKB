@@ -1,8 +1,10 @@
 
 def library_list():
 
-    librares = db(db.library).select()
-    return {'librares': librares}
+    librares = db((db.library.lib_type == db.lib_type.id) & (db.library.specie == db.specie.id) & (db.library.read_processing == db.read_processing.id)).select()
+
+
+    return {'libraries': librares}
 
 def library():
     id = request.args[0]

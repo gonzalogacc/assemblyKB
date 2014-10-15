@@ -1,43 +1,17 @@
-<html>
-    <head>
-        <style type="text/css">
-        .cont1 {
-            float: left;
-            width: 49%;
-            border: 2px solid;
-        }
-        .cont2 {
-            float: left;
-            width: 49%;
-            border: 2px solid;
 
-        }
-        .box {
-            float: left;
-            border: 1px solid;
-        }
-       </style>
-    </head>
-</html>
-
-<body>
-<div class="cont1">
+<div class="qc_fig_container">
 {{for l in lib_qc_fig:}}
-    <div class="box">
-        <h4>{{=l.lib_qc_type.name}}</h4>
-        <div class="box">
-            <img src="{{=URL('download',args=l.lib_qc_fig.figure)}}"/>
-        </div>
+    <div class="qc_fig">
+    <h4>{{=l.lib_qc_type.name}}</h4>
+        <img src="{{=URL('download',args=l.lib_qc_fig.figure)}}"/>
     </div>
 {{pass}}
 </div>
 
-<div class="cont2">
+<div class="qc_val_container">
 {{for l2 in lib_qc_val:}}
-    <div class="box">
-        <h4>{{=l2.lib_qc_type.name}}</h4>
-        <ul>{{=l2.lib_qc_val.valor}}</ul>
+    <div class="qc_val">
+        <ul>{{=l2.lib_qc_type.name}}: {{=l2.lib_qc_val.valor}}</ul>
     </div>
 {{pass}}
 </div>
-</body>

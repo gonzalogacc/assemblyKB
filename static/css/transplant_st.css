@@ -1,0 +1,134 @@
+.table_row {
+    background-color: #7cfc00;
+    width: 100%;
+    padding: 0.2cm 0.2cm 0.2cm 0.2cm;
+}
+
+.table_row:hover {
+    background-color: #e7fc09;
+    width: 100%;
+    margin: 0.5cm 0.5cm 0.5cm 0.5cm;
+    padding: 0.2cm 0.2cm 0.2cm 0.2cm;
+}
+
+.table_header {
+    background-color: #95938e;
+    width: 100%;
+    margin: 0.5cm 0.5cm 0.5cm 0.5cm;
+    padding: 0.2cm 0.2cm 0.2cm 0.2cm;
+}
+
+.general_container1{
+    float: left;
+    width: 100%;
+    border: 1px solid;
+    margin: 0.5cm 0.5cm 0.5cm 0.5cm;
+    padding: 0.2cm 0.2cm 0.2cm 0.2cm;
+}
+
+.general_container2{
+    float: left;
+    width: 75%;
+    border: 1px solid;
+    margin: 0.5cm 0.5cm 0.5cm 0.5cm;
+    padding: 0.2cm 0.2cm 0.2cm 0.2cm;
+}
+
+.info_box{
+    background-color: #01dde6;
+    border-radius: 1em;
+    width: 50%;
+    margin: 0.5cm 0.5cm 0.5cm 0.5cm;
+    padding: 0.2cm 0.2cm 0.2cm 0.2cm;
+}
+
+.specie_box {
+    width: 90%;
+    background-color: #00e68b;
+    border-radius: 1em;
+    margin: 0.1cm 0.1cm 0.1cm 0.1cm;
+    padding: 0.2cm 0.2cm 0.2cm 0.2cm;
+}
+
+.specie_box:hover {
+    opacity: 0.75;
+    background-color: #ffff00;
+}
+
+.qc_val_container{
+    float: right;
+    background-color: #01dde6;
+    border-radius: 1em;
+    width: 45%;
+    margin: 0.5cm 0.5cm 0.5cm 0.5cm;
+    padding: 0.2cm 0.2cm 0.2cm 0.2cm;
+}
+
+.qc_val{
+    float: left;
+    background-color: #02e638;
+    border-radius: 1em;
+    border: 1px;
+    border-color: #000000;
+    padding: 0.1cm 0.1cm 0.1cm 0.1cm;
+    margin: 0.2cm 0.2cm 0.2cm 0.2cm;
+    width: 90%;
+}
+
+.qc_fig_container {
+    float: left;
+    background-color: #01dde6;
+    border-radius: 1em;
+    width: 45%;
+    margin: 0.5cm 0.5cm 0.5cm 0.5cm;
+    padding: 0.2cm 0.2cm 0.2cm 0.2cm;
+}
+
+.qc_fig {
+    background-color: #01dde6;
+    width: 90%;
+    margin: 0.5cm 0.5cm 0.5cm 0.5cm;
+    padding: 0.2cm 0.2cm 0.2cm 0.2cm;
+}
+
+/*.qc_fig:hover {*/
+    /*float: left;*/
+    /*background-color: #01dde6;*/
+    /*width: 200%;*/
+    /*margin: 0.5cm 0.5cm 0.5cm 0.5cm;*/
+    /*padding: 0.2cm 0.2cm 0.2cm 0.2cm;*/
+/*}*/
+
+.cont1 {
+    float: left;
+    width: 100%;
+    /*border: 1px solid;*/
+}
+
+.cont2 {
+    float: left;
+    width: 49%;
+    border: 1px solid;
+}
+
+.box {
+    float: left;
+    border: 1px solid;
+}
+
+.pipeline_component {
+    width: 100%;
+    float: left;
+    border: 1px solid;
+    background: #00e68b;
+    border-radius: 1em;
+    padding: 0.5cm 0.5cm 0.5cm 0.5cm;
+    margin: 0cm 0cm 0cm 0cm;
+}
+
+.pipeline_arrow {
+    color: #002fe6;
+    margin: 0cm 10cm 0cm 15cm;
+}
+
+
