@@ -1,0 +1,4 @@
+
+def sidebar():
+
+    return dict()

@@ -485,7 +485,7 @@ INSERT INTO dataset_library (dataset, library) VALUES (2, 11);
 -- pe
 INSERT INTO dataset_library (dataset, library) VALUES (3, 12);
 INSERT INTO dataset_library (dataset, library) VALUES (3, 13);
-INSERT INTO dataset_library (dataset, library) VALUES (3, 14);
+INSERT INTO dataset_library (dataset, library) VALUES (3, 14); -- Bad second read
 INSERT INTO dataset_library (dataset, library) VALUES (3, 15);
 -- lmp
 -- INSERT INTO dataset_library (dataset, library) VALUES (3, 16);
@@ -668,27 +668,27 @@ INSERT INTO assembly_qc_fig (ref_genome, assembly_qc_type, assembled_seq, figure
 
 -- o. staiva nb run1
 INSERT INTO assembly_qc_fig (ref_genome, assembly_qc_type, assembled_seq, figure) VALUES (7, 1, 4, 'assembly_qc_fig.figure.o_sativa_nb_run1_cbc.png');
-INSERT INTO assembly_qc_fig (ref_genome, assembly_qc_type, assembled_seq, figure) VALUES (7, 2, 4, 'assembly_qc_fig.figure.o_sativa_nb_run1_sbc.png');
+-- INSERT INTO assembly_qc_fig (ref_genome, assembly_qc_type, assembled_seq, figure) VALUES (7, 2, 4, 'assembly_qc_fig.figure.o_sativa_nb_run1_sbc.png');
 INSERT INTO assembly_qc_fig (ref_genome, assembly_qc_type, assembled_seq, figure) VALUES (7, 3, 4, 'assembly_qc_fig.figure.o_sativa_nb_run1_lr.png');
 INSERT INTO assembly_qc_fig (ref_genome, assembly_qc_type, assembled_seq, figure) VALUES (7, 4, 4, 'assembly_qc_fig.figure.o_sativa_nb_run1_gc.png');
 -- INSERT INTO assembly_qc_fig (ref_genome, assembly_qc_type, assembled_seq, figure) VALUES (7, 5, 4, 'assembly_qc_fig.figure.o_sativa_nb_run1_tr.png');
 INSERT INTO assembly_qc_fig (ref_genome, assembly_qc_type, assembled_seq, figure) VALUES (7, 6, 4, 'assembly_qc_fig.figure.o_sativa_nb_run1_nx.png');
 
 -- -- o. staiva nb run2
-INSERT INTO assembly_qc_fig (ref_genome, assembly_qc_type, assembled_seq, figure) VALUES (7, 1, 5, 'assembly_qc_fig.figure.o_sativa_nb_run1_cbc.png');
-INSERT INTO assembly_qc_fig (ref_genome, assembly_qc_type, assembled_seq, figure) VALUES (7, 2, 5, 'assembly_qc_fig.figure.o_sativa_nb_run1_sbc.png');
-INSERT INTO assembly_qc_fig (ref_genome, assembly_qc_type, assembled_seq, figure) VALUES (7, 3, 5, 'assembly_qc_fig.figure.o_sativa_nb_run1_lr.png');
-INSERT INTO assembly_qc_fig (ref_genome, assembly_qc_type, assembled_seq, figure) VALUES (7, 4, 5, 'assembly_qc_fig.figure.o_sativa_nb_run1_gc.png');
--- INSERT INTO assembly_qc_fig (ref_genome, assembly_qc_type, assembled_seq, figure) VALUES (7, 5, 5, 'assembly_qc_fig.figure.o_sativa_nb_run1_tr.png');
-INSERT INTO assembly_qc_fig (ref_genome, assembly_qc_type, assembled_seq, figure) VALUES (7, 6, 5, 'assembly_qc_fig.figure.o_sativa_nb_run1_nx.png');
+INSERT INTO assembly_qc_fig (ref_genome, assembly_qc_type, assembled_seq, figure) VALUES (7, 1, 5, 'assembly_qc_fig.figure.o_sativa_nb_run2_cbc.png');
+INSERT INTO assembly_qc_fig (ref_genome, assembly_qc_type, assembled_seq, figure) VALUES (7, 2, 5, 'assembly_qc_fig.figure.o_sativa_nb_run2_sbc.png');
+INSERT INTO assembly_qc_fig (ref_genome, assembly_qc_type, assembled_seq, figure) VALUES (7, 3, 5, 'assembly_qc_fig.figure.o_sativa_nb_run2_lr.png');
+INSERT INTO assembly_qc_fig (ref_genome, assembly_qc_type, assembled_seq, figure) VALUES (7, 4, 5, 'assembly_qc_fig.figure.o_sativa_nb_run2_gc.png');
+-- INSERT INTO assembly_qc_fig (ref_genome, assembly_qc_type, assembled_seq, figure) VALUES (7, 5, 5, 'assembly_qc_fig.figure.o_sativa_nb_run2_tr.png');
+INSERT INTO assembly_qc_fig (ref_genome, assembly_qc_type, assembled_seq, figure) VALUES (7, 6, 5, 'assembly_qc_fig.figure.o_sativa_nb_run2_nx.png');
 
 -- -- o. staiva nb run3 (pending)
-INSERT INTO assembly_qc_fig (ref_genome, assembly_qc_type, assembled_seq, figure) VALUES (7, 1, 6, 'assembly_qc_fig.figure.o_sativa_nb_run1_cbc.png');
-INSERT INTO assembly_qc_fig (ref_genome, assembly_qc_type, assembled_seq, figure) VALUES (7, 2, 6, 'assembly_qc_fig.figure.o_sativa_nb_run1_sbc.png');
-INSERT INTO assembly_qc_fig (ref_genome, assembly_qc_type, assembled_seq, figure) VALUES (7, 3, 6, 'assembly_qc_fig.figure.o_sativa_nb_run1_lr.png');
-INSERT INTO assembly_qc_fig (ref_genome, assembly_qc_type, assembled_seq, figure) VALUES (7, 4, 6, 'assembly_qc_fig.figure.o_sativa_nb_run1_gc.png');
--- INSERT INTO assembly_qc_fig (ref_genome, assembly_qc_type, assembled_seq, figure) VALUES (7, 5, 6, 'assembly_qc_fig.figure.o_sativa_nb_run1_tr.png');
-INSERT INTO assembly_qc_fig (ref_genome, assembly_qc_type, assembled_seq, figure) VALUES (7, 6, 6, 'assembly_qc_fig.figure.o_sativa_nb_run1_nx.png');
+INSERT INTO assembly_qc_fig (ref_genome, assembly_qc_type, assembled_seq, figure) VALUES (7, 1, 6, 'assembly_qc_fig.figure.o_sativa_nb_run3_cbc.png');
+INSERT INTO assembly_qc_fig (ref_genome, assembly_qc_type, assembled_seq, figure) VALUES (7, 2, 6, 'assembly_qc_fig.figure.o_sativa_nb_run3_sbc.png');
+INSERT INTO assembly_qc_fig (ref_genome, assembly_qc_type, assembled_seq, figure) VALUES (7, 3, 6, 'assembly_qc_fig.figure.o_sativa_nb_run3_lr.png');
+INSERT INTO assembly_qc_fig (ref_genome, assembly_qc_type, assembled_seq, figure) VALUES (7, 4, 6, 'assembly_qc_fig.figure.o_sativa_nb_run3_gc.png');
+-- INSERT INTO assembly_qc_fig (ref_genome, assembly_qc_type, assembled_seq, figure) VALUES (7, 5, 6, 'assembly_qc_fig.figure.o_sativa_nb_run3_tr.png');
+INSERT INTO assembly_qc_fig (ref_genome, assembly_qc_type, assembled_seq, figure) VALUES (7, 6, 6, 'assembly_qc_fig.figure.o_sativa_nb_run3_nx.png');
 
 -- o. staiva ir64 run1
 INSERT INTO assembly_qc_fig (ref_genome, assembly_qc_type, assembled_seq, figure) VALUES (7, 1, 7, 'assembly_qc_fig.figure.o_sativa_ir64_run1_cbc.png');
@@ -699,20 +699,20 @@ INSERT INTO assembly_qc_fig (ref_genome, assembly_qc_type, assembled_seq, figure
 INSERT INTO assembly_qc_fig (ref_genome, assembly_qc_type, assembled_seq, figure) VALUES (7, 6, 7, 'assembly_qc_fig.figure.o_sativa_ir64_run1_nx.png');
 
 -- -- o. staiva ir64 run2
-INSERT INTO assembly_qc_fig (ref_genome, assembly_qc_type, assembled_seq, figure) VALUES (7, 1, 8, 'assembly_qc_fig.figure.o_sativa_ir64_run1_cbc.png');
-INSERT INTO assembly_qc_fig (ref_genome, assembly_qc_type, assembled_seq, figure) VALUES (7, 2, 8, 'assembly_qc_fig.figure.o_sativa_ir64_run1_sbc.png');
-INSERT INTO assembly_qc_fig (ref_genome, assembly_qc_type, assembled_seq, figure) VALUES (7, 3, 8, 'assembly_qc_fig.figure.o_sativa_ir64_run1_lr.png');
-INSERT INTO assembly_qc_fig (ref_genome, assembly_qc_type, assembled_seq, figure) VALUES (7, 4, 8, 'assembly_qc_fig.figure.o_sativa_ir64_run1_gc.png');
--- INSERT INTO assembly_qc_fig (ref_genome, assembly_qc_type, assembled_seq, figure) VALUES (7, 5, 8, 'assembly_qc_fig.figure.o_sativa_ir64_run1_tr.png');
-INSERT INTO assembly_qc_fig (ref_genome, assembly_qc_type, assembled_seq, figure) VALUES (7, 6, 8, 'assembly_qc_fig.figure.o_sativa_ir64_run1_nx.png');
+INSERT INTO assembly_qc_fig (ref_genome, assembly_qc_type, assembled_seq, figure) VALUES (7, 1, 8, 'assembly_qc_fig.figure.o_sativa_ir64_run2_cbc.png');
+INSERT INTO assembly_qc_fig (ref_genome, assembly_qc_type, assembled_seq, figure) VALUES (7, 2, 8, 'assembly_qc_fig.figure.o_sativa_ir64_run2_sbc.png');
+INSERT INTO assembly_qc_fig (ref_genome, assembly_qc_type, assembled_seq, figure) VALUES (7, 3, 8, 'assembly_qc_fig.figure.o_sativa_ir64_run2_lr.png');
+INSERT INTO assembly_qc_fig (ref_genome, assembly_qc_type, assembled_seq, figure) VALUES (7, 4, 8, 'assembly_qc_fig.figure.o_sativa_ir64_run2_gc.png');
+-- INSERT INTO assembly_qc_fig (ref_genome, assembly_qc_type, assembled_seq, figure) VALUES (7, 5, 8, 'assembly_qc_fig.figure.o_sativa_ir64_run2_tr.png');
+INSERT INTO assembly_qc_fig (ref_genome, assembly_qc_type, assembled_seq, figure) VALUES (7, 6, 8, 'assembly_qc_fig.figure.o_sativa_ir64_run2_nx.png');
 
 -- -- o. staiva ir64 run3
-INSERT INTO assembly_qc_fig (ref_genome, assembly_qc_type, assembled_seq, figure) VALUES (7, 1, 9, 'assembly_qc_fig.figure.o_sativa_ir64_run1_cbc.png');
-INSERT INTO assembly_qc_fig (ref_genome, assembly_qc_type, assembled_seq, figure) VALUES (7, 2, 9, 'assembly_qc_fig.figure.o_sativa_ir64_run1_sbc.png');
-INSERT INTO assembly_qc_fig (ref_genome, assembly_qc_type, assembled_seq, figure) VALUES (7, 3, 9, 'assembly_qc_fig.figure.o_sativa_ir64_run1_lr.png');
-INSERT INTO assembly_qc_fig (ref_genome, assembly_qc_type, assembled_seq, figure) VALUES (7, 4, 9, 'assembly_qc_fig.figure.o_sativa_ir64_run1_gc.png');
--- INSERT INTO assembly_qc_fig (ref_genome, assembly_qc_type, assembled_seq, figure) VALUES (7, 5, 9, 'assembly_qc_fig.figure.o_sativa_ir64_run1_tr.png');
-INSERT INTO assembly_qc_fig (ref_genome, assembly_qc_type, assembled_seq, figure) VALUES (7, 6, 9, 'assembly_qc_fig.figure.o_sativa_ir64_run1_nx.png');
+INSERT INTO assembly_qc_fig (ref_genome, assembly_qc_type, assembled_seq, figure) VALUES (7, 1, 9, 'assembly_qc_fig.figure.o_sativa_ir64_run3_cbc.png');
+INSERT INTO assembly_qc_fig (ref_genome, assembly_qc_type, assembled_seq, figure) VALUES (7, 2, 9, 'assembly_qc_fig.figure.o_sativa_ir64_run3_sbc.png');
+INSERT INTO assembly_qc_fig (ref_genome, assembly_qc_type, assembled_seq, figure) VALUES (7, 3, 9, 'assembly_qc_fig.figure.o_sativa_ir64_run3_lr.png');
+INSERT INTO assembly_qc_fig (ref_genome, assembly_qc_type, assembled_seq, figure) VALUES (7, 4, 9, 'assembly_qc_fig.figure.o_sativa_ir64_run3_gc.png');
+-- INSERT INTO assembly_qc_fig (ref_genome, assembly_qc_type, assembled_seq, figure) VALUES (7, 5, 9, 'assembly_qc_fig.figure.o_sativa_ir64_run3_tr.png');
+INSERT INTO assembly_qc_fig (ref_genome, assembly_qc_type, assembled_seq, figure) VALUES (7, 6, 9, 'assembly_qc_fig.figure.o_sativa_ir64_run3_nx.png');
 
 -- -- o. staiva dj123 run1
 INSERT INTO assembly_qc_fig (ref_genome, assembly_qc_type, assembled_seq, figure) VALUES (7, 1, 10, 'assembly_qc_fig.figure.o_sativa_dj123_run1_cbc.png');
@@ -723,15 +723,15 @@ INSERT INTO assembly_qc_fig (ref_genome, assembly_qc_type, assembled_seq, figure
 INSERT INTO assembly_qc_fig (ref_genome, assembly_qc_type, assembled_seq, figure) VALUES (7, 6, 10, 'assembly_qc_fig.figure.o_sativa_dj123_run1_nx.png');
 
 -- o. staiva dj123 run2
-INSERT INTO assembly_qc_fig (ref_genome, assembly_qc_type, assembled_seq, figure) VALUES (7, 1, 11, 'assembly_qc_fig.figure.o_sativa_dj123_run1_cbc.png');
-INSERT INTO assembly_qc_fig (ref_genome, assembly_qc_type, assembled_seq, figure) VALUES (7, 2, 11, 'assembly_qc_fig.figure.o_sativa_dj123_run1_sbc.png');
-INSERT INTO assembly_qc_fig (ref_genome, assembly_qc_type, assembled_seq, figure) VALUES (7, 3, 11, 'assembly_qc_fig.figure.o_sativa_dj123_run1_lr.png');
-INSERT INTO assembly_qc_fig (ref_genome, assembly_qc_type, assembled_seq, figure) VALUES (7, 4, 11, 'assembly_qc_fig.figure.o_sativa_dj123_run1_gc.png');
--- INSERT INTO assembly_qc_fig (ref_genome, assembly_qc_type, assembled_seq, figure) VALUES (7, 5, 11, 'assembly_qc_fig.figure.o_sativa_dj123_run1_tr.png');
-INSERT INTO assembly_qc_fig (ref_genome, assembly_qc_type, assembled_seq, figure) VALUES (7, 6, 11, 'assembly_qc_fig.figure.o_sativa_dj123_run1_nx.png');
+INSERT INTO assembly_qc_fig (ref_genome, assembly_qc_type, assembled_seq, figure) VALUES (7, 1, 11, 'assembly_qc_fig.figure.o_sativa_dj123_run2_cbc.png');
+INSERT INTO assembly_qc_fig (ref_genome, assembly_qc_type, assembled_seq, figure) VALUES (7, 2, 11, 'assembly_qc_fig.figure.o_sativa_dj123_run2_sbc.png');
+INSERT INTO assembly_qc_fig (ref_genome, assembly_qc_type, assembled_seq, figure) VALUES (7, 3, 11, 'assembly_qc_fig.figure.o_sativa_dj123_run2_lr.png');
+INSERT INTO assembly_qc_fig (ref_genome, assembly_qc_type, assembled_seq, figure) VALUES (7, 4, 11, 'assembly_qc_fig.figure.o_sativa_dj123_run2_gc.png');
+-- INSERT INTO assembly_qc_fig (ref_genome, assembly_qc_type, assembled_seq, figure) VALUES (7, 5, 11, 'assembly_qc_fig.figure.o_sativa_dj123_run2_tr.png');
+INSERT INTO assembly_qc_fig (ref_genome, assembly_qc_type, assembled_seq, figure) VALUES (7, 6, 11, 'assembly_qc_fig.figure.o_sativa_dj123_run2_nx.png');
 
 -- -- o. staiva dj123 run3
--- INSERT INTO assembly_qc_fig (ref_genome, assembly_qc_type, assembled_seq, figure) VALUES (7, 1, 12, 'assembly_qc_fig.figure.o_sativa_dj123_run1_bc.png');
+-- INSERT INTO assembly_qc_fig (ref_genome, assembly_qc_type, assembled_seq, figure) VALUES (7, 1, 12, 'assembly_qc_fig.figure.o_sativa_dj123_run3_bc.png');
 -- INSERT INTO assembly_qc_fig (ref_genome, assembly_qc_type, assembled_seq, figure) VALUES (7, 2, 12, 'assembly_qc_fig.figure.o_sativa_dj123_run3_lr.png');
 
 -- a. thalinana ler-0
