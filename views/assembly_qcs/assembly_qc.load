@@ -13,7 +13,7 @@
 <div class="qc_val_container">
 {{for a in assembly_qc_val:}}
     <div class="qc_val">
-        <ul>{{=a.assembly_qc_type.name}} {{=a.assembly_qc_val.valor}}</ul>
+        <b> {{=a.assembly_qc_type.name}}: {{=a.assembly_qc_val.valor}} </b>
     </div>
 {{pass}}
 </div>

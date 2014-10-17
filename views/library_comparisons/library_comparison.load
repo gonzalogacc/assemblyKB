@@ -1,0 +1,36 @@
+
+<div class="qc_fig_container" style="background-color: #f4e4c8;">
+{{=LOAD('libraries','library.load',args=request.args[0].split('-')[0], ajax=True)}}
+{{for l in lib_qc_fig_1:}}
+    <div class="qc_fig">
+    <h4>{{=l.lib_qc_type.name}}</h4>
+        <img src="{{=URL('download',args=l.lib_qc_fig.figure)}}"/>
+    </div>
+{{pass}}
+</div>
+
+<div class="qc_fig_container" style="background-color: #f4e4c8;">
+{{=LOAD('libraries','library.load',args=request.args[0].split('-')[1], ajax=True)}}
+{{for l in lib_qc_fig_2:}}
+    <div class="qc_fig">
+    <h4>{{=l.lib_qc_type.name}}</h4>
+        <img src="{{=URL('download',args=l.lib_qc_fig.figure)}}"/>
+    </div>
+{{pass}}
+</div>
+
+<div class="qc_val_container" style="background-color: #f4e4c8;">
+{{for l2 in lib_qc_val_1:}}
+    <div class="qc_val">
+        <b>{{=l2.lib_qc_type.name}}: {{=l2.lib_qc_val.valor}}</b>
+    </div>
+{{pass}}
+</div>
+
+<div class="qc_val_container" style="background-color: #f4e4c8;">
+{{for l2 in lib_qc_val_2:}}
+    <div class="qc_val">
+        <b>{{=l2.lib_qc_type.name}}: {{=l2.lib_qc_val.valor}}</b>
+    </div>
+{{pass}}
+</div>

@@ -1,10 +1,10 @@
 -- DO NOT CHANGE ORDER!!! (add new ENTRIES at the bottom of the list)
 
 -- specie table DO NOT CHANGE ORDER!!! (add new ENTRIES at the bottom of the list)
-INSERT INTO specie (id, name, genome_size, gc_content, ploidy) VALUES (1, 'Aegilops sharonensis', 750000, 36, 2);
+INSERT INTO specie (id, name, genome_size, gc_content, ploidy) VALUES (1, 'Aegilops sharonensis', 75000000000, 36, 2);
 INSERT INTO specie (id, name, genome_size, gc_content, ploidy) VALUES (2, 'Oryza sativa Nipponbare', 355000000, 36, -1);
-INSERT INTO specie (id, name, genome_size, gc_content, ploidy) VALUES (3, 'Oryza sativa IR64', 135000000, 36, -1);
-INSERT INTO specie (id, name, genome_size, gc_content, ploidy) VALUES (4, 'Oryza sativa DJ123', 135000000, 36, -1);
+INSERT INTO specie (id, name, genome_size, gc_content, ploidy) VALUES (3, 'Oryza sativa IR64', 345000000, 36, -1);
+INSERT INTO specie (id, name, genome_size, gc_content, ploidy) VALUES (4, 'Oryza sativa DJ123', 345000000, 36, -1);
 INSERT INTO specie (id, name, genome_size, gc_content, ploidy) VALUES (5, 'Arabidopsis thaliana ler-0', 135000000, 36, 1);
 INSERT INTO specie (id, name, genome_size, gc_content, ploidy) VALUES (6, 'Arabidopsis thaliana col-0', 135000000, 36, 1);
 INSERT INTO specie (id, name, genome_size, gc_content, ploidy) VALUES (7, 'None', -1, -1, -1);
@@ -525,7 +525,7 @@ INSERT INTO sw_type (id, name) VALUES (4, 'None');
 
 -- software
 INSERT INTO software (id, name, sw_type) VALUES (1, 'None', 4);
-INSERT INTO software (id, name, sw_type) VALUES (2, 'ABYSS', 3);
+INSERT INTO software (id, name, sw_type) VALUES (2, 'ABYSS_v1.5', 3);
 INSERT INTO software (id, name, sw_type) VALUES (3, 'SOAPdenovo', 3);
 INSERT INTO software (id, name, sw_type) VALUES (4, 'Allpaths', 3);
 
@@ -539,18 +539,25 @@ INSERT INTO assembly_pipeline (id, name) VALUES (1, 'pipeline Abyss generic');
 INSERT INTO assembly_pipeline (id, name) VALUES (2, 'pipeline Soap generic');
 INSERT INTO assembly_pipeline (id, name) VALUES (3, 'pipeline Allpaths generic');
 
+INSERT INTO assembly_pipeline (id, name) VALUES (4, 'A.thaliana-ler0 Abyss');
+
 -- pipeline_component
-INSERT INTO pipeline_component (pipeline, name, step_order, software, parameters) VALUES (1, 'adaptor triming', 1, 1, "{'Matching': 90, 'another':50, 'another2': 40}");
-INSERT INTO pipeline_component (pipeline, name, step_order, software, parameters) VALUES (1, 'assembly', 2, 2, "{'k': 31}");
-INSERT INTO pipeline_component (pipeline, name, step_order, software, parameters) VALUES (1, 'scaffolding', 3, 3, "{'k': 31}");
+INSERT INTO pipeline_component (pipeline, name, step_order, software, parameters) VALUES (1, 'Adaptor triming', 1, 6, "{'min_length': 25, 'trim_ends': 0, 'remove duplicates': True}");
+INSERT INTO pipeline_component (pipeline, name, step_order, software, parameters) VALUES (1, 'Abyss contig assembly', 2, 2, "{'k': 31}");
+INSERT INTO pipeline_component (pipeline, name, step_order, software, parameters) VALUES (1, 'Scaffolding', 3, 3, "{'k': 31}");
 
-INSERT INTO pipeline_component (pipeline, name, step_order, software, parameters) VALUES (2, 'adaptor triming', 1, 1, "{'Matching': 90, 'another':50, 'another2': 40}");
-INSERT INTO pipeline_component (pipeline, name, step_order, software, parameters) VALUES (2, 'assembly', 2, 3, "{'k': 31}");
-INSERT INTO pipeline_component (pipeline, name, step_order, software, parameters) VALUES (2, 'scaffolding', 3, 3, "{'k': 31}");
+INSERT INTO pipeline_component (pipeline, name, step_order, software, parameters) VALUES (2, 'Adaptor triming', 1, 1, "{'Matching': 90, 'another':50, 'another2': 40}");
+INSERT INTO pipeline_component (pipeline, name, step_order, software, parameters) VALUES (2, 'Assembly', 2, 3, "{'k': 31}");
+INSERT INTO pipeline_component (pipeline, name, step_order, software, parameters) VALUES (2, 'Scaffolding', 3, 3, "{'k': 31}");
 
-INSERT INTO pipeline_component (pipeline, name, step_order, software, parameters) VALUES (3, 'adaptor triming', 1, 1, "{'Matching': 90, 'another':50, 'another2': 40}");
-INSERT INTO pipeline_component (pipeline, name, step_order, software, parameters) VALUES (3, 'assembly', 2, 4, "{'k': 31}");
-INSERT INTO pipeline_component (pipeline, name, step_order, software, parameters) VALUES (3, 'scaffolding', 3, 3, "{'k': 31}");
+INSERT INTO pipeline_component (pipeline, name, step_order, software, parameters) VALUES (3, 'Adaptor triming', 1, 1, "{'Matching': 90, 'another':50, 'another2': 40}");
+INSERT INTO pipeline_component (pipeline, name, step_order, software, parameters) VALUES (3, 'Assembly', 2, 4, "{'k': 31}");
+INSERT INTO pipeline_component (pipeline, name, step_order, software, parameters) VALUES (3, 'Scaffolding', 3, 3, "{'k': 31}");
+
+INSERT INTO pipeline_component (pipeline, name, step_order, software, parameters) VALUES (4, 'Nextera Adaptor triming', 1, 6, "{'Matching': 90, 'another':50, 'another2': 40}");
+INSERT INTO pipeline_component (pipeline, name, step_order, software, parameters) VALUES (4, 'Abyss contig assembly', 2, 2, "{'k': 31}");
+INSERT INTO pipeline_component (pipeline, name, step_order, software, parameters) VALUES (4, 'Abyss scaffolding', 3, 2, "{'k': 31, 'l': 31}");
+
 ---------- end software -------------------------
 
 
@@ -577,7 +584,7 @@ INSERT INTO assembly_run (assembly_pipeline, specie, dataset, name) VALUES (2, 4
 INSERT INTO assembly_run (assembly_pipeline, specie, dataset, name) VALUES (3, 4, 4, 'Run3 O. Sativa DJ123');
 
 -- A. thalinana ler-0
-INSERT INTO assembly_run (assembly_pipeline, specie, dataset, name) VALUES (1, 5, 5, 'Run1 A. Thaliana ler-0');
+INSERT INTO assembly_run (assembly_pipeline, specie, dataset, name) VALUES (4, 5, 5, 'Run1 A. Thaliana ler-0');
 INSERT INTO assembly_run (assembly_pipeline, specie, dataset, name) VALUES (2, 5, 5, 'Run2 A. Thaliana ler-0');
 INSERT INTO assembly_run (assembly_pipeline, specie, dataset, name) VALUES (3, 5, 5, 'Run3 A. Thaliana ler-0');
 
@@ -596,29 +603,29 @@ INSERT INTO read_processing (id, name, software) VALUES (5, 'Kat intersection', 
 
 ---------------- begin assembled seq --------------------
 -- assembled_seq
-INSERT INTO assembled_seq (name, assembly_run) VALUES ('assembled A. Sharonensis 1', 1);
-INSERT INTO assembled_seq (name, assembly_run) VALUES ('assembled A. Sharonensis 2', 2);
-INSERT INTO assembled_seq (name, assembly_run) VALUES ('assembled A. Sharonensis 3', 3);
+INSERT INTO assembled_seq (id, name, assembly_run) VALUES (1, 'assembled A. Sharonensis 1', 1);
+INSERT INTO assembled_seq (id, name, assembly_run) VALUES (2, 'assembled A. Sharonensis 2', 2);
+INSERT INTO assembled_seq (id, name, assembly_run) VALUES (3, 'assembled A. Sharonensis 3', 3);
 
-INSERT INTO assembled_seq (name, assembly_run) VALUES ('assembled O. Sativa Nb 1', 4);
-INSERT INTO assembled_seq (name, assembly_run) VALUES ('assembled O. Sativa Nb 2', 5);
-INSERT INTO assembled_seq (name, assembly_run) VALUES ('assembled O. Sativa Nb 3', 6);
+INSERT INTO assembled_seq (id, name, assembly_run) VALUES (4, 'assembled O. Sativa Nb 1', 4);
+INSERT INTO assembled_seq (id, name, assembly_run) VALUES (5, 'assembled O. Sativa Nb 2', 5);
+INSERT INTO assembled_seq (id, name, assembly_run) VALUES (6, 'assembled O. Sativa Nb 3', 6);
 
-INSERT INTO assembled_seq (name, assembly_run) VALUES ('assembled O. Sativa IR64 1', 7);
-INSERT INTO assembled_seq (name, assembly_run) VALUES ('assembled O. Sativa IR64 2', 8);
-INSERT INTO assembled_seq (name, assembly_run) VALUES ('assembled O. Sativa IR64 3', 9);
+INSERT INTO assembled_seq (id, name, assembly_run) VALUES (7, 'assembled O. Sativa IR64 1', 7);
+INSERT INTO assembled_seq (id, name, assembly_run) VALUES (8, 'assembled O. Sativa IR64 2', 8);
+INSERT INTO assembled_seq (id, name, assembly_run) VALUES (9, 'assembled O. Sativa IR64 3', 9);
 
-INSERT INTO assembled_seq (name, assembly_run) VALUES ('assembled O. Sativa DJ123 1', 10);
-INSERT INTO assembled_seq (name, assembly_run) VALUES ('assembled O. Sativa DJ123 2', 11);
-INSERT INTO assembled_seq (name, assembly_run) VALUES ('assembled O. Sativa DJ123 3', 12);
+INSERT INTO assembled_seq (id, name, assembly_run) VALUES (10, 'assembled O. Sativa DJ123 1', 10);
+INSERT INTO assembled_seq (id, name, assembly_run) VALUES (11, 'assembled O. Sativa DJ123 2', 11);
+INSERT INTO assembled_seq (id, name, assembly_run) VALUES (12, 'assembled O. Sativa DJ123 3', 12);
 
-INSERT INTO assembled_seq (name, assembly_run) VALUES ('assembled A. Thaliana ler-0 1', 13);
-INSERT INTO assembled_seq (name, assembly_run) VALUES ('assembled A. Thaliana ler-0 2', 14);
-INSERT INTO assembled_seq (name, assembly_run) VALUES ('assembled A. Thaliana ler-0 3', 15);
+INSERT INTO assembled_seq (id, name, assembly_run) VALUES (13, 'assembled A. Thaliana ler-0 1', 13);
+INSERT INTO assembled_seq (id, name, assembly_run) VALUES (14, 'assembled A. Thaliana ler-0 2', 14);
+INSERT INTO assembled_seq (id, name, assembly_run) VALUES (15, 'assembled A. Thaliana ler-0 3', 15);
 
-INSERT INTO assembled_seq (name, assembly_run) VALUES ('assembled A. Thaliana col-0 1', 16);
-INSERT INTO assembled_seq (name, assembly_run) VALUES ('assembled A. Thaliana col-0 2', 17);
-INSERT INTO assembled_seq (name, assembly_run) VALUES ('assembled A. Thaliana col-0 3', 18);
+INSERT INTO assembled_seq (id, name, assembly_run) VALUES (16, 'assembled A. Thaliana col-0 1', 16);
+INSERT INTO assembled_seq (id, name, assembly_run) VALUES (17, 'assembled A. Thaliana col-0 2', 17);
+INSERT INTO assembled_seq (id, name, assembly_run) VALUES (18, 'assembled A. Thaliana col-0 3', 18);
 
 ---------------- end assembled seq --------------------
 
@@ -731,40 +738,59 @@ INSERT INTO assembly_qc_fig (ref_genome, assembly_qc_type, assembled_seq, figure
 INSERT INTO assembly_qc_fig (ref_genome, assembly_qc_type, assembled_seq, figure) VALUES (7, 6, 11, 'assembly_qc_fig.figure.o_sativa_dj123_run2_nx.png');
 
 -- -- o. staiva dj123 run3
--- INSERT INTO assembly_qc_fig (ref_genome, assembly_qc_type, assembled_seq, figure) VALUES (7, 1, 12, 'assembly_qc_fig.figure.o_sativa_dj123_run3_bc.png');
--- INSERT INTO assembly_qc_fig (ref_genome, assembly_qc_type, assembled_seq, figure) VALUES (7, 2, 12, 'assembly_qc_fig.figure.o_sativa_dj123_run3_lr.png');
+INSERT INTO assembly_qc_fig (ref_genome, assembly_qc_type, assembled_seq, figure) VALUES (7, 1, 12, 'assembly_qc_fig.figure.o_sativa_dj123_run3_cbc.png');
+INSERT INTO assembly_qc_fig (ref_genome, assembly_qc_type, assembled_seq, figure) VALUES (7, 2, 12, 'assembly_qc_fig.figure.o_sativa_dj123_run3_sbc.png');
+INSERT INTO assembly_qc_fig (ref_genome, assembly_qc_type, assembled_seq, figure) VALUES (7, 3, 12, 'assembly_qc_fig.figure.o_sativa_dj123_run3_lr.png');
+INSERT INTO assembly_qc_fig (ref_genome, assembly_qc_type, assembled_seq, figure) VALUES (7, 4, 12, 'assembly_qc_fig.figure.o_sativa_dj123_run3_gc.png');
+-- INSERT INTO assembly_qc_fig (ref_genome, assembly_qc_type, assembled_seq, figure) VALUES (7, 5, 12, 'assembly_qc_fig.figure.o_sativa_dj123_run3_tr.png');
+INSERT INTO assembly_qc_fig (ref_genome, assembly_qc_type, assembled_seq, figure) VALUES (7, 6, 12, 'assembly_qc_fig.figure.o_sativa_dj123_run3_nx.png');
 
--- a. thalinana ler-0
-INSERT INTO assembly_qc_fig (ref_genome, assembly_qc_type, assembled_seq, figure) VALUES (7, 1, 13, 'assembly_qc_fig.figure.a_thaliana_ler0_run1_bc.png');
-INSERT INTO assembly_qc_fig (ref_genome, assembly_qc_type, assembled_seq, figure) VALUES (7, 2, 13, 'assembly_qc_fig.figure.a_thaliana_ler0_run1_lr.png');
+-- a. thalinana ler-0 run1
+INSERT INTO assembly_qc_fig (ref_genome, assembly_qc_type, assembled_seq, figure) VALUES (7, 1, 13, 'assembly_qc_fig.figure.a_thaliana_ler0_run1_cbc.png');
+INSERT INTO assembly_qc_fig (ref_genome, assembly_qc_type, assembled_seq, figure) VALUES (7, 2, 13, 'assembly_qc_fig.figure.a_thaliana_ler0_run1_sbc.png');
+INSERT INTO assembly_qc_fig (ref_genome, assembly_qc_type, assembled_seq, figure) VALUES (7, 3, 13, 'assembly_qc_fig.figure.a_thaliana_ler0_run1_lr.png');
+INSERT INTO assembly_qc_fig (ref_genome, assembly_qc_type, assembled_seq, figure) VALUES (7, 4, 13, 'assembly_qc_fig.figure.a_thaliana_ler0_run1_gc.png');
+-- INSERT INTO assembly_qc_fig (ref_genome, assembly_qc_type, assembled_seq, figure) VALUES (7, 5, 13, 'assembly_qc_fig.figure.a_thaliana_ler0_run1_tr.png');
+INSERT INTO assembly_qc_fig (ref_genome, assembly_qc_type, assembled_seq, figure) VALUES (7, 6, 13, 'assembly_qc_fig.figure.a_thaliana_ler0_run1_nx.png');
 
--- -- a. thalinana ler-0
--- INSERT INTO assembly_qc_fig (ref_genome, assembly_qc_type, assembled_seq, figure) VALUES (7, 1, 14, 'assembly_qc_fig.figure.a_thaliana_ler0_run2_sl.png');
--- INSERT INTO assembly_qc_fig (ref_genome, assembly_qc_type, assembled_seq, figure) VALUES (7, 2, 14, 'assembly_qc_fig.figure.a_thaliana_ler0_run2_lr.png');
+-- -- a. thalinana ler-0 run2
+INSERT INTO assembly_qc_fig (ref_genome, assembly_qc_type, assembled_seq, figure) VALUES (7, 1, 14, 'assembly_qc_fig.figure.a_thaliana_ler0_run2_cbc.png');
+INSERT INTO assembly_qc_fig (ref_genome, assembly_qc_type, assembled_seq, figure) VALUES (7, 2, 14, 'assembly_qc_fig.figure.a_thaliana_ler0_run2_sbc.png');
+INSERT INTO assembly_qc_fig (ref_genome, assembly_qc_type, assembled_seq, figure) VALUES (7, 3, 14, 'assembly_qc_fig.figure.a_thaliana_ler0_run2_lr.png');
+INSERT INTO assembly_qc_fig (ref_genome, assembly_qc_type, assembled_seq, figure) VALUES (7, 4, 14, 'assembly_qc_fig.figure.a_thaliana_ler0_run2_gc.png');
+-- INSERT INTO assembly_qc_fig (ref_genome, assembly_qc_type, assembled_seq, figure) VALUES (7, 5, 14, 'assembly_qc_fig.figure.a_thaliana_ler0_run2_tr.png');
+INSERT INTO assembly_qc_fig (ref_genome, assembly_qc_type, assembled_seq, figure) VALUES (7, 6, 14, 'assembly_qc_fig.figure.a_thaliana_ler0_run2_nx.png');
 
--- -- a. thalinana ler-0
+-- -- a. thalinana ler-0 run3
 INSERT INTO assembly_qc_fig (ref_genome, assembly_qc_type, assembled_seq, figure) VALUES (7, 1, 15, 'assembly_qc_fig.figure.a_thaliana_ler0_run3_cbc.png');
 INSERT INTO assembly_qc_fig (ref_genome, assembly_qc_type, assembled_seq, figure) VALUES (7, 2, 15, 'assembly_qc_fig.figure.a_thaliana_ler0_run3_sbc.png');
 INSERT INTO assembly_qc_fig (ref_genome, assembly_qc_type, assembled_seq, figure) VALUES (7, 3, 15, 'assembly_qc_fig.figure.a_thaliana_ler0_run3_lr.png');
 INSERT INTO assembly_qc_fig (ref_genome, assembly_qc_type, assembled_seq, figure) VALUES (7, 4, 15, 'assembly_qc_fig.figure.a_thaliana_ler0_run3_gc.png');
-INSERT INTO assembly_qc_fig (ref_genome, assembly_qc_type, assembled_seq, figure) VALUES (7, 5, 15, 'assembly_qc_fig.figure.a_thaliana_ler0_run3_tr.png');
+-- INSERT INTO assembly_qc_fig (ref_genome, assembly_qc_type, assembled_seq, figure) VALUES (7, 5, 15, 'assembly_qc_fig.figure.a_thaliana_ler0_run3_tr.png');
 INSERT INTO assembly_qc_fig (ref_genome, assembly_qc_type, assembled_seq, figure) VALUES (7, 6, 15, 'assembly_qc_fig.figure.a_thaliana_ler0_run3_nx.png');
 
-
 -- a. thalinana col-0 run1
-INSERT INTO assembly_qc_fig (ref_genome, assembly_qc_type, assembled_seq, figure) VALUES (7, 1, 16, 'assembly_qc_fig.figure.a_thaliana_col0_run1_bc.png');
-INSERT INTO assembly_qc_fig (ref_genome, assembly_qc_type, assembled_seq, figure) VALUES (7, 2, 16, 'assembly_qc_fig.figure.a_thaliana_col0_run1_lr.png');
+INSERT INTO assembly_qc_fig (ref_genome, assembly_qc_type, assembled_seq, figure) VALUES (7, 1, 16, 'assembly_qc_fig.figure.a_thaliana_col0_run1_cbc.png');
+INSERT INTO assembly_qc_fig (ref_genome, assembly_qc_type, assembled_seq, figure) VALUES (7, 2, 16, 'assembly_qc_fig.figure.a_thaliana_col0_run1_sbc.png');
+INSERT INTO assembly_qc_fig (ref_genome, assembly_qc_type, assembled_seq, figure) VALUES (7, 3, 16, 'assembly_qc_fig.figure.a_thaliana_col0_run1_lr.png');
+INSERT INTO assembly_qc_fig (ref_genome, assembly_qc_type, assembled_seq, figure) VALUES (7, 4, 16, 'assembly_qc_fig.figure.a_thaliana_col0_run1_gc.png');
+-- INSERT INTO assembly_qc_fig (ref_genome, assembly_qc_type, assembled_seq, figure) VALUES (7, 5, 16, 'assembly_qc_fig.figure.a_thaliana_col0_run1_tr.png');
+INSERT INTO assembly_qc_fig (ref_genome, assembly_qc_type, assembled_seq, figure) VALUES (7, 6, 16, 'assembly_qc_fig.figure.a_thaliana_col0_run1_nx.png');
 
 -- -- a. thalinana col-0 run2
--- INSERT INTO assembly_qc_fig (ref_genome, assembly_qc_type, assembled_seq, figure) VALUES (7, 1, 17, 'assembly_qc_fig.figure.a_thaliana_col0_run2_sl.png');
--- INSERT INTO assembly_qc_fig (ref_genome, assembly_qc_type, assembled_seq, figure) VALUES (7, 2, 17, 'assembly_qc_fig.figure.a_thaliana_col0_run2_lr.png');
+INSERT INTO assembly_qc_fig (ref_genome, assembly_qc_type, assembled_seq, figure) VALUES (7, 1, 17, 'assembly_qc_fig.figure.a_thaliana_col0_run2_cbc.png');
+-- INSERT INTO assembly_qc_fig (ref_genome, assembly_qc_type, assembled_seq, figure) VALUES (7, 2, 17, 'assembly_qc_fig.figure.a_thaliana_col0_run2_sbc.png');
+INSERT INTO assembly_qc_fig (ref_genome, assembly_qc_type, assembled_seq, figure) VALUES (7, 3, 17, 'assembly_qc_fig.figure.a_thaliana_col0_run2_lr.png');
+INSERT INTO assembly_qc_fig (ref_genome, assembly_qc_type, assembled_seq, figure) VALUES (7, 4, 17, 'assembly_qc_fig.figure.a_thaliana_col0_run2_gc.png');
+-- INSERT INTO assembly_qc_fig (ref_genome, assembly_qc_type, assembled_seq, figure) VALUES (7, 5, 17, 'assembly_qc_fig.figure.a_thaliana_col0_run2_tr.png');
+INSERT INTO assembly_qc_fig (ref_genome, assembly_qc_type, assembled_seq, figure) VALUES (7, 6, 17, 'assembly_qc_fig.figure.a_thaliana_col0_run2_nx.png');
 
 -- -- a. thalinana col-0 run3
 INSERT INTO assembly_qc_fig (ref_genome, assembly_qc_type, assembled_seq, figure) VALUES (7, 1, 18, 'assembly_qc_fig.figure.a_thaliana_col0_run3_cbc.png');
 INSERT INTO assembly_qc_fig (ref_genome, assembly_qc_type, assembled_seq, figure) VALUES (7, 2, 18, 'assembly_qc_fig.figure.a_thaliana_col0_run3_sbc.png');
 INSERT INTO assembly_qc_fig (ref_genome, assembly_qc_type, assembled_seq, figure) VALUES (7, 3, 18, 'assembly_qc_fig.figure.a_thaliana_col0_run3_lr.png');
 INSERT INTO assembly_qc_fig (ref_genome, assembly_qc_type, assembled_seq, figure) VALUES (7, 4, 18, 'assembly_qc_fig.figure.a_thaliana_col0_run3_gc.png');
-INSERT INTO assembly_qc_fig (ref_genome, assembly_qc_type, assembled_seq, figure) VALUES (7, 5, 18, 'assembly_qc_fig.figure.a_thaliana_col0_run3_tr.png');
+-- INSERT INTO assembly_qc_fig (ref_genome, assembly_qc_type, assembled_seq, figure) VALUES (7, 5, 18, 'assembly_qc_fig.figure.a_thaliana_col0_run3_tr.png');
 INSERT INTO assembly_qc_fig (ref_genome, assembly_qc_type, assembled_seq, figure) VALUES (7, 6, 18, 'assembly_qc_fig.figure.a_thaliana_col0_run3_nx.png');
 --------------- end assembly_qc_fig ------------
 
@@ -803,16 +829,28 @@ INSERT INTO assembly_qc_val (ref_genome, assembly_qc_type, assembled_seq, valor)
 INSERT INTO assembly_qc_val (ref_genome, assembly_qc_type, assembled_seq, valor) VALUES (7, 10, 3, -1);
 
 -- o. staiva nb run1
-INSERT INTO assembly_qc_val (ref_genome, assembly_qc_type, assembled_seq, valor) VALUES (7, 7, 4, -1);
-INSERT INTO assembly_qc_val (ref_genome, assembly_qc_type, assembled_seq, valor) VALUES (7, 8, 4, -1);
-INSERT INTO assembly_qc_val (ref_genome, assembly_qc_type, assembled_seq, valor) VALUES (7, 9, 4, -1);
-INSERT INTO assembly_qc_val (ref_genome, assembly_qc_type, assembled_seq, valor) VALUES (7, 10, 4, -1);
+INSERT INTO assembly_qc_val (ref_genome, assembly_qc_type, assembled_seq, valor) VALUES (7, 7, 4, 881);
+INSERT INTO assembly_qc_val (ref_genome, assembly_qc_type, assembled_seq, valor) VALUES (7, 8, 4, 857);
+INSERT INTO assembly_qc_val (ref_genome, assembly_qc_type, assembled_seq, valor) VALUES (7, 9, 4, 48497);
+INSERT INTO assembly_qc_val (ref_genome, assembly_qc_type, assembled_seq, valor) VALUES (7, 10, 4, 49389);
+INSERT INTO assembly_qc_val (ref_genome, assembly_qc_type, assembled_seq, valor) VALUES (7, 11, 4, 1577017421);
+INSERT INTO assembly_qc_val (ref_genome, assembly_qc_type, assembled_seq, valor) VALUES (7, 12, 4, 1428260044);
+INSERT INTO assembly_qc_val (ref_genome, assembly_qc_type, assembled_seq, valor) VALUES (7, 13, 4, 67269555);
+INSERT INTO assembly_qc_val (ref_genome, assembly_qc_type, assembled_seq, valor) VALUES (7, 14, 4, 68328749);
+INSERT INTO assembly_qc_val (ref_genome, assembly_qc_type, assembled_seq, valor) VALUES (7, 15, 4, 7573247);
+INSERT INTO assembly_qc_val (ref_genome, assembly_qc_type, assembled_seq, valor) VALUES (7, 16, 4, 5625676);
 
 -- -- o. staiva nb run2
-INSERT INTO assembly_qc_val (ref_genome, assembly_qc_type, assembled_seq, valor) VALUES (7, 7, 5, -1);
+INSERT INTO assembly_qc_val (ref_genome, assembly_qc_type, assembled_seq, valor) VALUES (7, 7, 5, 10404);
 INSERT INTO assembly_qc_val (ref_genome, assembly_qc_type, assembled_seq, valor) VALUES (7, 8, 5, -1);
-INSERT INTO assembly_qc_val (ref_genome, assembly_qc_type, assembled_seq, valor) VALUES (7, 9, 5, -1);
+INSERT INTO assembly_qc_val (ref_genome, assembly_qc_type, assembled_seq, valor) VALUES (7, 9, 5, 47122);
 INSERT INTO assembly_qc_val (ref_genome, assembly_qc_type, assembled_seq, valor) VALUES (7, 10, 5, -1);
+INSERT INTO assembly_qc_val (ref_genome, assembly_qc_type, assembled_seq, valor) VALUES (7, 11, 5, 369510796);
+INSERT INTO assembly_qc_val (ref_genome, assembly_qc_type, assembled_seq, valor) VALUES (7, 12, 5, -1);
+INSERT INTO assembly_qc_val (ref_genome, assembly_qc_type, assembled_seq, valor) VALUES (7, 13, 5, 307451049);
+INSERT INTO assembly_qc_val (ref_genome, assembly_qc_type, assembled_seq, valor) VALUES (7, 14, 5, -1);
+INSERT INTO assembly_qc_val (ref_genome, assembly_qc_type, assembled_seq, valor) VALUES (7, 15, 5, 493139);
+INSERT INTO assembly_qc_val (ref_genome, assembly_qc_type, assembled_seq, valor) VALUES (7, 16, 5, -1);
 
 -- -- o. staiva nb run3
 INSERT INTO assembly_qc_val (ref_genome, assembly_qc_type, assembled_seq, valor) VALUES (7, 7, 6, -1);
@@ -856,19 +894,19 @@ INSERT INTO assembly_qc_val (ref_genome, assembly_qc_type, assembled_seq, valor)
 INSERT INTO assembly_qc_val (ref_genome, assembly_qc_type, assembled_seq, valor) VALUES (7, 9, 12, -1);
 INSERT INTO assembly_qc_val (ref_genome, assembly_qc_type, assembled_seq, valor) VALUES (7, 10, 12, -1);
 
--- a. thalinana ler-0
+-- a. thalinana ler-0 run1
 INSERT INTO assembly_qc_val (ref_genome, assembly_qc_type, assembled_seq, valor) VALUES (7, 7, 13, -1);
 INSERT INTO assembly_qc_val (ref_genome, assembly_qc_type, assembled_seq, valor) VALUES (7, 8, 13, -1);
 INSERT INTO assembly_qc_val (ref_genome, assembly_qc_type, assembled_seq, valor) VALUES (7, 9, 13, -1);
 INSERT INTO assembly_qc_val (ref_genome, assembly_qc_type, assembled_seq, valor) VALUES (7, 10, 13, -1);
 
--- -- a. thalinana ler-0
+-- -- a. thalinana ler-0 run2
 INSERT INTO assembly_qc_val (ref_genome, assembly_qc_type, assembled_seq, valor) VALUES (7, 7, 14, -1);
 INSERT INTO assembly_qc_val (ref_genome, assembly_qc_type, assembled_seq, valor) VALUES (7, 8, 14, -1);
 INSERT INTO assembly_qc_val (ref_genome, assembly_qc_type, assembled_seq, valor) VALUES (7, 9, 14, -1);
 INSERT INTO assembly_qc_val (ref_genome, assembly_qc_type, assembled_seq, valor) VALUES (7, 10, 14, -1);
 
--- -- a. thalinana ler-0
+-- -- a. thalinana ler-0 run3
 INSERT INTO assembly_qc_val (ref_genome, assembly_qc_type, assembled_seq, valor) VALUES (7, 7, 15, 29067);
 INSERT INTO assembly_qc_val (ref_genome, assembly_qc_type, assembled_seq, valor) VALUES (7, 8, 15, 53875);
 INSERT INTO assembly_qc_val (ref_genome, assembly_qc_type, assembled_seq, valor) VALUES (7, 9, 15, -1);
@@ -877,20 +915,27 @@ INSERT INTO assembly_qc_val (ref_genome, assembly_qc_type, assembled_seq, valor)
 INSERT INTO assembly_qc_val (ref_genome, assembly_qc_type, assembled_seq, valor) VALUES (7, 12, 15, 136812406);
 INSERT INTO assembly_qc_val (ref_genome, assembly_qc_type, assembled_seq, valor) VALUES (7, 13, 15, 104770535);
 INSERT INTO assembly_qc_val (ref_genome, assembly_qc_type, assembled_seq, valor) VALUES (7, 14, 15, 105929227);
+INSERT INTO assembly_qc_val (ref_genome, assembly_qc_type, assembled_seq, valor) VALUES (7, 15, 15, -1);
+INSERT INTO assembly_qc_val (ref_genome, assembly_qc_type, assembled_seq, valor) VALUES (7, 16, 15, -1);
 
--- a. thalinana col-0
-INSERT INTO assembly_qc_val (ref_genome, assembly_qc_type, assembled_seq, valor) VALUES (7, 7, 16, -1);
-INSERT INTO assembly_qc_val (ref_genome, assembly_qc_type, assembled_seq, valor) VALUES (7, 8, 16, -1);
-INSERT INTO assembly_qc_val (ref_genome, assembly_qc_type, assembled_seq, valor) VALUES (7, 9, 16, -1);
-INSERT INTO assembly_qc_val (ref_genome, assembly_qc_type, assembled_seq, valor) VALUES (7, 10, 16, -1);
-
--- -- a. thalinana col-0
+-- a. thalinana col-0 run1
+INSERT INTO assembly_qc_val (ref_genome, assembly_qc_type, assembled_seq, valor) VALUES (7, 7, 16, 11431);
+INSERT INTO assembly_qc_val (ref_genome, assembly_qc_type, assembled_seq, valor) VALUES (7, 8, 16, 233488);
+INSERT INTO assembly_qc_val (ref_genome, assembly_qc_type, assembled_seq, valor) VALUES (7, 9, 16, 15032);
+INSERT INTO assembly_qc_val (ref_genome, assembly_qc_type, assembled_seq, valor) VALUES (7, 10, 16, 4108);
+INSERT INTO assembly_qc_val (ref_genome, assembly_qc_type, assembled_seq, valor) VALUES (7, 11, 16, 130760545);
+INSERT INTO assembly_qc_val (ref_genome, assembly_qc_type, assembled_seq, valor) VALUES (7, 12, 16, 139010128);
+INSERT INTO assembly_qc_val (ref_genome, assembly_qc_type, assembled_seq, valor) VALUES (7, 13, 16, 301687);
+INSERT INTO assembly_qc_val (ref_genome, assembly_qc_type, assembled_seq, valor) VALUES (7, 14, 16, 289830);
+INSERT INTO assembly_qc_val (ref_genome, assembly_qc_type, assembled_seq, valor) VALUES (7, 15, 16, -1);
+INSERT INTO assembly_qc_val (ref_genome, assembly_qc_type, assembled_seq, valor) VALUES (7, 16, 16, -1);
+-- -- a. thalinana col-0 run2
 INSERT INTO assembly_qc_val (ref_genome, assembly_qc_type, assembled_seq, valor) VALUES (7, 7, 17, -1);
 INSERT INTO assembly_qc_val (ref_genome, assembly_qc_type, assembled_seq, valor) VALUES (7, 8, 17, -1);
 INSERT INTO assembly_qc_val (ref_genome, assembly_qc_type, assembled_seq, valor) VALUES (7, 9, 17, -1);
 INSERT INTO assembly_qc_val (ref_genome, assembly_qc_type, assembled_seq, valor) VALUES (7, 10, 17, -1);
 
--- -- a. thalinana col-0
+-- -- a. thalinana col-0 run3
 INSERT INTO assembly_qc_val (ref_genome, assembly_qc_type, assembled_seq, valor) VALUES (7, 7, 18, -1);
 INSERT INTO assembly_qc_val (ref_genome, assembly_qc_type, assembled_seq, valor) VALUES (7, 8, 18, -1);
 INSERT INTO assembly_qc_val (ref_genome, assembly_qc_type, assembled_seq, valor) VALUES (7, 9, 18, -1);
@@ -899,7 +944,7 @@ INSERT INTO assembly_qc_val (ref_genome, assembly_qc_type, assembled_seq, valor)
 
 
 --------------- Begin assembly_ranking_type -------------
--- assembly_ranking_type DO NOT CHANGE ORDER!!! (add new ENTRIES at the bottom of the list)
+-- assembly_ranking_type
 INSERT INTO assembly_ranking_type (id, name, assembly_qc_type) VALUES (1, 'Ranking contiguidad', 7);
 INSERT INTO assembly_ranking_type (id, name, assembly_qc_type) VALUES (2, 'Ranking contenido', 8);
 INSERT INTO assembly_ranking_type (id, name, assembly_qc_type) VALUES (3, 'Ranking kmer content', 9);

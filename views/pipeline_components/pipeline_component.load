@@ -1,15 +1,15 @@
 
 
-<div>
+<div class="general_container1">
     {{for comp in pipeline:}}
         <div class="pipeline_component">
-            <p>{{=comp.pipeline_component.name}}</p>
+            <p><h4>{{=comp.pipeline_component.name}}</h4></p>
             <!-- <p>{{=comp.pipeline_component.step_order}}</p> -->
             {{for key, param in eval(comp.pipeline_component.parameters).iteritems():}}
-                <li>{{=key}} &#8594  {{=param}}</li>
+                <div class="pipeline_parameter"> {{=key}} &#8594  {{=param}} </div>
             {{pass}}
         </div>
-        <div class="pipeline_arrow"><h1>&#8681</h4></div>
+        <div class="pipeline_arrow"><h1>&#8681</h1></div>
     {{pass}}
-        <div class="pipeline_component"> Assembled sequence</div>
+        <div class="pipeline_component"> <h4> Assembled sequence </h4></div>
 </div>

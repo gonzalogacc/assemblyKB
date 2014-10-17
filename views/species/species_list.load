@@ -7,13 +7,13 @@
     <tr>
         <th class="table_header">Assembly name</th>
         <th class="table_header">Assembly size</th>
-        <th class="table_header">gc_content</th>
+        <!-- <th class="table_header">gc_content</th> -->
     </tr>
     {{ for s in species: }}
             <tr  class="table_row">
                 <td><a href="{{=URL(c="species",f="specie",args=[s.id,], extension=False)}}">{{=s.name}}</a></td>
                 <td> {{=s.genome_size}} </td>
-                <td>{{=s.gc_content}}</td>
+                <!-- <td>{{=s.gc_content}}</td> -->
             </tr>
     {{ pass }}
 </table>

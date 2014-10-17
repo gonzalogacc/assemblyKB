@@ -1,0 +1,38 @@
+
+
+<div class="qc_fig_container" style="background-color: #f4e4c8;">
+
+{{=LOAD('assemblies','assembly.load',args=request.args[0].split('-')[0], ajax=True)}}
+{{for a in assembly_qc_fig_1:}}
+    <div class="qc_fig">
+        <h4>{{=a.assembly_qc_type.name}}</h4>
+            <img src="{{=URL('download',args=a.assembly_qc_fig.figure)}}"/>
+    </div>
+{{pass}}
+</div>
+
+<div class="qc_fig_container" style="background-color: #f4e4c8;">
+{{=LOAD('assemblies','assembly.load',args=request.args[0].split('-')[1], ajax=True)}}
+{{for a in assembly_qc_fig_2:}}
+    <div class="qc_fig">
+        <h4>{{=a.assembly_qc_type.name}}</h4>
+            <img src="{{=URL('download',args=a.assembly_qc_fig.figure)}}"/>
+    </div>
+{{pass}}
+</div>
+
+<div class="qc_val_container" style="background-color: #f4e4c8;">
+{{for a in assembly_qc_val_1:}}
+    <div class="qc_val">
+        <b> {{=a.assembly_qc_type.name}}: {{=a.assembly_qc_val.valor}} </b>
+    </div>
+{{pass}}
+</div>
+
+<div class="qc_val_container" style="background-color: #f4e4c8;">
+{{for a in assembly_qc_val_2:}}
+    <div class="qc_val">
+        <b> {{=a.assembly_qc_type.name}}: {{=a.assembly_qc_val.valor}} </b>
+    </div>
+{{pass}}
+</div>

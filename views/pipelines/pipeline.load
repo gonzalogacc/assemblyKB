@@ -1,11 +1,15 @@
-{{=pipeline_components}}
-{{=assembly_pipeline}}
 
-<div style="border: 2px lightblue solid; padding-top: 5px; padding-left: 10px; padding-bottom: 5px; padding-right: 10px" id="Assembly data">
+<div class="general_container1">
+    hola
+    {{=pipeline_components}}
+    {{=assembly_pipeline}}
+
+<div class="general_container1" id="Assembly data">
     <h4>Assembly settings for {{=assembly_pipeline.name}}</h4>
     <div style="border: 2px lightblue solid; padding-top: 5px; padding-left: 10px; padding-bottom: 5px; padding-right: 10px" >
         {{for c in pipeline_components:}}
             <p>Assembly run: <a href="{{=URL(c="pipeline_components",f="pipeline_component",args=[c.id,], extension=False)}}">{{=c.name}}</a></p>
         {{pass}}
     </div>
+</div>
 </div>

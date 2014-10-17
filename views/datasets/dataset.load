@@ -1,11 +1,10 @@
 {{include}}
 <body>
-    <div style="border: 2px #ffffff solid; padding-top: 5px; padding-left: 10px; padding-bottom: 5px; padding-right: 10px" id="dataset_{{=dataset.id}}" name="datasetDiv">
+    <div style="padding-top: 5px; padding-left: 10px; padding-bottom: 5px; padding-right: 10px" id="dataset_{{=dataset.id}}" name="datasetDiv">
       <h4>Dataset: {{=dataset.name}}</h4>
-
-        <div style="border: 1px #ffffff solid; padding-top: 1px; padding-left: 10px;" id="libraries" name="librariesDiv">
-                <table>
-                    <thead style="background: #b1f2f0">
+        <div id="libraries" name="librariesDiv">
+                <table style="width: 90%">
+                    <thead class="table_header">
                         <th>Lib name</th>
                         <th>Lib type</th>
                         <th>Pre-processing</th>
@@ -14,7 +13,7 @@
                         <th>fragment size</th>
                     </thead>
                     {{ for l in libraries:}}
-                    <tr style="background: #dcedf2">
+                    <tr class="table_row">
                         <td><a href="{{=URL(c="libraries",f="library",args=[l.library.id,], extension=False)}}">{{=l.library.name}}</a></td>
                         <td>{{=l.lib_type.name}}</td>
                         <td>{{=l.read_processing.name}}</td>

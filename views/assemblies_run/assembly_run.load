@@ -2,6 +2,6 @@
 
 <div class="cont1" name="datasetDiv">
   <h1>{{=assembly_run.name}}</h4>
-    <p>Assembled seq: <a href="{{=URL(c="assemblies_run",f="assembly_run",args=[assembled_seq.id,], extension=False)}}">{{=assembled_seq.name}}</a></p>
-    <p>Pipeline used: <a href="{{=URL(c="pipelines",f="pipeline",args=[pipeline.id,], extension=False)}}">{{=pipeline.name}}</a></p>
+    <p><b>Assembled seq: <a href="{{=URL(c="assemblies_run",f="assembly_run",args=[assembled_seq.id,], extension=False)}}">{{=assembled_seq.name}}</a></b></p>
+    <p><b>Pipeline used: <a href="{{=URL(c="pipelines",f="pipeline",args=[pipeline.id,], extension=False)}}">{{=pipeline.name}}</a></b></p>
 </div>

@@ -1,9 +1,8 @@
 
-<div class="general_container2">
-    <h4>Assembly settings for {{=assembled_seq.name}}</h4>
-    <div class="info_box">
-        <p>Specie: <a href="{{=URL(c="species",f="specie",args=[specie.id,], extension=False)}}">{{=specie.name}}</a></p>
-        <p>Dataset: <a href="{{=URL(c="datasets",f="dataset",args=[dataset.id,], extension=False)}}">{{=dataset.name}}</a></p>
-        <p>Assembly run: <a href="{{=URL(c="assemblies_run",f="assembly_run",args=[assembly_run.id,], extension=False)}}">{{=assembly_run.name}}</a></p>
-    </div>
+
+<h4>Assembly settings for {{=assembled_seq.name}}</h4>
+<div class="info_box">
+    <div class="specie_box">Specie: <a href="{{=URL(c="species",f="specie",args=[specie.id,], extension=False)}}">{{=specie.name}}</a> </div>
+    <div class="specie_box"> Dataset: <a href="{{=URL(c="datasets",f="dataset",args=[dataset.id,], extension=False)}}">{{=dataset.name}}</a> </div>
+    <div class="specie_box"> Assembly run: <a href="{{=URL(c="assemblies_run",f="assembly_run",args=[assembly_run.id,], extension=False)}}">{{=assembly_run.name}}</a> </div>
 </div>

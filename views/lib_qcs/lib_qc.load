@@ -11,7 +11,7 @@
 <div class="qc_val_container">
 {{for l2 in lib_qc_val:}}
     <div class="qc_val">
-        <ul>{{=l2.lib_qc_type.name}}: {{=l2.lib_qc_val.valor}}</ul>
+        <b> {{=l2.lib_qc_type.name}}: {{=l2.lib_qc_val.valor}} </b>
     </div>
 {{pass}}
 </div>

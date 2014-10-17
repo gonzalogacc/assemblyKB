@@ -1,19 +1,20 @@
 
-<div style="border: 2px #ffffff solid; padding-top: 5px; padding-left: 10px; padding-bottom: 5px; padding-right: 10px" id="dataset_{{=library.id}}" name="datasetDiv">
+<div id="dataset {{=library.id}}" name="datasetDiv">
   <h4>Library: {{=library.name}}</h4>
-  <div style="border: 1px #ffffff solid; padding-top: 1px; padding-left: 10px;" id="libraries" name="librariesDiv">
+  <div id="libraries" name="librariesDiv">
       <h5>Library available information</h5>
-      <div style="border: 1px #ffffff solid; padding-top: 1px; padding-left: 10px;" id="libraries" name="librariesDiv">
-          <p>Specie: <a href="{{=URL(c="species",f="specie",args=[library.specie,], extension=False)}}">{{=specie}}</a></p>
-          <p>Technology: <a href="{{=URL(c="lib_types",f="lib_type",args=[library.lib_type,], extension=False)}}">{{=lib_type}}</a></p>
-          <p>Read processing: <a href="{{=URL(c="read_processings",f="read_processing",args=[library.read_processing,], extension=False)}}">{{=read_processing}}</a></p>
+      <div class="info_box" id="libraries" name="librariesDiv">
+          <div class="specie_box"> Specie: <a href="{{=URL(c="species",f="specie",args=[library.specie,], extension=False)}}"> {{=specie}}</a> </div>
+          <div class="specie_box"> Technology: <a href="{{=URL(c="lib_types",f="lib_type",args=[library.lib_type,], extension=False)}}"> {{=lib_type}}</a> </div>
+          <div class="specie_box"> Read processing: <a href="{{=URL(c="read_processings",f="read_processing",args=[library.read_processing,], extension=False)}}"> {{=read_processing}}</a></div>
           </div>
       </div>
-  <div style="border: 1px #ffffff solid; padding-top: 1px; padding-left: 10px;" id="libraries" name="librariesDiv">
+
+  <div id="libraries" name="librariesDiv">
     <h5>Datasets where included:</h5>
-      <div style="border: 1px #ffffff solid; padding-top: 1px; padding-left: 10px;" id="libraries" name="librariesDiv">
+      <div class="info_box" id="libraries" name="librariesDiv">
           {{ for d in datasets:}}
-          <p><a href="{{=URL(c="datasets",f="dataset",args=[d.id,], extension=False)}}">{{=d.name}}</a></p>
+            <div class="specie_box"> <a href="{{=URL(c="datasets",f="dataset",args=[d.id,], extension=False)}}">{{=d.name}}</a> </div>
           {{ pass }}
           </div>
     </div>
