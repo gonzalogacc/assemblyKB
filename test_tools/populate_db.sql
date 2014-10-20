@@ -945,11 +945,12 @@ INSERT INTO assembly_qc_val (ref_genome, assembly_qc_type, assembled_seq, valor)
 
 --------------- Begin assembly_ranking_type -------------
 -- assembly_ranking_type
-INSERT INTO assembly_ranking_type (id, name, assembly_qc_type) VALUES (1, 'Ranking contiguidad', 7);
-INSERT INTO assembly_ranking_type (id, name, assembly_qc_type) VALUES (2, 'Ranking contenido', 8);
-INSERT INTO assembly_ranking_type (id, name, assembly_qc_type) VALUES (3, 'Ranking kmer content', 9);
-INSERT INTO assembly_ranking_type (id, name, assembly_qc_type) VALUES (4, 'Ranking unique kmer content', 10);
-INSERT INTO assembly_ranking_type (id, name, assembly_qc_type) VALUES (5, 'Ranking otro', 11);
+INSERT INTO assembly_ranking_type (id, name, assembly_qc_type) VALUES (1, 'Scaffold content', 2);
+INSERT INTO assembly_ranking_type (id, name, assembly_qc_type) VALUES (2, 'Contig content', 1);
+INSERT INTO assembly_ranking_type (id, name, assembly_qc_type) VALUES (3, 'Scaffold N50', 8);
+INSERT INTO assembly_ranking_type (id, name, assembly_qc_type) VALUES (4, 'Contig N50', 7);
+INSERT INTO assembly_ranking_type (id, name, assembly_qc_type) VALUES (5, '# scaffolds', 16);
+INSERT INTO assembly_ranking_type (id, name, assembly_qc_type) VALUES (6, '# contigs', 15);
 --------------- end assembly_ranking_type -------------
 
 

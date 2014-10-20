@@ -5,20 +5,123 @@
 
 <body>
 
-<div class="general_container2" name="datasetDiv">
-  <h4>Assembly ranking: {{=assembly_ranking.name}}</h4>
-    <div style="border: 1px lightblue solid; padding-top: 1px; padding-left: 10px;" id="libraries" name="librariesDiv">
-        <table border="1" class="sortable">
-            <tr bgcolor="#7cfc00">
+
+<div name="datasetDiv">
+
+  <h4>Assembly ranking</h4>
+    <div>
+        <table class="sortable">
+            <tr class="table_header">
                 <th>Assembly name</th>
-                <th>Assembly value</th>
+                <th>N50 contigs</th>
+                <th>N50 scaffolds</th>
+                <th># contigs</th>
+                <th># scaffolds</th>
+                <th>Contigs content</th>
+                <th>Scaffolds content</th>
+
             </tr>
-            {{ for a in assemblies:}}
-                <tr>
-                    <td><a href="{{=URL(c="assemblies",f="assembly",args=[a.assembled_seq.id,], extension=False)}}">{{=a.assembled_seq.name}}</a></td>
-                    <td>{{=a.assembly_qc_val.valor}} </td>
-                </tr>
-            {{ pass }}
+
+            <tr class="table_row">
+                <td>Arabidopsis thaliana ler-0 #3</td>
+                <th>29067</th>
+                <th>53875</th>
+                <th>672332</th>
+                <th>667578</th>
+                <th>136602373</th>
+                <th>136812406</th>
+
+            </tr>
+
+
+            <tr class="table_row">
+                <td>Arabidopsis thaliana ler-0 #2</td>
+                <th>11431</th>
+                <th>233488</th>
+                <th>301687</th>
+                <th>289830</th>
+                <th>130760545</th>
+                <th>139010128</th>
+
+            </tr>
+
+            <tr class="table_row">
+                <td>Arabidopsis thaliana ler-0 #1</td>
+                <th>1696</th>
+                <th>5149</th>
+                <th>672332</th>
+                <th>100297</th>
+                <th>11213990</th>
+                <th>11360149</th>
+
+            </tr>
+
+            <!--
+            <tr class="table_row">
+                <td>Oryza sativa Nipponbare #1</td>
+                <th>881</th>
+                <th>857</th>
+                <th>7573247</th>
+                <th>5625676</th>
+                <th>67269555</th>
+                <th>68328749</th>
+
+            </tr>
+            <tr class="table_row">
+                <td>Oryza sativa Nipponbare #2</td>
+                <th>10404</th>
+                <th>-1</th>
+                <th>493139</th>
+                <th>-1</th>
+                <th>369510796</th>
+                <th>-1</th>
+
+            </tr>
+            <tr class="table_row">
+                <td>Oryza sativa Nipponbare #3</td>
+                <th>10404</th>
+                <th>-1</th>
+                <th>493139</th>
+                <th>-1</th>
+                <th>369510796</th>
+                <th>-1</th>
+
+            </tr>
+
+            <!--
+            <tr class="table_row">
+                <td>Oryza sativa IR64</td>
+                <th>N50 contigs</th>
+                <th>N50 scaffolds</th>
+                <th># contigs</th>
+                <th># scaffolds</th>
+                <th>Contigs content</th>
+                <th>Scaffolds content</th>
+
+            </tr>
+
+            <tr class="table_row">
+                <td>Oryza sativa DJ123</td>
+                <th>N50 contigs</th>
+                <th>N50 scaffolds</th>
+                <th># contigs</th>
+                <th># scaffolds</th>
+                <th>Contigs content</th>
+                <th>Scaffolds content</th>
+
+            </tr>
+
+            <tr class="table_row">
+                <td>Aegilops sharonensis</td>
+                <th>1163</th>
+                <th>1163</th>
+                <th>49795399</th>
+                <th>49794675</th>
+                <th>6607166143</th>
+                <th>6607279760</th>
+            </tr>
+            -->
+
         </table>
     </div>
 </div>
