@@ -10,7 +10,7 @@
 
   <h4>Assembly ranking</h4>
     <div>
-        <table class="sortable">
+        <table class="sortable" style="width: 99%">
             <tr class="table_header">
                 <th>Assembly name</th>
                 <th>N50 contigs</th>
