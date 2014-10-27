@@ -20,6 +20,11 @@
     margin-left: 50px; /* 20px added for center margin */
 }
 
+.linktitle:hover {
+    color: #5f5f5f;
+    text-decoration: none;
+}
+
 #logo {
     width:300px;
     float:left
